@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Giancarlo Ronci — Data & Analytics Coaching and Advisory
+title: Data & Analytics Coaching and Advisory
 email: giancarlo.ronci@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Architectures, Tools, Concepts, Techniques and Strategies for Optimizing the Impact of Data and Analytics on Business.
