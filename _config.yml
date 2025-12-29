@@ -56,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Giancarlo Ronci"
   avatar : "/assets/images/MyPic.jpeg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Architectures, Tools, Concepts, and Strategies for Optimizing the Impact of Data and Analytics on Business."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
