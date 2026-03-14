@@ -5,8 +5,6 @@ author_profile: false
 classes: wide
 ---
 
-# Giancarlo Ronci
-
 ## Data & Analytics Coach & Advisory
 
 Italy · Florence / Rome area
