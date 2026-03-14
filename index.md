@@ -1,5 +1,6 @@
 ---
 layout: single
+title: "Giancarlo Ronci"
 permalink: /
 author_profile: false
 classes: wide
