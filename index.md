@@ -4,10 +4,12 @@ title: "Giancarlo Ronci"
 permalink: /
 author_profile: false
 classes: wide
---- 
+---
+
+# Giancarlo Ronci
 ## Data & Analytics Coach & Advisor
 
-Aiuto aziende e team a trasformare dati, analytics e AI in capacità concrete di business, 
+Aiuto aziende e team a trasformare dati, analytics e AI in capacità concrete di business,  
 con un focus su strategia dati, data platform moderne, data governance e advanced analytics.
 
 <div class="career-list">
@@ -35,7 +37,7 @@ con un focus su strategia dati, data platform moderne, data governance e advance
   </div>
 
   <div class="career-item">
-    <div class="career-period">Esperienze chiave</div>
+    <div class="career-period">Coaching &amp; Advisory</div>
 
     <div class="career-card">
       <div class="career-logo">
@@ -65,14 +67,3 @@ con un focus su strategia dati, data platform moderne, data governance e advance
 - Data Warehouse & Data Engineering
 - AWS, Redshift, Kafka, Glue
 - BI, Advanced Analytics e AI Enablement
-
-## CV sintetico
-
-Senior data leader con esperienza nella progettazione e nell’evoluzione di piattaforme dati, 
-data warehouse e soluzioni analytics per supportare decisioni, processi e crescita del business.
-
-[Scarica il CV completo]({{ '/assets/files/Giancarlo_Ronci_CV.pdf' | relative_url }})
-
-## Articoli
-
-Qui troverai articoli su architetture dati, data governance, analytics strategy, AI e casi pratici.
