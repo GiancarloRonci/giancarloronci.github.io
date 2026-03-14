@@ -39,7 +39,7 @@ His approach is pragmatic: connect strategy, operating model, architecture and e
 
     <div class="career-card">
       <div class="career-logo">
-        <img src="{{ '/assets/images/companies/soldo.png' | relative_url }}" alt="Soldo logo">
+        <img src="{{ '/assets/images/companies/soldo.svg' | relative_url }}" alt="Soldo logo">
       </div>
 
       <div class="career-content">
