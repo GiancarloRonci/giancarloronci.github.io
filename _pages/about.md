@@ -1,8 +1,30 @@
 ---
 permalink: /about/
-title: "About"
+title: "Chi sono"
+author_profile: false
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+## Giancarlo Ronci
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Sono un professionista con esperienza nella leadership di iniziative di Data Management, 
+Data Warehouse, Data Engineering e Analytics.
+
+Il mio obiettivo è aiutare organizzazioni e professionisti a costruire una maggiore maturità 
+nell’uso dei dati, trasformando architetture, processi e competenze in valore concreto per il business.
+
+## Aree di focus
+
+- Data Strategy
+- Data Platform moderne
+- Data Governance e Data Quality
+- Business Intelligence
+- Advanced Analytics e AI Enablement
+
+## Cosa pubblico su questo sito
+
+Su questo sito condivido articoli, riflessioni e casi pratici su:
+
+- architetture dati
+- modelli organizzativi data-driven
+- tecnologie e strumenti analytics
+- roadmap per team e leader del dato
