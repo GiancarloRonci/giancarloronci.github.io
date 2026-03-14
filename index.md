@@ -10,7 +10,7 @@ classes: wide
 
 Italy · Florence / Rome area
 
-For coaching, advisory, speaking or exchanges on Data, Analytics and AI, feel free to reach out on LinkedIn.
+For coaching....., advisory, speaking or exchanges on Data, Analytics and AI, feel free to reach out on LinkedIn.
 
 * * *
 
