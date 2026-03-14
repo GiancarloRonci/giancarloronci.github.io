@@ -4,9 +4,7 @@ title: "Giancarlo Ronci"
 permalink: /
 author_profile: false
 classes: wide
----
-
-# Giancarlo Ronci  
+--- 
 ## Data & Analytics Coach & Advisor
 
 Aiuto aziende e team a trasformare dati, analytics e AI in capacità concrete di business, 
