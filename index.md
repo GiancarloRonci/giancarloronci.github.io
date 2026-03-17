@@ -2,18 +2,12 @@
 layout: single
 title: "Giancarlo Ronci"
 permalink: /
-author_profile: false
-classes: wide
+author_profile: true
 ---
 
-## Data & Analytics Coach & Advisory
+Italy · Milan / Rome area
 
-Italy · Florence / Rome area
-
-For coaching....., advisory, speaking or exchanges on Data, Analytics and AI, feel free to reach out on LinkedIn.
-
-* * *
-
+For coaching, advisory, speaking or exchanges on Data, Analytics and AI, feel free to reach out on LinkedIn.
 ## Bio
 
 Giancarlo Ronci is a senior data leader and advisor with extensive experience in data management, data warehousing, analytics engineering and modern cloud data platforms.

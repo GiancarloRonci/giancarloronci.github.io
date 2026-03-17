@@ -76,3 +76,8 @@
     max-height: 72px;
   }
 }
+
+/* Make top navigation links slightly smaller */
+.masthead__menu-item a {
+  font-size: 0.9rem;
+}
