@@ -1,10 +1,12 @@
 ---
 import ProfileLayout from '../layouts/ProfileLayout.astro';
-import CareerItem from '../components/CareerItem.astro';
+import CareerList from '../components/CareerList.astro';
 import PostList from '../components/PostList.astro';
 import { AUTHOR } from '../consts';
+import { CV } from '../data/cv';
 import { getPublishedPosts } from '../lib/posts';
 
+const cv = CV.en;
 const latestPosts = (await getPublishedPosts('en')).slice(0, 5);
 ---
 
@@ -46,66 +48,13 @@ const latestPosts = (await getPublishedPosts('en')).slice(0, 5);
 
   <h2>Professional Career</h2>
 
-  <div class="career-list">
-    <CareerItem
-      period="Current"
-      title="Head of Data Management & Data Warehouse · Soldo · Italy"
-      logo="/assets/images/companies/soldo.svg"
-      logoAlt="Soldo logo"
-    >
-      <p>
-        Leading initiatives on data platform evolution, data warehouse architecture and analytics enablement in a
-        fintech environment.
-      </p>
-      <ul>
-        <li>Modern cloud data architecture and data warehouse evolution</li>
-        <li>Data engineering, orchestration and near real-time data pipelines</li>
-        <li>Data governance, data quality and analytical data exposure</li>
-      </ul>
-    </CareerItem>
-
-    <CareerItem period="Advisory" title="Data & Analytics Coach & Advisor">
-      <p>
-        Supporting professionals, managers and organizations in strengthening their data capabilities through
-        structured coaching and advisory.
-      </p>
-      <ul>
-        <li>Data Strategy and target operating model</li>
-        <li>Coaching on data leadership, architecture and analytics maturity</li>
-        <li>Practical guidance on BI, ML and AI adoption paths</li>
-      </ul>
-    </CareerItem>
-
-    <CareerItem period="Focus areas" title="Data Platform, Governance and Analytics Transformation">
-      <p>
-        Over the years, Giancarlo has worked across different layers of the data value chain, from modeling and
-        warehousing to analytics delivery and organizational enablement.
-      </p>
-      <ul>
-        <li>Enterprise data warehouse and dimensional / analytical modeling</li>
-        <li>Cloud services and ecosystem integration</li>
-        <li>Business-facing analytics and data-driven decision support</li>
-      </ul>
-    </CareerItem>
-  </div>
+  <CareerList entries={cv.experience} />
 
   <h2>Education</h2>
 
-  <div class="career-list">
-    <CareerItem period="Academic background" title="Engineering, Data and Technology background">
-      <p>
-        Academic and professional development centered on technology, data systems and analytical problem solving,
-        continuously expanded through practical work on platforms, architectures and applied analytics.
-      </p>
-    </CareerItem>
+  <CareerList entries={cv.education} />
 
-    <CareerItem period="Continuous learning" title="Ongoing professional development">
-      <p>
-        Continuous focus on cloud data platforms, data engineering, data governance, machine learning, AI and
-        managerial growth in Data &amp; Analytics leadership.
-      </p>
-    </CareerItem>
-  </div>
+  <p><a href="/cv/">See the full CV →</a></p>
 
   <h2>Selected Articles</h2>
 
@@ -130,16 +79,7 @@ const latestPosts = (await getPublishedPosts('en')).slice(0, 5);
   <h2>Core expertise</h2>
 
   <ul>
-    <li>Data Strategy</li>
-    <li>Data Management</li>
-    <li>Data Warehouse</li>
-    <li>Data Engineering</li>
-    <li>Cloud Data Platforms</li>
-    <li>Data Governance</li>
-    <li>Data Quality</li>
-    <li>Business Intelligence</li>
-    <li>Advanced Analytics</li>
-    <li>AI Enablement</li>
+    {cv.skills.map((skill) => <li>{skill}</li>)}
   </ul>
 
   <h2>Contact</h2>
@@ -148,8 +88,6 @@ const latestPosts = (await getPublishedPosts('en')).slice(0, 5);
     <li>LinkedIn: <a href={AUTHOR.linkedin}>Giancarlo Ronci</a></li>
     <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
     <li>Articles: <a href="/posts/">Posts</a></li>
-    <!-- Riattivare quando il PDF è in public/assets/files/
-    <li>CV: <a href="/assets/files/Giancarlo_Ronci_CV.pdf">Download CV</a></li>
-    -->
+    <li>CV: <a href="/cv/">Curriculum Vitae</a></li>
   </ul>
 </ProfileLayout>

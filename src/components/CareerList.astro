@@ -1,0 +1,28 @@
+---
+// Elenco di esperienze o formazione, dai dati in src/data/cv.ts
+import CareerItem from './CareerItem.astro';
+import type { CvEntry } from '../data/cv';
+
+interface Props {
+  entries: CvEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="career-list">
+  {
+    entries.map((entry) => (
+      <CareerItem period={entry.period} title={entry.title} logo={entry.logo} logoAlt={entry.logoAlt}>
+        <p>{entry.description}</p>
+        {entry.highlights && (
+          <ul>
+            {entry.highlights.map((highlight) => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        )}
+      </CareerItem>
+    ))
+  }
+</div>

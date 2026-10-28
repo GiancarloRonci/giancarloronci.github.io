@@ -25,6 +25,16 @@ export const UI = {
     allPosts: '← Tutti gli articoli',
     updatedOn: 'aggiornato il',
     draft: 'bozza',
+    cv: {
+      title: 'Curriculum Vitae',
+      description: 'Curriculum di Giancarlo Ronci: esperienza, formazione e competenze in Data & Analytics.',
+      intro: 'Esperienza professionale, formazione e competenze principali.',
+      download: 'Scarica il CV (PDF)',
+      experience: 'Esperienza professionale',
+      education: 'Formazione',
+      skills: 'Competenze principali',
+      contact: 'Contatti',
+    },
     dateLocale: 'it-IT',
   },
   en: {
@@ -43,6 +53,16 @@ export const UI = {
     allPosts: '← All articles',
     updatedOn: 'updated on',
     draft: 'draft',
+    cv: {
+      title: 'Curriculum Vitae',
+      description: 'Curriculum of Giancarlo Ronci: experience, education and skills in Data & Analytics.',
+      intro: 'Professional experience, education and core expertise.',
+      download: 'Download CV (PDF)',
+      experience: 'Professional Career',
+      education: 'Education',
+      skills: 'Core expertise',
+      contact: 'Contact',
+    },
     dateLocale: 'en-GB',
   },
 } satisfies Record<Lang, unknown>;

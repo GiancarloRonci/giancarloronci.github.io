@@ -1,0 +1,51 @@
+---
+// Pagina CV nella lingua della pagina
+import fs from 'node:fs';
+import path from 'node:path';
+import ProfileLayout from '../layouts/ProfileLayout.astro';
+import CareerList from './CareerList.astro';
+import { AUTHOR } from '../consts';
+import { CV } from '../data/cv';
+import { getLang, useTranslations } from '../i18n/ui';
+
+const lang = getLang(Astro.currentLocale);
+const t = useTranslations(lang);
+const cv = CV[lang];
+
+// Il PDF si aggiunge mettendo il file in public/: finché non c'è, il pulsante non compare
+const hasPdf = fs.existsSync(path.join(process.cwd(), 'public', cv.pdf));
+---
+
+<ProfileLayout title={t.cv.title} description={t.cv.description}>
+  <h1>{t.cv.title}</h1>
+
+  <p>{t.cv.intro}</p>
+
+  {
+    hasPdf && (
+      <p>
+        <a class="button" href={cv.pdf} download>
+          {t.cv.download}
+        </a>
+      </p>
+    )
+  }
+
+  <h2>{t.cv.experience}</h2>
+  <CareerList entries={cv.experience} />
+
+  <h2>{t.cv.education}</h2>
+  <CareerList entries={cv.education} />
+
+  <h2>{t.cv.skills}</h2>
+  <ul class="tags tags--large">
+    {cv.skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
+  <h2>{t.cv.contact}</h2>
+  <ul>
+    <li>LinkedIn: <a href={AUTHOR.linkedin}>{AUTHOR.name}</a></li>
+    <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
+    <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
+  </ul>
+</ProfileLayout>

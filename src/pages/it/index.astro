@@ -1,10 +1,12 @@
 ---
 import ProfileLayout from '../../layouts/ProfileLayout.astro';
-import CareerItem from '../../components/CareerItem.astro';
+import CareerList from '../../components/CareerList.astro';
 import PostList from '../../components/PostList.astro';
 import { AUTHOR } from '../../consts';
+import { CV } from '../../data/cv';
 import { getPublishedPosts } from '../../lib/posts';
 
+const cv = CV.it;
 const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
 ---
 
@@ -46,66 +48,13 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
 
   <h2>Esperienza professionale</h2>
 
-  <div class="career-list">
-    <CareerItem
-      period="Attuale"
-      title="Head of Data Management & Data Warehouse · Soldo · Italia"
-      logo="/assets/images/companies/soldo.svg"
-      logoAlt="Logo Soldo"
-    >
-      <p>
-        Guida le iniziative di evoluzione della data platform, dell’architettura del data warehouse e
-        dell’analytics enablement in un contesto fintech.
-      </p>
-      <ul>
-        <li>Architettura dati cloud moderna ed evoluzione del data warehouse</li>
-        <li>Data engineering, orchestrazione e pipeline dati near real-time</li>
-        <li>Data governance, data quality ed esposizione dei dati per l’analisi</li>
-      </ul>
-    </CareerItem>
-
-    <CareerItem period="Advisory" title="Data & Analytics Coach & Advisor">
-      <p>
-        Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso
-        percorsi strutturati di coaching e advisory.
-      </p>
-      <ul>
-        <li>Data Strategy e target operating model</li>
-        <li>Coaching su data leadership, architettura e maturità analitica</li>
-        <li>Indicazioni pratiche sui percorsi di adozione di BI, ML e AI</li>
-      </ul>
-    </CareerItem>
-
-    <CareerItem period="Aree di focus" title="Data Platform, Governance e trasformazione Analytics">
-      <p>
-        Negli anni Giancarlo ha lavorato su diversi livelli della catena del valore del dato, dalla modellazione e
-        dal warehousing fino alla delivery degli analytics e all’abilitazione organizzativa.
-      </p>
-      <ul>
-        <li>Enterprise data warehouse e modellazione dimensionale / analitica</li>
-        <li>Servizi cloud e integrazione dell’ecosistema</li>
-        <li>Analytics orientati al business e supporto alle decisioni data-driven</li>
-      </ul>
-    </CareerItem>
-  </div>
+  <CareerList entries={cv.experience} />
 
   <h2>Formazione</h2>
 
-  <div class="career-list">
-    <CareerItem period="Percorso accademico" title="Formazione in ingegneria, dati e tecnologia">
-      <p>
-        Un percorso accademico e professionale incentrato su tecnologia, sistemi dati e problem solving analitico,
-        ampliato nel tempo attraverso il lavoro concreto su piattaforme, architetture e analytics applicati.
-      </p>
-    </CareerItem>
+  <CareerList entries={cv.education} />
 
-    <CareerItem period="Formazione continua" title="Sviluppo professionale continuo">
-      <p>
-        Attenzione costante a data platform cloud, data engineering, data governance, machine learning, AI e crescita
-        manageriale nella leadership Data &amp; Analytics.
-      </p>
-    </CareerItem>
-  </div>
+  <p><a href="/it/cv/">Vedi il CV completo →</a></p>
 
   <h2>Articoli in evidenza</h2>
 
@@ -130,16 +79,7 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
   <h2>Competenze principali</h2>
 
   <ul>
-    <li>Data Strategy</li>
-    <li>Data Management</li>
-    <li>Data Warehouse</li>
-    <li>Data Engineering</li>
-    <li>Cloud Data Platforms</li>
-    <li>Data Governance</li>
-    <li>Data Quality</li>
-    <li>Business Intelligence</li>
-    <li>Advanced Analytics</li>
-    <li>AI Enablement</li>
+    {cv.skills.map((skill) => <li>{skill}</li>)}
   </ul>
 
   <h2>Contatti</h2>
@@ -148,8 +88,6 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
     <li>LinkedIn: <a href={AUTHOR.linkedin}>Giancarlo Ronci</a></li>
     <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
     <li>Articoli: <a href="/it/posts/">Articoli</a></li>
-    <!-- Riattivare quando il PDF è in public/assets/files/
-    <li>CV: <a href="/assets/files/Giancarlo_Ronci_CV.pdf">Scarica il CV</a></li>
-    -->
+    <li>CV: <a href="/it/cv/">Curriculum Vitae</a></li>
   </ul>
 </ProfileLayout>

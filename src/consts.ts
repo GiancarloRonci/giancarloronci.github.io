@@ -13,7 +13,6 @@ export const AUTHOR = {
 export const NAVIGATION = [
   { key: 'home', path: '/' },
   { key: 'posts', path: '/posts/' },
+  { key: 'cv', path: '/cv/' },
   { key: 'about', path: '/about/' },
-  // Riattivare quando il PDF è in public/assets/files/
-  // { key: 'cv', path: '/assets/files/Giancarlo_Ronci_CV.pdf', shared: true },
 ] as const;

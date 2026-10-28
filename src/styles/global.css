@@ -311,6 +311,27 @@ main.container {
   border: 1px solid var(--border);
 }
 
+.tags--large li {
+  padding: 0.25rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background: var(--link);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #fff;
+  background: var(--link-hover);
+}
+
 /* Footer */
 
 .site-footer {

@@ -61,7 +61,7 @@ const isActive = (url: string) => (url === homePath ? currentPath === homePath :
           <ul class="masthead__menu">
             {
               NAVIGATION.map((item) => {
-                const url = 'shared' in item ? item.path : localizePath(item.path, lang);
+                const url = localizePath(item.path, lang);
                 return (
                   <li>
                     <a href={url} aria-current={isActive(url) ? 'page' : undefined}>
