@@ -1,0 +1,54 @@
+---
+// Pagina di un singolo articolo. Se esiste la traduzione, il selettore di lingua punta lì;
+// altrimenti all'elenco articoli dell'altra lingua.
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { LANGUAGES, localizePath, useTranslations, type Lang } from '../i18n/ui';
+import { formatDate, getPostLang, getPostUrl, getTranslation } from '../lib/posts';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const lang = getPostLang(post);
+const t = useTranslations(lang);
+const { Content } = await render(post);
+const { title, description, date, updated, tags } = post.data;
+
+const alternates: Partial<Record<Lang, string>> = {};
+for (const code of Object.keys(LANGUAGES) as Lang[]) {
+  if (code === lang) continue;
+  const translation = await getTranslation(post, code);
+  alternates[code] = translation ? getPostUrl(translation) : localizePath('/posts/', code);
+}
+---
+
+<BaseLayout title={title} description={description} alternates={alternates}>
+  <article class="page__content post">
+    <header class="post__header">
+      <h1>{title}</h1>
+      <p class="post__meta">
+        <time datetime={date.toISOString()}>{formatDate(date, lang)}</time>
+        {
+          updated && (
+            <>
+              · {t.updatedOn} <time datetime={updated.toISOString()}>{formatDate(updated, lang)}</time>
+            </>
+          )
+        }
+      </p>
+      {
+        tags.length > 0 && (
+          <ul class="tags">
+            {tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+    <Content />
+    <p class="post__back"><a href={localizePath('/posts/', lang)}>{t.allPosts}</a></p>
+  </article>
+</BaseLayout>

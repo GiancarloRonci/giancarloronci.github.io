@@ -1,0 +1,27 @@
+---
+// Elenco articoli raggruppato per anno, nella lingua della pagina
+import ProfileLayout from '../layouts/ProfileLayout.astro';
+import PostList from './PostList.astro';
+import { getLang, useTranslations } from '../i18n/ui';
+import { getPublishedPosts } from '../lib/posts';
+
+const lang = getLang(Astro.currentLocale);
+const t = useTranslations(lang);
+const posts = await getPublishedPosts(lang);
+
+// Raggruppa per anno; l'ordine (dal più recente) viene da getPublishedPosts
+const byYear = Map.groupBy(posts, (post) => post.data.date.getFullYear());
+---
+
+<ProfileLayout title={t.postsTitle} description={t.postsDescription}>
+  <h1>{t.postsTitle}</h1>
+  {posts.length === 0 && <p>{t.noPosts}</p>}
+  {
+    [...byYear].map(([year, yearPosts]) => (
+      <section>
+        <h2>{year}</h2>
+        <PostList posts={yearPosts} />
+      </section>
+    ))
+  }
+</ProfileLayout>

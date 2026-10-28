@@ -1,0 +1,155 @@
+---
+import ProfileLayout from '../../layouts/ProfileLayout.astro';
+import CareerItem from '../../components/CareerItem.astro';
+import PostList from '../../components/PostList.astro';
+import { AUTHOR } from '../../consts';
+import { getPublishedPosts } from '../../lib/posts';
+
+const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
+---
+
+<ProfileLayout>
+  <h1>Giancarlo Ronci</h1>
+
+  <p>Italia · Milano / Roma</p>
+
+  <p>
+    Per coaching, advisory, interventi come speaker o semplicemente per un confronto su Data, Analytics e AI,
+    contattami su <a href={AUTHOR.linkedin}>LinkedIn</a>.
+  </p>
+
+  <h2>Bio</h2>
+
+  <p>
+    Giancarlo Ronci è un data leader e advisor con una lunga esperienza in data management, data warehousing,
+    analytics engineering e piattaforme dati cloud moderne.
+  </p>
+  <p>
+    Lavora all’incrocio tra business, architettura e delivery, aiutando le organizzazioni a trasformare i dati in
+    capacità operative concrete. Il suo percorso unisce esperienza diretta nella progettazione di data warehouse,
+    pipeline streaming e batch, data governance, data quality e analytics enablement.
+  </p>
+  <p>
+    Il suo approccio è pragmatico: collegare strategia, modello operativo, architettura ed esecuzione per generare
+    valore di business misurabile.
+  </p>
+
+  <h2>Principali aree di attività</h2>
+
+  <ul>
+    <li>Costruzione ed evoluzione di data platform moderne</li>
+    <li>Definizione di Data Strategy e modelli operativi pragmatici</li>
+    <li>Rafforzamento delle capacità di Data Governance e Data Quality</li>
+    <li>Abilitazione di Business Intelligence, Advanced Analytics e adozione dell’AI</li>
+    <li>Coaching di professionisti e team sulla leadership in ambito Data &amp; Analytics</li>
+  </ul>
+
+  <h2>Esperienza professionale</h2>
+
+  <div class="career-list">
+    <CareerItem
+      period="Attuale"
+      title="Head of Data Management & Data Warehouse · Soldo · Italia"
+      logo="/assets/images/companies/soldo.svg"
+      logoAlt="Logo Soldo"
+    >
+      <p>
+        Guida le iniziative di evoluzione della data platform, dell’architettura del data warehouse e
+        dell’analytics enablement in un contesto fintech.
+      </p>
+      <ul>
+        <li>Architettura dati cloud moderna ed evoluzione del data warehouse</li>
+        <li>Data engineering, orchestrazione e pipeline dati near real-time</li>
+        <li>Data governance, data quality ed esposizione dei dati per l’analisi</li>
+      </ul>
+    </CareerItem>
+
+    <CareerItem period="Advisory" title="Data & Analytics Coach & Advisor">
+      <p>
+        Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso
+        percorsi strutturati di coaching e advisory.
+      </p>
+      <ul>
+        <li>Data Strategy e target operating model</li>
+        <li>Coaching su data leadership, architettura e maturità analitica</li>
+        <li>Indicazioni pratiche sui percorsi di adozione di BI, ML e AI</li>
+      </ul>
+    </CareerItem>
+
+    <CareerItem period="Aree di focus" title="Data Platform, Governance e trasformazione Analytics">
+      <p>
+        Negli anni Giancarlo ha lavorato su diversi livelli della catena del valore del dato, dalla modellazione e
+        dal warehousing fino alla delivery degli analytics e all’abilitazione organizzativa.
+      </p>
+      <ul>
+        <li>Enterprise data warehouse e modellazione dimensionale / analitica</li>
+        <li>Servizi cloud e integrazione dell’ecosistema</li>
+        <li>Analytics orientati al business e supporto alle decisioni data-driven</li>
+      </ul>
+    </CareerItem>
+  </div>
+
+  <h2>Formazione</h2>
+
+  <div class="career-list">
+    <CareerItem period="Percorso accademico" title="Formazione in ingegneria, dati e tecnologia">
+      <p>
+        Un percorso accademico e professionale incentrato su tecnologia, sistemi dati e problem solving analitico,
+        ampliato nel tempo attraverso il lavoro concreto su piattaforme, architetture e analytics applicati.
+      </p>
+    </CareerItem>
+
+    <CareerItem period="Formazione continua" title="Sviluppo professionale continuo">
+      <p>
+        Attenzione costante a data platform cloud, data engineering, data governance, machine learning, AI e crescita
+        manageriale nella leadership Data &amp; Analytics.
+      </p>
+    </CareerItem>
+  </div>
+
+  <h2>Articoli in evidenza</h2>
+
+  <p>Una selezione di articoli e riflessioni su data platform, governance, strategia analytics e adozione dell’AI.</p>
+
+  {
+    latestPosts.length > 0 ? (
+      <PostList posts={latestPosts} />
+    ) : (
+      <ul>
+        <li>Modern Data Platform: dall’architettura al modello operativo</li>
+        <li>Data Warehouse, Data Lake e Lakehouse: quando ha senso ciascuno</li>
+        <li>Data Governance nella pratica: come passare dalla teoria all’esecuzione</li>
+        <li>Analytics near real-time: opportunità, compromessi e scelte architetturali</li>
+        <li>Adozione dell’AI nelle organizzazioni: dove il valore è reale e dove no</li>
+      </ul>
+    )
+  }
+
+  <p>Trovi altri articoli nella sezione <a href="/it/posts/">Articoli</a>.</p>
+
+  <h2>Competenze principali</h2>
+
+  <ul>
+    <li>Data Strategy</li>
+    <li>Data Management</li>
+    <li>Data Warehouse</li>
+    <li>Data Engineering</li>
+    <li>Cloud Data Platforms</li>
+    <li>Data Governance</li>
+    <li>Data Quality</li>
+    <li>Business Intelligence</li>
+    <li>Advanced Analytics</li>
+    <li>AI Enablement</li>
+  </ul>
+
+  <h2>Contatti</h2>
+
+  <ul>
+    <li>LinkedIn: <a href={AUTHOR.linkedin}>Giancarlo Ronci</a></li>
+    <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
+    <li>Articoli: <a href="/it/posts/">Articoli</a></li>
+    <!-- Riattivare quando il PDF è in public/assets/files/
+    <li>CV: <a href="/assets/files/Giancarlo_Ronci_CV.pdf">Scarica il CV</a></li>
+    -->
+  </ul>
+</ProfileLayout>

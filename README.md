@@ -11,20 +11,33 @@ Sito personale di Giancarlo Ronci, costruito con [Astro](https://astro.build) e 
 | `npm run build`   | Genera il sito statico in `dist/`                              |
 | `npm run preview` | Mostra in locale la build di produzione                        |
 
+## Lingue
+
+Il sito è in inglese (lingua principale, indirizzi senza prefisso: `/about/`) e in italiano
+(indirizzi sotto `/it/`: `/it/about/`). Il selettore EN/IT nel menu porta alla stessa pagina nell'altra lingua.
+
 ## Dove modificare i contenuti
+
+| Cosa                                    | Inglese                        | Italiano                          |
+| --------------------------------------- | ------------------------------ | --------------------------------- |
+| Home (bio, carriera, formazione)        | `src/pages/index.astro`        | `src/pages/it/index.astro`        |
+| Pagina "About" / "Chi sono"             | `src/pages/about.md`           | `src/pages/it/about.md`           |
+| Articoli                                | `src/content/posts/en/*.md`    | `src/content/posts/it/*.md`       |
+| Menu, profilo, etichette                | `src/i18n/ui.ts` (`en`)        | `src/i18n/ui.ts` (`it`)           |
+
+Comuni alle due lingue:
 
 | Cosa                                    | File                                    |
 | --------------------------------------- | --------------------------------------- |
-| Home (bio, carriera, formazione)        | `src/pages/index.astro`                 |
-| Pagina "Chi sono"                       | `src/pages/about.md`                    |
-| Articoli                                | `src/content/posts/*.md`                |
-| Menu, contatti, dati dell'autore        | `src/consts.ts`                         |
+| Voci del menu, contatti, link social    | `src/consts.ts`                         |
 | Stili                                   | `src/styles/global.css`                 |
 | Immagini e file scaricabili (es. CV)    | `public/assets/`                        |
 
+Se modifichi un testo in una lingua, ricordati di aggiornare anche l'altra.
+
 ### Nuovo articolo
 
-Duplica `src/content/posts/esempio-articolo.md` e compila l'intestazione:
+Duplica `src/content/posts/en/esempio-articolo.md` (o la versione in `it/`) e compila l'intestazione:
 
 ```yaml
 ---
@@ -36,8 +49,13 @@ draft: false
 ---
 ```
 
-Il nome del file diventa l'indirizzo: `src/content/posts/data-mesh.md` → `/posts/data-mesh/`.
+Il nome del file diventa l'indirizzo: `src/content/posts/en/data-mesh.md` → `/posts/data-mesh/`,
+`src/content/posts/it/data-mesh.md` → `/it/posts/data-mesh/`.
 Con `draft: true` l'articolo si vede solo con `npm run dev`.
+
+**Traduzioni:** due file con lo stesso nome in `en/` e `it/` sono lo stesso articolo nelle due lingue, e il
+selettore EN/IT li collega. Un articolo può anche esistere in una sola lingua: in quel caso il selettore
+porta all'elenco articoli dell'altra lingua.
 
 ## Pubblicazione
 

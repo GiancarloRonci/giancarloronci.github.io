@@ -1,10 +1,13 @@
 ---
+// GitHub Pages serve un'unica 404 per tutto il sito, quindi il messaggio è in entrambe le lingue
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Pagina non trovata">
+<BaseLayout title="Page not found · Pagina non trovata" alternates={{ it: '/it/' }}>
   <article class="page__content">
-    <h1>Pagina non trovata</h1>
-    <p>La pagina che cerchi non esiste. Torna alla <a href="/">home</a>.</p>
+    <h1>Page not found</h1>
+    <p>The page you are looking for does not exist. Go back to the <a href="/">home page</a>.</p>
+    <h2 lang="it">Pagina non trovata</h2>
+    <p lang="it">La pagina che cerchi non esiste. Torna alla <a href="/it/">home</a>.</p>
   </article>
 </BaseLayout>

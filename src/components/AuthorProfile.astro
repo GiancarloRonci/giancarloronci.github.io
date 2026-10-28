@@ -1,14 +1,17 @@
 ---
 import { AUTHOR } from '../consts';
+import { getLang, useTranslations } from '../i18n/ui';
+
+const t = useTranslations(getLang(Astro.currentLocale));
 ---
 
 <aside class="author-profile">
   <img class="author-profile__avatar" src={AUTHOR.avatar} alt={AUTHOR.name} width="140" height="140" />
   <div>
     <h2 class="author-profile__name">{AUTHOR.name}</h2>
-    <p class="author-profile__bio">{AUTHOR.bio}</p>
+    <p class="author-profile__bio">{t.bio}</p>
     <ul class="author-profile__links">
-      <li>{AUTHOR.location}</li>
+      <li>{t.location}</li>
       <li><a href={AUTHOR.linkedin} rel="noopener">LinkedIn</a></li>
       <li><a href={AUTHOR.github} rel="noopener">GitHub</a></li>
       <li><a href={`mailto:${AUTHOR.email}`}>Email</a></li>

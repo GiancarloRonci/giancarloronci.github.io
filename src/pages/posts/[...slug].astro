@@ -1,43 +1,13 @@
 ---
-import { render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatDate, getPublishedPosts } from '../../lib/posts';
+import PostPage from '../../components/PostPage.astro';
+import { getPostSlug, getPublishedPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = await getPublishedPosts();
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  const posts = await getPublishedPosts('en');
+  return posts.map((post) => ({ params: { slug: getPostSlug(post) }, props: { post } }));
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
-const { title, description, date, updated, tags } = post.data;
 ---
 
-<BaseLayout title={title} description={description}>
-  <article class="page__content post">
-    <header class="post__header">
-      <h1>{title}</h1>
-      <p class="post__meta">
-        <time datetime={date.toISOString()}>{formatDate(date)}</time>
-        {
-          updated && (
-            <>
-              · aggiornato il <time datetime={updated.toISOString()}>{formatDate(updated)}</time>
-            </>
-          )
-        }
-      </p>
-      {
-        tags.length > 0 && (
-          <ul class="tags">
-            {tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul>
-        )
-      }
-    </header>
-    <Content />
-    <p class="post__back"><a href="/posts/">← Tutti gli articoli</a></p>
-  </article>
-</BaseLayout>
+<PostPage post={post} />

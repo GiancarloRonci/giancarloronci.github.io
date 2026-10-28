@@ -1,10 +1,10 @@
 ---
-// Layout per le pagine scritte in Markdown dentro src/pages/ (es. about.md)
+// Layout per le pagine scritte in Markdown dentro src/pages/ (es. about.md, en/about.md)
 import ProfileLayout from './ProfileLayout.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
-<ProfileLayout title={frontmatter.title} description={frontmatter.description} lang={frontmatter.lang}>
+<ProfileLayout title={frontmatter.title} description={frontmatter.description}>
   <slot />
 </ProfileLayout>

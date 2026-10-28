@@ -6,13 +6,12 @@ import AuthorProfile from '../components/AuthorProfile.astro';
 interface Props {
   title?: string;
   description?: string;
-  lang?: string;
 }
 
-const { title, description, lang } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} lang={lang}>
+<BaseLayout title={title} description={description}>
   <div class="layout--profile">
     <AuthorProfile />
     <article class="page__content">

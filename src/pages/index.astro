@@ -5,13 +5,13 @@ import PostList from '../components/PostList.astro';
 import { AUTHOR } from '../consts';
 import { getPublishedPosts } from '../lib/posts';
 
-const latestPosts = (await getPublishedPosts()).slice(0, 5);
+const latestPosts = (await getPublishedPosts('en')).slice(0, 5);
 ---
 
-<ProfileLayout lang="en">
+<ProfileLayout>
   <h1>Giancarlo Ronci</h1>
 
-  <p>{AUTHOR.location}</p>
+  <p>Italy · Milan / Rome area</p>
 
   <p>
     For coaching, advisory, speaking or exchanges on Data, Analytics and AI, feel free to reach out on
