@@ -10,17 +10,18 @@ export const DEFAULT_LANG: Lang = 'en';
 // Testi dell'interfaccia (menu, profilo, etichette). I contenuti delle pagine stanno nei rispettivi file.
 export const UI = {
   it: {
-    tagline: 'Data & Analytics Coaching and Advisory',
+    tagline: 'Blog su Data Analytics e AI',
     description:
-      'Architetture, strumenti, concetti, tecniche e strategie per massimizzare l’impatto di Data e Analytics sul business.',
+      'Un blog sulla Data Analytics e sul rapporto tra AI e Data Analytics: architetture, pratiche e strategie per trasformare i dati in valore per il business.',
     bio: 'Data & Analytics Coach e Advisor',
     location: 'Italia · Milano / Roma',
     navLabel: 'Navigazione principale',
-    nav: { home: 'Home', posts: 'Articoli', about: 'Chi sono', cv: 'CV' },
+    nav: { home: 'Home', posts: 'Blog', about: 'Chi sono', cv: 'CV' },
     switchTo: 'Leggi in italiano',
     rss: 'Feed RSS',
-    postsTitle: 'Articoli',
-    postsDescription: 'Articoli e riflessioni su Data, Analytics e AI.',
+    postsTitle: 'Blog',
+    postsDescription:
+      'Articoli sulla Data Analytics e sul rapporto tra AI e Data Analytics: come l’AI cambia il modo di analizzare i dati, e quali dati servono perché l’AI generi valore.',
     noPosts: 'Nessun articolo pubblicato, per ora.',
     allPosts: '← Tutti gli articoli',
     updatedOn: 'aggiornato il',
@@ -38,17 +39,18 @@ export const UI = {
     dateLocale: 'it-IT',
   },
   en: {
-    tagline: 'Data & Analytics Coaching and Advisory',
+    tagline: 'Data Analytics & AI Blog',
     description:
-      'Architectures, Tools, Concepts, Techniques and Strategies for Optimizing the Impact of Data and Analytics on Business.',
+      'A blog on Data Analytics and on the relationship between AI and Data Analytics: architectures, practices and strategies to turn data into business value.',
     bio: 'Data & Analytics Coach and Advisor',
     location: 'Italy · Milan / Rome area',
     navLabel: 'Main navigation',
-    nav: { home: 'Home', posts: 'Articles', about: 'About', cv: 'CV' },
+    nav: { home: 'Home', posts: 'Blog', about: 'About', cv: 'CV' },
     switchTo: 'Read in English',
     rss: 'RSS feed',
-    postsTitle: 'Articles',
-    postsDescription: 'Articles and reflections on Data, Analytics and AI.',
+    postsTitle: 'Blog',
+    postsDescription:
+      'Articles on Data Analytics and on the relationship between AI and Data Analytics: how AI changes the way we analyse data, and what data AI needs to deliver value.',
     noPosts: 'No articles published yet.',
     allPosts: '← All articles',
     updatedOn: 'updated on',

@@ -20,11 +20,17 @@ nell’uso dei dati, trasformando architetture, processi e competenze in valore 
 - Business Intelligence
 - Advanced Analytics e AI Enablement
 
-## Cosa pubblico su questo sito
+## Questo blog
 
-Su questo sito condivido articoli, riflessioni e casi pratici su:
+Questo sito è un blog sulla **Data Analytics** e sul rapporto tra **AI e Data Analytics**.
+L’AI sta cambiando il modo di analizzare i dati e, allo stesso tempo, genera valore solo se poggia su
+dati solidi e ben governati: questo blog esplora entrambe le direzioni.
 
-- architetture dati
-- modelli organizzativi data-driven
-- tecnologie e strumenti analytics
-- roadmap per team e leader del dato
+Condivido articoli, riflessioni e casi pratici su:
+
+- architetture dati e data platform moderne
+- AI applicata alla Data Analytics e ai processi decisionali
+- le basi dati, la governance e la qualità di cui l’AI ha bisogno
+- modelli organizzativi data-driven e roadmap per team e leader del dato
+
+Leggi gli articoli nella sezione [Blog](/it/posts/).

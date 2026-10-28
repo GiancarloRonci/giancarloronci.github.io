@@ -15,6 +15,7 @@ const byYear = Map.groupBy(posts, (post) => post.data.date.getFullYear());
 
 <ProfileLayout title={t.postsTitle} description={t.postsDescription}>
   <h1>{t.postsTitle}</h1>
+  <p>{t.postsDescription}</p>
   {posts.length === 0 && <p>{t.noPosts}</p>}
   {
     [...byYear].map(([year, yearPosts]) => (

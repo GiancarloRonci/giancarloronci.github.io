@@ -16,9 +16,40 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
   <p>Italia · Milano / Roma</p>
 
   <p>
-    Per coaching, advisory, interventi come speaker o semplicemente per un confronto su Data, Analytics e AI,
-    contattami su <a href={AUTHOR.linkedin}>LinkedIn</a>.
+    Benvenuto nel mio blog sulla <strong>Data Analytics</strong> e sul rapporto tra
+    <strong>AI e Data Analytics</strong>. Qui condivido articoli, riflessioni e casi pratici nati da anni di lavoro
+    su data platform, data warehousing e analytics.
   </p>
+
+  <p>I temi di cui scrivo:</p>
+
+  <ul>
+    <li><strong>Data Analytics nella pratica</strong>: piattaforme, architetture, modellazione dei dati e delivery degli analytics</li>
+    <li><strong>AI per la Data Analytics</strong>: come l’AI sta cambiando il modo di analizzare i dati e di prendere decisioni</li>
+    <li><strong>Dati per l’AI</strong>: le basi dati, la governance e la qualità di cui l’AI ha bisogno per generare valore</li>
+    <li><strong>Strategia e organizzazione</strong>: modelli operativi, ruoli e roadmap per team data-driven</li>
+  </ul>
+
+  <h2>Ultimi articoli</h2>
+
+  {
+    latestPosts.length > 0 ? (
+      <PostList posts={latestPosts} />
+    ) : (
+      <>
+        <p>I primi articoli sono in arrivo. Prossimamente:</p>
+        <ul>
+          <li>Modern Data Platform: dall’architettura al modello operativo</li>
+          <li>Data Warehouse, Data Lake e Lakehouse: quando ha senso ciascuno</li>
+          <li>Data Governance nella pratica: come passare dalla teoria all’esecuzione</li>
+          <li>Analytics near real-time: opportunità, compromessi e scelte architetturali</li>
+          <li>Adozione dell’AI nelle organizzazioni: dove il valore è reale e dove no</li>
+        </ul>
+      </>
+    )
+  }
+
+  <p>Tutti gli articoli sono nella sezione <a href="/it/posts/">Blog</a>.</p>
 
   <h2>Bio</h2>
 
@@ -56,26 +87,6 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
 
   <p><a href="/it/cv/">Vedi il CV completo →</a></p>
 
-  <h2>Articoli in evidenza</h2>
-
-  <p>Una selezione di articoli e riflessioni su data platform, governance, strategia analytics e adozione dell’AI.</p>
-
-  {
-    latestPosts.length > 0 ? (
-      <PostList posts={latestPosts} />
-    ) : (
-      <ul>
-        <li>Modern Data Platform: dall’architettura al modello operativo</li>
-        <li>Data Warehouse, Data Lake e Lakehouse: quando ha senso ciascuno</li>
-        <li>Data Governance nella pratica: come passare dalla teoria all’esecuzione</li>
-        <li>Analytics near real-time: opportunità, compromessi e scelte architetturali</li>
-        <li>Adozione dell’AI nelle organizzazioni: dove il valore è reale e dove no</li>
-      </ul>
-    )
-  }
-
-  <p>Trovi altri articoli nella sezione <a href="/it/posts/">Articoli</a>.</p>
-
   <h2>Competenze principali</h2>
 
   <ul>
@@ -87,7 +98,12 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
   <ul>
     <li>LinkedIn: <a href={AUTHOR.linkedin}>Giancarlo Ronci</a></li>
     <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
-    <li>Articoli: <a href="/it/posts/">Articoli</a></li>
+    <li>Blog: <a href="/it/posts/">Articoli</a></li>
     <li>CV: <a href="/it/cv/">Curriculum Vitae</a></li>
   </ul>
+
+  <p>
+    Per coaching, advisory, interventi come speaker o semplicemente per un confronto su Data, Analytics e AI,
+    contattami su <a href={AUTHOR.linkedin}>LinkedIn</a>.
+  </p>
 </ProfileLayout>
