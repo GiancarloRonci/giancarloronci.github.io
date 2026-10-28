@@ -1,28 +1,44 @@
-# Minimal Mistakes remote theme starter
+# giancarloronci.github.io
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+Sito personale di Giancarlo Ronci, costruito con [Astro](https://astro.build) e pubblicato su GitHub Pages.
 
-Contains basic configuration to get you a site with:
+## Comandi
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+| Comando           | Cosa fa                                                        |
+| ----------------- | -------------------------------------------------------------- |
+| `npm install`     | Installa le dipendenze (la prima volta)                        |
+| `npm run dev`     | Avvia il sito in locale su http://localhost:4321, bozze incluse |
+| `npm run build`   | Genera il sito statico in `dist/`                              |
+| `npm run preview` | Mostra in locale la build di produzione                        |
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+## Dove modificare i contenuti
 
+| Cosa                                    | File                                    |
+| --------------------------------------- | --------------------------------------- |
+| Home (bio, carriera, formazione)        | `src/pages/index.astro`                 |
+| Pagina "Chi sono"                       | `src/pages/about.md`                    |
+| Articoli                                | `src/content/posts/*.md`                |
+| Menu, contatti, dati dell'autore        | `src/consts.ts`                         |
+| Stili                                   | `src/styles/global.css`                 |
+| Immagini e file scaricabili (es. CV)    | `public/assets/`                        |
+
+### Nuovo articolo
+
+Duplica `src/content/posts/esempio-articolo.md` e compila l'intestazione:
+
+```yaml
 ---
+title: "Titolo"
+description: "Sintesi di una riga"
+date: 2026-10-28
+tags: ["Data Governance"]
+draft: false
+---
+```
 
-## Troubleshooting
+Il nome del file diventa l'indirizzo: `src/content/posts/data-mesh.md` → `/posts/data-mesh/`.
+Con `draft: true` l'articolo si vede solo con `npm run dev`.
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+## Pubblicazione
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
-GitHub Pages deployment test
+Ogni push su `master` avvia il workflow `.github/workflows/deploy.yml`, che esegue la build e pubblica su GitHub Pages.

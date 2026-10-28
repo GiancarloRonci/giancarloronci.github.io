@@ -1,9 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Articoli"
-    url: /posts/
-  - title: "Chi sono"
-    url: /about/
-  - title: "CV"
-    url: /assets/files/Giancarlo_Ronci_CV.pdf

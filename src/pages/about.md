@@ -1,15 +1,15 @@
 ---
-permalink: /about/
+layout: ../layouts/MarkdownPage.astro
 title: "Chi sono"
-author_profile: false
+description: "Giancarlo Ronci: Data Management, Data Warehouse, Data Engineering e Analytics."
 ---
 
 ## Giancarlo Ronci
 
-Sono un professionista con esperienza nella leadership di iniziative di Data Management, 
+Sono un professionista con esperienza nella leadership di iniziative di Data Management,
 Data Warehouse, Data Engineering e Analytics.
 
-Il mio obiettivo è aiutare organizzazioni e professionisti a costruire una maggiore maturità 
+Il mio obiettivo è aiutare organizzazioni e professionisti a costruire una maggiore maturità
 nell’uso dei dati, trasformando architetture, processi e competenze in valore concreto per il business.
 
 ## Aree di focus

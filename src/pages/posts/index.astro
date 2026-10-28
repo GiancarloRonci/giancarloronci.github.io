@@ -1,0 +1,23 @@
+---
+import ProfileLayout from '../../layouts/ProfileLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { getPublishedPosts } from '../../lib/posts';
+
+const posts = await getPublishedPosts();
+
+// Raggruppa per anno; l'ordine (dal più recente) viene da getPublishedPosts
+const byYear = Map.groupBy(posts, (post) => post.data.date.getFullYear());
+---
+
+<ProfileLayout title="Articoli" description="Articoli e riflessioni su Data, Analytics e AI.">
+  <h1>Articoli</h1>
+  {posts.length === 0 && <p>Nessun articolo pubblicato, per ora.</p>}
+  {
+    [...byYear].map(([year, yearPosts]) => (
+      <section>
+        <h2>{year}</h2>
+        <PostList posts={yearPosts} />
+      </section>
+    ))
+  }
+</ProfileLayout>

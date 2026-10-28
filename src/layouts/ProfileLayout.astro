@@ -1,0 +1,22 @@
+---
+// Pagina con profilo autore a lato (come l'author_profile di Minimal Mistakes)
+import BaseLayout from './BaseLayout.astro';
+import AuthorProfile from '../components/AuthorProfile.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+
+const { title, description, lang } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+  <div class="layout--profile">
+    <AuthorProfile />
+    <article class="page__content">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

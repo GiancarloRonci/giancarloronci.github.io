@@ -1,0 +1,28 @@
+---
+// Card della sezione carriera / formazione. Il contenuto (descrizione ed elenco) va nello slot.
+interface Props {
+  period: string;
+  title: string;
+  logo?: string;
+  logoAlt?: string;
+}
+
+const { period, title, logo, logoAlt = '' } = Astro.props;
+---
+
+<div class="career-item">
+  <div class="career-period">{period}</div>
+  <div class="career-card">
+    {
+      logo && (
+        <div class="career-logo">
+          <img src={logo} alt={logoAlt} />
+        </div>
+      )
+    }
+    <div class="career-content">
+      <h3>{title}</h3>
+      <slot />
+    </div>
+  </div>
+</div>

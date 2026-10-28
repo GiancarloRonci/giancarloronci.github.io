@@ -1,0 +1,10 @@
+---
+// Layout per le pagine scritte in Markdown dentro src/pages/ (es. about.md)
+import ProfileLayout from './ProfileLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<ProfileLayout title={frontmatter.title} description={frontmatter.description} lang={frontmatter.lang}>
+  <slot />
+</ProfileLayout>
