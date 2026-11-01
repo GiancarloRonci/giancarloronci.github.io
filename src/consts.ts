@@ -4,6 +4,7 @@ export const AUTHOR = {
   name: 'Giancarlo Ronci',
   avatar: '/assets/images/MyPic.jpeg',
   email: 'giancarlo.ronci@gmail.com',
+  phone: '+39 331 828 0118',
   linkedin: 'https://www.linkedin.com/in/roncigiancarlo/',
   github: 'https://github.com/GiancarloRonci',
 };

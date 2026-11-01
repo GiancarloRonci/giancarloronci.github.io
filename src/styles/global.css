@@ -420,6 +420,20 @@ main.container {
     margin: 0;
   }
 
+  .cv-print-header {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .cv-print-photo {
+    flex: none;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
   .print-only .cv-print-name {
     font-size: 1.9rem;
     font-weight: 700;

@@ -14,10 +14,14 @@ const cv = CV[lang];
 
 <ProfileLayout title={t.cv.title} description={t.cv.description}>
   <!-- Intestazione del PDF: a schermo nome e contatti sono nel profilo a lato -->
-  <div class="print-only">
-    <p class="cv-print-name">{AUTHOR.name}</p>
-    <p>{t.bio} · {t.location}</p>
-    <p>{AUTHOR.email} · {AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</p>
+  <div class="print-only cv-print-header">
+    <img class="cv-print-photo" src={AUTHOR.avatar} alt={AUTHOR.name} />
+    <div>
+      <p class="cv-print-name">{AUTHOR.name}</p>
+      <p>{t.bio} · {t.location}</p>
+      <p>{AUTHOR.email} · {AUTHOR.phone}</p>
+      <p>{AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</p>
+    </div>
   </div>
 
   <h1>{t.cv.title}</h1>
@@ -60,6 +64,7 @@ const cv = CV[lang];
       <li>LinkedIn: <a href={AUTHOR.linkedin}>{AUTHOR.name}</a></li>
       <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
       <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
+      <li>{t.cv.phone}: <a href={`tel:${AUTHOR.phone.replaceAll(' ', '')}`}>{AUTHOR.phone}</a></li>
     </ul>
   </div>
 </ProfileLayout>
