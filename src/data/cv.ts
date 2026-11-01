@@ -186,6 +186,7 @@ export const CV: Record<Lang, Cv> = {
         highlights: [
           'Planning and evolution of the company Data Warehouse, with scalable solutions that optimize data accessibility and performance',
           'Design and maintenance of the data platform architecture (Data Lake, Data Warehouse, Lakehouse) on AWS and Databricks',
+          'Leading the choice of technologies and architectural patterns (batch, streaming, lambda/kappa architecture, medallion architecture) based on business requirements',
           'Identifying the metrics that matter most to the business and defining the related KPIs',
           'Partnering with product teams, designing systems and databases that serve the core product',
           'Bridge between technical teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions',
@@ -348,6 +349,7 @@ export const CV: Record<Lang, Cv> = {
         highlights: [
           'Pianificazione ed evoluzione del Data Warehouse aziendale, con soluzioni scalabili che ottimizzano accessibilità dei dati e prestazioni',
           'Progettazione e mantenimento dell’architettura della piattaforma dati (Data Lake, Data Warehouse, Lakehouse) su AWS e Databricks',
+          'Guida nella scelta delle tecnologie e dei pattern architetturali (batch, streaming, lambda/kappa architecture, medallion architecture) in base ai requisiti di business',
           'Individuazione delle metriche più significative per il business e definizione dei relativi KPI',
           'Collaborazione con i team di prodotto, con la progettazione di sistemi e database a disposizione del core product',
           'Raccordo tra team tecnici e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche',
