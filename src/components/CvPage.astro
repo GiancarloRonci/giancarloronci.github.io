@@ -70,12 +70,15 @@ const cv = CV[lang];
 </ProfileLayout>
 
 <script>
-  // Il titolo del documento diventa il nome proposto per il file PDF
+  // Il titolo del documento diventa il nome proposto per il file PDF, con la data del salvataggio (YYYYMMDD)
   const button = document.querySelector<HTMLButtonElement>('[data-print-cv]');
 
   button?.addEventListener('click', () => {
     const title = document.title;
-    document.title = button.dataset.printCv ?? title;
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    document.title = `${button.dataset.printCv}_${now.getFullYear()}${month}${day}`;
     window.addEventListener('afterprint', () => (document.title = title), { once: true });
     window.print();
   });
