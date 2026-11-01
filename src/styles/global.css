@@ -197,10 +197,14 @@ main.container {
   margin-bottom: 2.5rem;
 }
 
+/* Niente sfondi per dare enfasi: nel PDF il browser di norma non li stampa, testo e bordi sì */
 .career-period {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text-muted);
+  padding-left: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--link-hover);
+  border-left: 4px solid var(--link);
   margin-bottom: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -474,7 +478,7 @@ main.container {
   }
 
   .career-period {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.35rem;
     break-after: avoid;
   }
 
