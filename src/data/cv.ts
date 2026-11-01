@@ -7,15 +7,24 @@ import type { Lang } from '../i18n/ui';
 export interface CvEntry {
   period: string;
   title: string;
-  description: string;
+  description?: string;
+  // highlights e technologies si vedono solo nella pagina CV, la home mostra la versione compatta
   highlights?: string[];
+  technologies?: string[];
   logo?: string;
   logoAlt?: string;
+}
+
+export interface CvExpertise {
+  title: string;
+  description: string;
 }
 
 export interface Cv {
   // PDF scaricabile, in public/. Il pulsante di download compare solo se il file esiste.
   pdf: string;
+  summary: string[];
+  expertise: CvExpertise[];
   experience: CvEntry[];
   education: CvEntry[];
   skills: string[];
@@ -34,22 +43,129 @@ const SKILLS = [
   'AI Enablement',
 ];
 
+// Le tecnologie non si traducono: sono condivise tra le due lingue
+const TECH = {
+  soldo: [
+    'AWS',
+    'Amazon Redshift',
+    'MySQL Aurora',
+    'MySQL',
+    'Pentaho Kettle',
+    'Stored Procedures',
+    'Tableau',
+    'SOS Berlin Job Scheduler',
+    'Python',
+    'R',
+    'XGBoost',
+    'Decision Trees',
+    'TensorFlow',
+    'Agile (Scrum)',
+    'Jira',
+  ],
+  altran: [
+    'Teradata',
+    'SQL Server',
+    'Oracle',
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'IBM DataStage',
+    'Pentaho Kettle',
+    'SAS Visual Analytics',
+    'Microsoft Power BI',
+    'SSRS',
+    'SAS Data Federation',
+    'Teradata QueryGrid',
+    'Erwin Data Modeler',
+    'T-SQL',
+    'REST API',
+    'JSON',
+    'Apache HDFS',
+    'Apache Kafka',
+    'Apache Spark',
+    'Unix',
+    'Linux',
+    'Windows',
+  ],
+  nttData: [
+    'Oracle (PL/SQL)',
+    'Oracle Data Integrator',
+    'Oracle Warehouse Builder',
+    'OBIEE',
+    'Oracle APEX',
+    'Oracle WebLogic',
+    'Oracle Forms',
+    'IBM DB2',
+    'IBM DataStage',
+    'IBM Cognos',
+    'Informatica PowerCenter',
+    'Microsoft Analysis Server',
+  ],
+  dataSystem: [
+    'Oracle',
+    'PL/SQL',
+    'MS SQL Server',
+    'Oracle Forms',
+    'Sybase PowerBuilder',
+  ],
+};
+
 export const CV: Record<Lang, Cv> = {
   en: {
     pdf: '/assets/files/Giancarlo_Ronci_CV_EN.pdf',
+    summary: [
+      'Experience in Business Intelligence, Data Warehousing, Data Engineering and Data Analytics, from both a functional and a technical perspective. Since 2017, leading cross-functional teams and managing complex projects, consistently delivering high-quality, forward-thinking solutions that give business units accurate and timely insights.',
+      'The vision: integrated data ecosystems that support business growth and optimize decision-making processes, balancing strategic vision with advanced technical skills.',
+    ],
+    expertise: [
+      {
+        title: 'Leadership and Project Management',
+        description:
+          'Coordinating teams of data engineers, data analysts and BI developers, with agile methodologies and goal-oriented management, to ensure timely and accurate delivery of data solutions.',
+      },
+      {
+        title: 'Business Intelligence and Data Strategy',
+        description:
+          'Designing and implementing BI strategies that transform business data into actionable insights and support strategic decision making.',
+      },
+      {
+        title: 'Data Warehousing and Data Engineering',
+        description:
+          'Designing scalable data warehouse architectures and developing efficient ETL processes optimized for advanced data integration and analytics.',
+      },
+      {
+        title: 'Machine Learning and AI applied to Data Analytics',
+        description:
+          'Developing machine learning models for fraud detection, churn prediction and anti-money laundering, with a focus on real-time solutions.',
+      },
+      {
+        title: 'Consulting experience and strategic vision',
+        description:
+          'A background at NTT Data and Altran, on projects of all sizes and complexities, brought to companies building their data management foundations.',
+      },
+      {
+        title: 'Communication and team engagement',
+        description:
+          'A structured approach, including in remote work, that emphasizes effective communication and team engagement while maintaining high productivity and morale.',
+      },
+    ],
     experience: [
       {
-        period: 'Current',
+        period: 'Sep 2017 – Present',
         title: 'Head of Data Management & Data Warehouse · Soldo · Italy',
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Soldo logo',
         description:
-          'Leading initiatives on data platform evolution, data warehouse architecture and analytics enablement in a fintech environment.',
+          'Leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading the internal team dedicated to Data Management and Analytics.',
         highlights: [
-          'Modern cloud data architecture and data warehouse evolution',
-          'Data engineering, orchestration and near real-time data pipelines',
-          'Data governance, data quality and analytical data exposure',
+          'Planning and evolution of the company Data Warehouse, with scalable solutions that optimize data accessibility and performance',
+          'Bridge between technical teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions',
+          'Responsibility for data architectures, transformation processes and real-time streaming, enabling advanced analytics and BI capabilities',
+          'Reporting systems focused on data visualization and user experience, providing clear and actionable insights to business users through Tableau',
+          'Design and optimization of data pipelines and robust data governance on AWS, Amazon Redshift and MySQL Aurora',
+          'Machine learning and data science solutions, in particular fraud detection on financial transactions, with improved model accuracy, reduced processing time and increased operational efficiency',
         ],
+        technologies: TECH.soldo,
       },
       {
         period: 'Advisory',
@@ -63,23 +179,64 @@ export const CV: Record<Lang, Cv> = {
         ],
       },
       {
-        period: 'Focus areas',
-        title: 'Data Platform, Governance and Analytics Transformation',
+        period: 'Nov 2013 – Sep 2017',
+        title: 'Data Warehouse BI Technical and Functional Analyst, DWH Architect · Altran S.p.A.',
         description:
-          'Over the years, Giancarlo has worked across different layers of the data value chain, from modeling and warehousing to analytics delivery and organizational enablement.',
+          'Technical and functional analysis in Data Warehousing and Business Intelligence and design of data warehouse systems, including highly complex ones, also acting as team leader and technical manager.',
         highlights: [
-          'Enterprise data warehouse and dimensional / analytical modeling',
-          'Cloud services and ecosystem integration',
-          'Business-facing analytics and data-driven decision support',
+          'Team leadership',
+          'Business requirements analysis',
+          'Testing and Data Quality',
+          'Management of the project data model',
+          'Development activities on the ETL and reporting layers',
+          'Data Warehouse design: loading techniques, optimized partitioning, indexing, data mart design and optimization of OLAP layers',
         ],
+        technologies: TECH.altran,
+      },
+      {
+        period: 'Nov 2013 – Sep 2017',
+        title: 'BI Data Warehouse Architect, Technical & Project Manager · Altran S.p.A.',
+        description:
+          'Managing the data warehouse architectures of the projects, with schedules and activity estimates, coordinating the analysis and development groups and handling the relationship with the end customer.',
+        highlights: [
+          'Project start-up, publication of deliverables and of business case documents',
+          'Development and implementation of feasibility studies',
+          'Data Warehouse design, interfacing it with Big Data technologies',
+          'Promoting communication and shared understanding in the project team, allocating resources to activities and closely monitoring the performance of all tasks',
+        ],
+      },
+      {
+        period: 'Oct 2005 – Nov 2013',
+        title: 'Data Warehouse and Business Intelligence Technical Analyst & Developer · NTT DATA Italia',
+        description:
+          'Technical analysis and software development in Data Warehousing and Business Intelligence: process design, data acquisition and processing, database design, reporting planning and development.',
+        highlights: [
+          'Technical analysis',
+          'Business requirements analysis',
+          'Testing and Data Quality',
+          'Management of the project data model',
+          'Development activities',
+          'Data Mining activities',
+        ],
+        technologies: TECH.nttData,
+      },
+      {
+        period: 'Aug 2001 – Oct 2005',
+        title: 'Analyst Developer · 3F DATA SYSTEM S.p.A.',
+        description:
+          'Oracle analyst programmer in Rome and developer of graphical user interfaces for storing and processing data.',
+        highlights: [
+          'Handling databases through PL/SQL procedures, functions and triggers',
+          'Data replication through the implementation of snapshots',
+          'Relational / procedural data architectures and data warehouse approach',
+        ],
+        technologies: TECH.dataSystem,
       },
     ],
     education: [
       {
-        period: 'Academic background',
-        title: 'Engineering, Data and Technology background',
-        description:
-          'Academic and professional development centered on technology, data systems and analytical problem solving, continuously expanded through practical work on platforms, architectures and applied analytics.',
+        period: '1997 – 2004',
+        title: 'Degree in Electronic Engineering · Sapienza University of Rome',
       },
       {
         period: 'Continuous learning',
@@ -92,19 +249,59 @@ export const CV: Record<Lang, Cv> = {
   },
   it: {
     pdf: '/assets/files/Giancarlo_Ronci_CV_IT.pdf',
+    summary: [
+      'Esperienza in Business Intelligence, Data Warehousing, Data Engineering e Data Analytics, sia dal punto di vista funzionale sia da quello tecnico. Dal 2017 guida team cross-funzionali e gestisce progetti complessi, realizzando con costanza soluzioni di qualità e orientate al futuro che forniscono alle business unit informazioni accurate e tempestive.',
+      'La visione: ecosistemi di dati integrati che sostengono la crescita del business e ottimizzano i processi decisionali, in equilibrio tra visione strategica e competenze tecniche avanzate.',
+    ],
+    expertise: [
+      {
+        title: 'Leadership e Project Management',
+        description:
+          'Coordinamento di team di data engineer, data analyst e sviluppatori BI, con metodologie agili e gestione per obiettivi, per garantire una delivery puntuale e accurata delle soluzioni dati.',
+      },
+      {
+        title: 'Business Intelligence e Data Strategy',
+        description:
+          'Progettazione e implementazione di strategie BI che trasformano i dati di business in informazioni utili all’azione e supportano le decisioni strategiche.',
+      },
+      {
+        title: 'Data Warehousing e Data Engineering',
+        description:
+          'Progettazione di architetture di data warehouse scalabili e sviluppo di processi ETL efficienti, ottimizzati per l’integrazione avanzata dei dati e per gli analytics.',
+      },
+      {
+        title: 'Machine Learning e AI applicati alla Data Analytics',
+        description:
+          'Sviluppo di modelli di machine learning per fraud detection, churn prediction e antiriciclaggio, con un’attenzione particolare alle soluzioni real-time.',
+      },
+      {
+        title: 'Esperienza di consulenza e visione strategica',
+        description:
+          'Un percorso in NTT Data e Altran, su progetti di ogni dimensione e complessità, messo a disposizione delle aziende che costruiscono le basi del proprio data management.',
+      },
+      {
+        title: 'Comunicazione e coinvolgimento del team',
+        description:
+          'Un approccio strutturato, anche nel lavoro da remoto, che punta su comunicazione efficace e coinvolgimento del team, mantenendo alte produttività e motivazione.',
+      },
+    ],
     experience: [
       {
-        period: 'Attuale',
+        period: 'Set 2017 – Oggi',
         title: 'Head of Data Management & Data Warehouse · Soldo · Italia',
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Logo Soldo',
         description:
-          'Guida le iniziative di evoluzione della data platform, dell’architettura del data warehouse e dell’analytics enablement in un contesto fintech.',
+          'Guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige il team interno dedicato a Data Management e Analytics.',
         highlights: [
-          'Architettura dati cloud moderna ed evoluzione del data warehouse',
-          'Data engineering, orchestrazione e pipeline dati near real-time',
-          'Data governance, data quality ed esposizione dei dati per l’analisi',
+          'Pianificazione ed evoluzione del Data Warehouse aziendale, con soluzioni scalabili che ottimizzano accessibilità dei dati e prestazioni',
+          'Raccordo tra team tecnici e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche',
+          'Responsabilità di architetture dati, processi di trasformazione e streaming real-time, per abilitare analytics avanzati e BI',
+          'Sistemi di reportistica incentrati su data visualization e user experience, per dare agli utenti di business informazioni chiare e utili all’azione tramite Tableau',
+          'Progettazione e ottimizzazione delle pipeline dati e solida data governance su AWS, Amazon Redshift e MySQL Aurora',
+          'Soluzioni di machine learning e data science, in particolare per la fraud detection sulle transazioni finanziarie, con maggiore accuratezza dei modelli, tempi di elaborazione ridotti e più efficienza operativa',
         ],
+        technologies: TECH.soldo,
       },
       {
         period: 'Advisory',
@@ -118,23 +315,64 @@ export const CV: Record<Lang, Cv> = {
         ],
       },
       {
-        period: 'Aree di focus',
-        title: 'Data Platform, Governance e trasformazione Analytics',
+        period: 'Nov 2013 – Set 2017',
+        title: 'Data Warehouse BI Technical and Functional Analyst, DWH Architect · Altran S.p.A.',
         description:
-          'Negli anni Giancarlo ha lavorato su diversi livelli della catena del valore del dato, dalla modellazione e dal warehousing fino alla delivery degli analytics e all’abilitazione organizzativa.',
+          'Analisi tecnica e funzionale in ambito Data Warehousing e Business Intelligence e progettazione di sistemi di data warehouse, anche ad alta complessità, con ruolo di team leader e responsabile tecnico.',
         highlights: [
-          'Enterprise data warehouse e modellazione dimensionale / analitica',
-          'Servizi cloud e integrazione dell’ecosistema',
-          'Analytics orientati al business e supporto alle decisioni data-driven',
+          'Team leadership',
+          'Analisi dei requisiti di business',
+          'Testing e Data Quality',
+          'Gestione del modello dati di progetto',
+          'Attività di sviluppo sui livelli ETL e di reporting',
+          'Progettazione del Data Warehouse: tecniche di caricamento, partizionamento ottimizzato, indicizzazione, progettazione dei data mart e ottimizzazione dei livelli OLAP',
         ],
+        technologies: TECH.altran,
+      },
+      {
+        period: 'Nov 2013 – Set 2017',
+        title: 'BI Data Warehouse Architect, Technical & Project Manager · Altran S.p.A.',
+        description:
+          'Gestione delle architetture di data warehouse dei progetti, con pianificazione e stima delle attività, coordinamento dei gruppi di analisi e sviluppo e gestione del rapporto con il cliente finale.',
+        highlights: [
+          'Avvio del progetto, pubblicazione dei deliverable e dei documenti di business case',
+          'Sviluppo e realizzazione di studi di fattibilità',
+          'Progettazione del Data Warehouse e interfacciamento con le tecnologie Big Data',
+          'Promozione della comunicazione e della comprensione reciproca nel team di progetto, assegnazione delle risorse alle attività e monitoraggio ravvicinato di tutti i task',
+        ],
+      },
+      {
+        period: 'Ott 2005 – Nov 2013',
+        title: 'Data Warehouse and Business Intelligence Technical Analyst & Developer · NTT DATA Italia',
+        description:
+          'Analisi tecnica e sviluppo software in ambito Data Warehousing e Business Intelligence: progettazione dei processi, acquisizione ed elaborazione dei dati, progettazione di database, pianificazione e sviluppo della reportistica.',
+        highlights: [
+          'Analisi tecnica',
+          'Analisi dei requisiti di business',
+          'Testing e Data Quality',
+          'Gestione del modello dati di progetto',
+          'Attività di sviluppo',
+          'Attività di Data Mining',
+        ],
+        technologies: TECH.nttData,
+      },
+      {
+        period: 'Ago 2001 – Ott 2005',
+        title: 'Analyst Developer · 3F DATA SYSTEM S.p.A.',
+        description:
+          'Analista programmatore Oracle a Roma e sviluppatore di interfacce grafiche per l’archiviazione e l’elaborazione dei dati.',
+        highlights: [
+          'Gestione dei database tramite procedure, funzioni e trigger PL/SQL',
+          'Replica dei dati tramite l’implementazione di snapshot',
+          'Architetture dati relazionali / procedurali e approccio data warehouse',
+        ],
+        technologies: TECH.dataSystem,
       },
     ],
     education: [
       {
-        period: 'Percorso accademico',
-        title: 'Formazione in ingegneria, dati e tecnologia',
-        description:
-          'Un percorso accademico e professionale incentrato su tecnologia, sistemi dati e problem solving analitico, ampliato nel tempo attraverso il lavoro concreto su piattaforme, architetture e analytics applicati.',
+        period: '1997 – 2004',
+        title: 'Laurea in Ingegneria Elettronica · Università La Sapienza di Roma',
       },
       {
         period: 'Formazione continua',

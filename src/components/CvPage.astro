@@ -31,16 +31,28 @@ const hasPdf = fs.existsSync(path.join(process.cwd(), 'public', cv.pdf));
     )
   }
 
+  <h2>{t.cv.summary}</h2>
+  {cv.summary.map((paragraph) => <p>{paragraph}</p>)}
+
+  <h2>{t.cv.skills}</h2>
+  <ul>
+    {
+      cv.expertise.map((item) => (
+        <li>
+          <strong>{item.title}</strong>: {item.description}
+        </li>
+      ))
+    }
+  </ul>
+  <ul class="tags tags--large">
+    {cv.skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
   <h2>{t.cv.experience}</h2>
   <CareerList entries={cv.experience} />
 
   <h2>{t.cv.education}</h2>
   <CareerList entries={cv.education} />
-
-  <h2>{t.cv.skills}</h2>
-  <ul class="tags tags--large">
-    {cv.skills.map((skill) => <li>{skill}</li>)}
-  </ul>
 
   <h2>{t.cv.contact}</h2>
   <ul>
