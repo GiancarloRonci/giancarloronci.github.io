@@ -6,19 +6,22 @@ description: "Giancarlo Ronci: Data Management, Data Warehouse, Data Engineering
 
 ## Giancarlo Ronci
 
-Sono un professionista con esperienza nella leadership di iniziative di Data Management,
-Data Warehouse, Data Engineering e Analytics.
+Sono un data leader con oltre 20 anni di esperienza in ambito dati e analytics, di cui più di 10 in
+ruoli di leadership, alla guida di iniziative e team di Data Management, Data Warehouse,
+Data Engineering e Analytics.
 
 Il mio obiettivo è aiutare organizzazioni e professionisti a costruire una maggiore maturità
 nell’uso dei dati, trasformando architetture, processi e competenze in valore concreto per il business.
 
 ## Aree di focus
 
-- Data Strategy
+- Strategia dati e analytics
+- Leadership di team di Data Engineering e Analytics
 - Data Platform moderne
 - Data Governance e Data Quality
 - Business Intelligence
 - Advanced Analytics e AI Enablement
+- Stakeholder management e cultura data-driven
 
 ## Questo blog
 

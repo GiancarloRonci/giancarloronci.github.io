@@ -30,6 +30,8 @@ export interface Cv {
 
 const SKILLS = [
   'Data Strategy',
+  'Data Leadership',
+  'Stakeholder Management',
   'Data Management',
   'Data Warehouse',
   'Data Engineering',
@@ -39,6 +41,8 @@ const SKILLS = [
   'Business Intelligence',
   'Advanced Analytics',
   'AI Enablement',
+  'SQL',
+  'Python',
 ];
 
 // Le tecnologie non si traducono: sono condivise tra le due lingue
@@ -111,24 +115,39 @@ const TECH = {
 export const CV: Record<Lang, Cv> = {
   en: {
     summary: [
-      'Experience in Business Intelligence, Data Warehousing, Data Engineering and Data Analytics, from both a functional and a technical perspective. Since 2017, leading cross-functional teams and managing complex projects, consistently delivering high-quality, forward-thinking solutions that give business units accurate and timely insights.',
+      'Over 20 years of experience in data and analytics, more than 10 of them in leadership roles, across fintech and technology consulting: Business Intelligence, Data Warehousing, Data Engineering and Data Analytics, from both a functional and a technical perspective. Leading cross-functional teams and managing complex projects, consistently delivering high-quality, forward-thinking solutions that give business units accurate and timely insights.',
       'The vision: integrated data ecosystems that support business growth and optimize decision-making processes, balancing strategic vision with advanced technical skills.',
     ],
     expertise: [
       {
-        title: 'Leadership and Project Management',
+        title: 'Leadership of Data Engineering and Analytics teams',
         description:
-          'Coordinating teams of data engineers, data analysts and BI developers, with agile methodologies and goal-oriented management, to ensure timely and accurate delivery of data solutions.',
+          'Leading, coordinating and growing teams of data engineers, data analysts and BI developers, with agile methodologies and goal-oriented management, to ensure timely and accurate delivery of data solutions.',
       },
       {
-        title: 'Business Intelligence and Data Strategy',
+        title: 'KPIs and metrics',
         description:
-          'Designing and implementing BI strategies that transform business data into actionable insights and support strategic decision making.',
+          'Identifying the metrics that matter most to the business and defining the KPIs that measure them.',
       },
       {
-        title: 'Data Warehousing and Data Engineering',
+        title: 'Data and Analytics Strategy',
         description:
-          'Designing scalable data warehouse architectures and developing efficient ETL processes optimized for advanced data integration and analytics.',
+          'Designing and implementing data and BI strategies that transform business data into actionable insights and support strategic decision making.',
+      },
+      {
+        title: 'Data infrastructure and platforms',
+        description:
+          'Designing scalable data warehouse architectures on cloud platforms such as AWS and Amazon Redshift, and developing efficient data pipelines and ETL processes optimized for advanced data integration and analytics.',
+      },
+      {
+        title: 'Data Governance',
+        description:
+          'Ensuring robust data governance and data quality, for secure and efficient data management.',
+      },
+      {
+        title: 'Technical depth',
+        description:
+          'Hands-on background from development to architecture: SQL and PL/SQL, Python and R, data warehouse modeling, ETL and BI tools such as Pentaho Kettle and Tableau.',
       },
       {
         title: 'Machine Learning and AI applied to Data Analytics',
@@ -139,6 +158,16 @@ export const CV: Record<Lang, Cv> = {
         title: 'Consulting experience and strategic vision',
         description:
           'A background at NTT Data and Altran, on projects of all sizes and complexities, brought to companies building their data management foundations.',
+      },
+      {
+        title: 'Stakeholder management and partnership with product and business',
+        description:
+          'Reporting to senior management and bridging technical teams, product teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions.',
+      },
+      {
+        title: 'Data-driven culture',
+        description:
+          'Promoting data-driven innovation through analytics enablement, coaching and data strategies that foster business growth.',
       },
       {
         title: 'Communication and team engagement',
@@ -153,9 +182,11 @@ export const CV: Record<Lang, Cv> = {
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Soldo logo',
         description:
-          'Leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading the internal team dedicated to Data Management and Analytics.',
+          'Reporting to the CTO, leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading and growing the internal Data & Analytics team.',
         highlights: [
           'Planning and evolution of the company Data Warehouse, with scalable solutions that optimize data accessibility and performance',
+          'Identifying the metrics that matter most to the business and defining the related KPIs',
+          'Partnering with product teams, designing systems and databases that serve the core product',
           'Bridge between technical teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions',
           'Responsibility for data architectures, transformation processes and real-time streaming, enabling advanced analytics and BI capabilities',
           'Reporting systems focused on data visualization and user experience, providing clear and actionable insights to business users through Tableau',
@@ -246,24 +277,38 @@ export const CV: Record<Lang, Cv> = {
   },
   it: {
     summary: [
-      'Esperienza in Business Intelligence, Data Warehousing, Data Engineering e Data Analytics, sia dal punto di vista funzionale sia da quello tecnico. Dal 2017 guida team cross-funzionali e gestisce progetti complessi, realizzando con costanza soluzioni di qualità e orientate al futuro che forniscono alle business unit informazioni accurate e tempestive.',
+      'Oltre 20 anni di esperienza in ambito dati e analytics, di cui più di 10 in ruoli di leadership, tra fintech e consulenza tecnologica: Business Intelligence, Data Warehousing, Data Engineering e Data Analytics, sia dal punto di vista funzionale sia da quello tecnico. Guida team cross-funzionali e gestisce progetti complessi, realizzando con costanza soluzioni di qualità e orientate al futuro che forniscono alle business unit informazioni accurate e tempestive.',
       'La visione: ecosistemi di dati integrati che sostengono la crescita del business e ottimizzano i processi decisionali, in equilibrio tra visione strategica e competenze tecniche avanzate.',
     ],
     expertise: [
       {
-        title: 'Leadership e Project Management',
+        title: 'Leadership di team di Data Engineering e Analytics',
         description:
-          'Coordinamento di team di data engineer, data analyst e sviluppatori BI, con metodologie agili e gestione per obiettivi, per garantire una delivery puntuale e accurata delle soluzioni dati.',
+          'Guida, coordinamento e crescita di team di data engineer, data analyst e sviluppatori BI, con metodologie agili e gestione per obiettivi, per garantire una delivery puntuale e accurata delle soluzioni dati.',
       },
       {
-        title: 'Business Intelligence e Data Strategy',
+        title: 'KPI e metriche',
         description:
-          'Progettazione e implementazione di strategie BI che trasformano i dati di business in informazioni utili all’azione e supportano le decisioni strategiche.',
+          'Individuazione delle metriche più significative per il business e definizione dei KPI che le misurano.',
       },
       {
-        title: 'Data Warehousing e Data Engineering',
+        title: 'Strategia dati e analytics',
         description:
-          'Progettazione di architetture di data warehouse scalabili e sviluppo di processi ETL efficienti, ottimizzati per l’integrazione avanzata dei dati e per gli analytics.',
+          'Progettazione e implementazione di strategie dati e BI che trasformano i dati di business in informazioni utili all’azione e supportano le decisioni strategiche.',
+      },
+      {
+        title: 'Infrastrutture e piattaforme dati',
+        description:
+          'Progettazione di architetture di data warehouse scalabili su piattaforme cloud come AWS e Amazon Redshift e sviluppo di pipeline dati e processi ETL efficienti, ottimizzati per l’integrazione avanzata dei dati e per gli analytics.',
+      },
+      {
+        title: 'Data Governance',
+        description: 'Solida data governance e data quality, per una gestione dei dati sicura ed efficiente.',
+      },
+      {
+        title: 'Competenze tecniche',
+        description:
+          'Esperienza diretta dallo sviluppo all’architettura: SQL e PL/SQL, Python e R, modellazione del data warehouse, strumenti ETL e BI come Pentaho Kettle e Tableau.',
       },
       {
         title: 'Machine Learning e AI applicati alla Data Analytics',
@@ -274,6 +319,16 @@ export const CV: Record<Lang, Cv> = {
         title: 'Esperienza di consulenza e visione strategica',
         description:
           'Un percorso in NTT Data e Altran, su progetti di ogni dimensione e complessità, messo a disposizione delle aziende che costruiscono le basi del proprio data management.',
+      },
+      {
+        title: 'Stakeholder management e collaborazione con prodotto e business',
+        description:
+          'Reporting al senior management e raccordo tra team tecnici, team di prodotto e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche.',
+      },
+      {
+        title: 'Cultura data-driven',
+        description:
+          'Promozione dell’innovazione data-driven attraverso analytics enablement, coaching e strategie dati che favoriscono la crescita del business.',
       },
       {
         title: 'Comunicazione e coinvolgimento del team',
@@ -288,9 +343,11 @@ export const CV: Record<Lang, Cv> = {
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Logo Soldo',
         description:
-          'Guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige il team interno dedicato a Data Management e Analytics.',
+          'A riporto del CTO, guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige e fa crescere il team interno di Data & Analytics.',
         highlights: [
           'Pianificazione ed evoluzione del Data Warehouse aziendale, con soluzioni scalabili che ottimizzano accessibilità dei dati e prestazioni',
+          'Individuazione delle metriche più significative per il business e definizione dei relativi KPI',
+          'Collaborazione con i team di prodotto, con la progettazione di sistemi e database a disposizione del core product',
           'Raccordo tra team tecnici e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche',
           'Responsabilità di architetture dati, processi di trasformazione e streaming real-time, per abilitare analytics avanzati e BI',
           'Sistemi di reportistica incentrati su data visualization e user experience, per dare agli utenti di business informazioni chiare e utili all’azione tramite Tableau',

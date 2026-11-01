@@ -6,19 +6,22 @@ description: "Giancarlo Ronci: Data Management, Data Warehouse, Data Engineering
 
 ## Giancarlo Ronci
 
-I am a professional with experience in leading Data Management,
-Data Warehouse, Data Engineering and Analytics initiatives.
+I am a data leader with over 20 years of experience in data and analytics, more than 10 of them
+in leadership roles, leading Data Management, Data Warehouse, Data Engineering and Analytics
+initiatives and teams.
 
 My goal is to help organizations and professionals build greater maturity
 in the use of data, turning architectures, processes and skills into concrete business value.
 
 ## Focus areas
 
-- Data Strategy
+- Data and Analytics Strategy
+- Leadership of Data Engineering and Analytics teams
 - Modern Data Platforms
 - Data Governance and Data Quality
 - Business Intelligence
 - Advanced Analytics and AI Enablement
+- Stakeholder management and data-driven culture
 
 ## About this blog
 
