@@ -32,7 +32,7 @@ Comuni alle due lingue:
 | --------------------------------------- | --------------------------------------- |
 | Voci del menu, contatti, link social    | `src/consts.ts`                         |
 | Stili                                   | `src/styles/global.css`                 |
-| Immagini e file scaricabili (es. CV)    | `public/assets/`                        |
+| Immagini e file scaricabili             | `public/assets/`                        |
 
 Se modifichi un testo in una lingua, ricordati di aggiornare anche l'altra.
 
@@ -41,12 +41,9 @@ Se modifichi un testo in una lingua, ricordati di aggiornare anche l'altra.
 La pagina CV (`/cv/`, `/it/cv/`) e le sezioni carriera e formazione della home leggono i dati da
 `src/data/cv.ts`: aggiungi o modifica lì esperienze, formazione e competenze.
 
-Per offrire il CV in PDF, salva i file in:
-
-- `public/assets/files/Giancarlo_Ronci_CV_EN.pdf` (versione inglese)
-- `public/assets/files/Giancarlo_Ronci_CV_IT.pdf` (versione italiana)
-
-Il pulsante "Download CV (PDF)" / "Scarica il CV (PDF)" compare automaticamente nella lingua per cui il file esiste.
+Il PDF nasce dalla pagina stessa: il pulsante "Save CV as PDF" / "Salva il CV in PDF" apre la stampa del
+browser, dove si sceglie "Salva come PDF". È quindi sempre allineato al sito e nella lingua della pagina.
+L'impaginazione è negli stili `@media print` in fondo a `src/styles/global.css`.
 
 ### Nuovo articolo
 

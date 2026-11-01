@@ -319,12 +319,15 @@ main.container {
 .button {
   display: inline-block;
   padding: 0.55rem 1.1rem;
+  font-family: inherit;
   font-weight: 700;
   font-size: 0.9rem;
   color: #fff;
   background: var(--link);
+  border: 0;
   border-radius: 4px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -374,5 +377,106 @@ main.container {
   .career-logo img {
     max-width: 72px;
     max-height: 72px;
+  }
+}
+
+/* Stampa e PDF: resta solo il contenuto. Sta in fondo perché deve vincere sulle regole mobile,
+   che valgono anche qui: un foglio A4 è largo meno di 768px. */
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  html {
+    font-size: 12.5px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .masthead,
+  .site-footer,
+  .author-profile,
+  .career-logo,
+  .no-print {
+    display: none;
+  }
+
+  .print-only {
+    display: block;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+  }
+
+  .print-only p {
+    margin: 0;
+  }
+
+  .print-only .cv-print-name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  main.container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .layout--profile {
+    display: block;
+  }
+
+  .page__content {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 1.5rem;
+    break-after: avoid;
+  }
+
+  .career-list {
+    margin-top: 1rem;
+  }
+
+  /* Le voci possono spezzarsi tra due pagine, altrimenti le più lunghe lasciano mezza pagina vuota:
+     restano uniti solo periodo, titolo e testo iniziale */
+  .career-item {
+    margin-bottom: 1.25rem;
+  }
+
+  .career-period {
+    margin-bottom: 0.2rem;
+    break-after: avoid;
+  }
+
+  .career-content h3 {
+    break-after: avoid;
+  }
+
+  .career-content p,
+  .career-content li,
+  .tags {
+    break-inside: avoid;
+  }
+
+  .career-card {
+    display: block;
+    padding: 0;
+    border-bottom: 0;
   }
 }

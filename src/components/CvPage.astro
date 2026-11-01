@@ -1,7 +1,6 @@
 ---
-// Pagina CV nella lingua della pagina
-import fs from 'node:fs';
-import path from 'node:path';
+// Pagina CV nella lingua della pagina. Il PDF si ottiene dalla pagina stessa, con la stampa del browser:
+// gli stili per il PDF sono in fondo a src/styles/global.css (@media print).
 import ProfileLayout from '../layouts/ProfileLayout.astro';
 import CareerList from './CareerList.astro';
 import { AUTHOR } from '../consts';
@@ -11,25 +10,26 @@ import { getLang, useTranslations } from '../i18n/ui';
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const cv = CV[lang];
-
-// Il PDF si aggiunge mettendo il file in public/: finché non c'è, il pulsante non compare
-const hasPdf = fs.existsSync(path.join(process.cwd(), 'public', cv.pdf));
 ---
 
 <ProfileLayout title={t.cv.title} description={t.cv.description}>
+  <!-- Intestazione del PDF: a schermo nome e contatti sono nel profilo a lato -->
+  <div class="print-only">
+    <p class="cv-print-name">{AUTHOR.name}</p>
+    <p>{t.bio} · {t.location}</p>
+    <p>{AUTHOR.email} · {AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</p>
+  </div>
+
   <h1>{t.cv.title}</h1>
 
-  <p>{t.cv.intro}</p>
-
-  {
-    hasPdf && (
-      <p>
-        <a class="button" href={cv.pdf} download>
-          {t.cv.download}
-        </a>
-      </p>
-    )
-  }
+  <div class="no-print">
+    <p>{t.cv.intro}</p>
+    <p>
+      <button class="button" type="button" data-print-cv={`Giancarlo_Ronci_CV_${lang.toUpperCase()}`}>
+        {t.cv.download}
+      </button>
+    </p>
+  </div>
 
   <h2>{t.cv.summary}</h2>
   {cv.summary.map((paragraph) => <p>{paragraph}</p>)}
@@ -54,10 +54,24 @@ const hasPdf = fs.existsSync(path.join(process.cwd(), 'public', cv.pdf));
   <h2>{t.cv.education}</h2>
   <CareerList entries={cv.education} />
 
-  <h2>{t.cv.contact}</h2>
-  <ul>
-    <li>LinkedIn: <a href={AUTHOR.linkedin}>{AUTHOR.name}</a></li>
-    <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
-    <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
-  </ul>
+  <div class="no-print">
+    <h2>{t.cv.contact}</h2>
+    <ul>
+      <li>LinkedIn: <a href={AUTHOR.linkedin}>{AUTHOR.name}</a></li>
+      <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
+      <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
+    </ul>
+  </div>
 </ProfileLayout>
+
+<script>
+  // Il titolo del documento diventa il nome proposto per il file PDF
+  const button = document.querySelector<HTMLButtonElement>('[data-print-cv]');
+
+  button?.addEventListener('click', () => {
+    const title = document.title;
+    document.title = button.dataset.printCv ?? title;
+    window.addEventListener('afterprint', () => (document.title = title), { once: true });
+    window.print();
+  });
+</script>
