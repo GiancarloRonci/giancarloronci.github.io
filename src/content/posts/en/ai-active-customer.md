@@ -3,6 +3,7 @@ title: "AI's problem with data isn't writing the SQL. It's knowing what \"active
 description: "Asking your data questions in plain language works today. But if a company hasn't decided what its numbers mean, AI will decide for it, without saying so."
 date: 2026-11-02
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
+updated: 2026-11-02
 draft: false
 ---
 
@@ -64,9 +65,17 @@ None of this is new: these are the foundations our profession has known for deca
 
 1. **Choose the metrics that matter.** You don't need to map everything. Start with the ones that reach leadership meetings.
 2. **Write down the definition and the owner.** Each metric needs a calculation rule, inclusions, exclusions, a time period and the name of whoever decides. This step is organizational, not technical. If marketing and finance need different concepts, both are fine as long as they have different names: "active app users" and "active paying customers".
-3. **Make definitions executable.** A glossary on a wiki isn't enough. Metrics need to live in a semantic layer or in certified views, so the assistant uses that definition instead of rebuilding it each time.
-4. **Look after data quality.** A well-defined metric on incomplete or late data gives you a wrong number very consistently. You need automated tests and checks on data freshness.
-5. **Verify the answers.** Prepare a set of test questions with expected results and rerun it after every change. Make sure the assistant shows the definition it used and the query it ran, and asks for clarification when a question is ambiguous.
+3. **Put a date on definitions.** A definition can change: if in June "active customer" moves from 30 to 60 days, the comparison with the previous year no longer holds, and the assistant won't flag that on its own. Each version needs a validity date, so the assistant knows which rule applies to each period and can warn you when a trend crosses a change of definition.
+4. **Make definitions executable.** A glossary on a wiki isn't enough. Metrics need to live in a semantic layer or in certified views, so the assistant uses that definition instead of rebuilding it each time.
+5. **Look after data quality.** A well-defined metric on incomplete or late data gives you a wrong number very consistently. You need automated tests and checks on data freshness.
+6. **Verify the answers.** Prepare a set of test questions with expected results and rerun it after every change. Make sure the assistant shows the definition it used and the query it ran, and asks for clarification when a question is ambiguous.
+7. **Separate certified answers from exploratory ones.** Not every question needs the same rigor. When an answer rests on a certified metric, the assistant says so. When it's improvising, it labels the answer as exploratory: useful for getting a sense of things, but not something to take to a leadership meeting. That keeps AI useful on questions the definitions don't cover yet.
+
+## Questions show what to define
+
+An assistant can also record what people actually ask. That log shows which metrics are needed, which terms are used in different ways and which answers get challenged. If many people ask about "churn" in a month and no certified metric covers it, you know which definition to write next.
+
+So AI doesn't just depend on governance: it can also help steer it, by showing where the work should go.
 
 ## A test to get started
 

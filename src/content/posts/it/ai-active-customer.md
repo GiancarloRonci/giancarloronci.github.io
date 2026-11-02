@@ -3,6 +3,7 @@ title: "Il problema dell’AI sui dati non è scrivere l’SQL: è sapere cosa s
 description: "Chiedere ai dati in linguaggio naturale oggi funziona. Ma se l’azienda non ha deciso cosa significano i suoi numeri, l’AI sceglierà al posto suo, senza dirlo."
 date: 2026-11-02
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
+updated: 2026-11-02
 draft: false
 ---
 
@@ -64,9 +65,17 @@ Qui non c’è nulla di nuovo: sono le basi che il nostro mestiere conosce da de
 
 1. **Scegli le metriche che contano.** Non serve mappare tutto. Parti da quelle che arrivano alle riunioni di direzione.
 2. **Scrivi definizione e responsabile.** Per ogni metrica servono regola di calcolo, inclusioni, esclusioni, periodo e il nome di chi decide. Questo passaggio è organizzativo, non tecnico. Se marketing e finanza hanno bisogno di concetti diversi, vanno bene entrambi, purché abbiano nomi diversi: “utenti attivi in app” e “clienti paganti attivi”.
-3. **Rendi le definizioni eseguibili.** Un glossario su una wiki non basta. Le metriche devono vivere in un semantic layer o in viste certificate, così l’assistente usa quella definizione invece di ricostruirla ogni volta.
-4. **Cura la qualità dei dati.** Una metrica ben definita su dati incompleti o in ritardo dà un numero sbagliato con grande coerenza. Servono test automatici e controlli sull’aggiornamento dei dati.
-5. **Verifica le risposte.** Prepara una serie di domande di prova con il risultato atteso e ripetila a ogni modifica. Fai in modo che l’assistente mostri quale definizione ha usato e la query eseguita, e che chieda un chiarimento quando la domanda è ambigua.
+3. **Dai una data alle definizioni.** Una definizione può cambiare: se a giugno “cliente attivo” passa da 30 a 60 giorni, il confronto con l’anno precedente non regge più, e l’assistente non lo segnala da solo. Ogni versione deve avere una data di validità, così l’assistente sa quale regola applicare a ogni periodo e può avvisare quando un trend attraversa un cambio di definizione.
+4. **Rendi le definizioni eseguibili.** Un glossario su una wiki non basta. Le metriche devono vivere in un semantic layer o in viste certificate, così l’assistente usa quella definizione invece di ricostruirla ogni volta.
+5. **Cura la qualità dei dati.** Una metrica ben definita su dati incompleti o in ritardo dà un numero sbagliato con grande coerenza. Servono test automatici e controlli sull’aggiornamento dei dati.
+6. **Verifica le risposte.** Prepara una serie di domande di prova con il risultato atteso e ripetila a ogni modifica. Fai in modo che l’assistente mostri quale definizione ha usato e la query eseguita, e che chieda un chiarimento quando la domanda è ambigua.
+7. **Distingui le risposte certificate da quelle esplorative.** Non tutte le domande richiedono lo stesso rigore. Se la risposta poggia su una metrica certificata, l’assistente lo dichiara. Se sta improvvisando, la segnala come analisi esplorativa, utile per farsi un’idea ma da non portare in direzione. Così l’AI resta utile anche sulle domande non ancora coperte.
+
+## Le domande dicono cosa definire
+
+Un assistente può anche registrare quello che le persone chiedono davvero. Quel registro mostra quali metriche servono, quali termini vengono usati in modi diversi e quali risposte vengono contestate. Se in un mese molte persone chiedono il “churn” e nessuna metrica certificata lo copre, sai qual è la prossima definizione da scrivere.
+
+L’AI, quindi, non dipende soltanto dalla governance: può anche aiutare a orientarla, indicando dove concentrare il lavoro.
 
 ## Un test per cominciare
 
