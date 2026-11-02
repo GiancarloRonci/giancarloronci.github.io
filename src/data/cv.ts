@@ -202,6 +202,7 @@ export const CV: Record<Lang, Cv> = {
           'Supporting professionals, managers and organizations in strengthening their data capabilities through structured coaching and advisory.',
         highlights: [
           'Data Strategy and target operating model',
+          'Designing and evolving teams for Data Analytics and for AI applied to Data Analytics',
           'Coaching on data leadership, architecture and analytics maturity',
           'Practical guidance on BI, ML and AI adoption paths',
           'Bridge between technical teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions',
@@ -366,6 +367,7 @@ export const CV: Record<Lang, Cv> = {
           'Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso percorsi strutturati di coaching e advisory.',
         highlights: [
           'Data Strategy e target operating model',
+          'Progettazione ed evoluzione dei team di Data Analytics e di AI applicata al Data Analytics',
           'Coaching su data leadership, architettura e maturità analitica',
           'Indicazioni pratiche sui percorsi di adozione di BI, ML e AI',
           'Raccordo tra team tecnici e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche',
