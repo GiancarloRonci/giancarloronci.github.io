@@ -3,7 +3,7 @@ title: "Il problema dell’AI sui dati non è scrivere l’SQL: è sapere cosa s
 description: "Chiedere ai dati in linguaggio naturale oggi funziona. Ma se l’azienda non ha deciso cosa significano i suoi numeri, l’AI sceglierà al posto suo, senza dirlo."
 date: 2026-11-02
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
-draft: true
+draft: false
 ---
 
 Prendi una domanda semplice: quanti clienti attivi abbiamo?

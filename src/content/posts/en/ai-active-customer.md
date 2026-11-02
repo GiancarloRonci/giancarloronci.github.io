@@ -3,7 +3,7 @@ title: "AI's problem with data isn't writing the SQL. It's knowing what \"active
 description: "Asking your data questions in plain language works today. But if a company hasn't decided what its numbers mean, AI will decide for it, without saying so."
 date: 2026-11-02
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
-draft: true
+draft: false
 ---
 
 Take a simple question: how many active customers do we have?
