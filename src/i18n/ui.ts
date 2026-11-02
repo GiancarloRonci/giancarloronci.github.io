@@ -10,7 +10,7 @@ export const DEFAULT_LANG: Lang = 'en';
 // Testi dell'interfaccia (menu, profilo, etichette). I contenuti delle pagine stanno nei rispettivi file.
 export const UI = {
   it: {
-    tagline: 'Blog su Data Analytics e AI',
+    tagline: 'Data Analytics & AnalyticsAI',
     description:
       'Un blog sulla Data Analytics e sul rapporto tra AI e Data Analytics: architetture, pratiche e strategie per trasformare i dati in valore per il business.',
     bio: 'Data & Analytics Coach e Advisor',
@@ -41,7 +41,7 @@ export const UI = {
     dateLocale: 'it-IT',
   },
   en: {
-    tagline: 'Data Analytics & AI Blog',
+    tagline: 'Data Analytics & AnalyticsAI',
     description:
       'A blog on Data Analytics and on the relationship between AI and Data Analytics: architectures, practices and strategies to turn data into business value.',
     bio: 'Data & Analytics Coach and Advisor',
