@@ -191,7 +191,6 @@ export const CV: Record<Lang, Cv> = {
           'Partnering with product teams, designing systems and databases that serve the core product',
           'Reporting systems focused on data visualization and user experience, providing clear and actionable insights to business users through Tableau',
           'Design and optimization of data pipelines and robust data governance on AWS, Amazon Redshift and MySQL Aurora',
-          'Machine learning and data science solutions, in particular fraud detection on financial transactions, with improved model accuracy, reduced processing time and increased operational efficiency',
           'Supporting the adoption of AWS AI/ML services, ensuring the availability and quality of the data needed for model training and inference',
         ],
         technologies: TECH.soldo,
@@ -207,6 +206,7 @@ export const CV: Record<Lang, Cv> = {
           'Practical guidance on BI, ML and AI adoption paths',
           'Bridge between technical teams and business stakeholders, so that data exploration, analysis and visualization support strategic decisions',
           'Responsibility for data architectures, transformation processes and real-time streaming, enabling advanced analytics and BI capabilities',
+          'Machine learning and data science solutions, in particular fraud detection on financial transactions, with improved model accuracy, reduced processing time and increased operational efficiency',
         ],
       },
       {
@@ -355,7 +355,6 @@ export const CV: Record<Lang, Cv> = {
           'Collaborazione con i team di prodotto, con la progettazione di sistemi e database a disposizione del core product',
           'Sistemi di reportistica incentrati su data visualization e user experience, per dare agli utenti di business informazioni chiare e utili all’azione tramite Tableau',
           'Progettazione e ottimizzazione delle pipeline dati e solida data governance su AWS, Amazon Redshift e MySQL Aurora',
-          'Soluzioni di machine learning e data science, in particolare per la fraud detection sulle transazioni finanziarie, con maggiore accuratezza dei modelli, tempi di elaborazione ridotti e più efficienza operativa',
           'Supporto all’adozione di servizi AWS AI/ML, garantendo la disponibilità e la qualità dei dati necessari all’addestramento e all’inferenza dei modelli',
         ],
         technologies: TECH.soldo,
@@ -371,6 +370,7 @@ export const CV: Record<Lang, Cv> = {
           'Indicazioni pratiche sui percorsi di adozione di BI, ML e AI',
           'Raccordo tra team tecnici e stakeholder di business, perché esplorazione, analisi e visualizzazione dei dati supportino le decisioni strategiche',
           'Responsabilità di architetture dati, processi di trasformazione e streaming real-time, per abilitare analytics avanzati e BI',
+          'Soluzioni di machine learning e data science, in particolare per la fraud detection sulle transazioni finanziarie, con maggiore accuratezza dei modelli, tempi di elaborazione ridotti e più efficienza operativa',
         ],
       },
       {
