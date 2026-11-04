@@ -167,6 +167,18 @@ main.container {
   font-size: 1.1rem;
 }
 
+.author-profile__titles {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.author-profile__titles li + li {
+  margin-top: 0.2rem;
+}
+
 .author-profile__bio {
   margin: 0 0 0.75rem;
   color: var(--text-muted);

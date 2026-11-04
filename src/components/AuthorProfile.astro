@@ -9,6 +9,9 @@ const t = useTranslations(getLang(Astro.currentLocale));
   <img class="author-profile__avatar" src={AUTHOR.avatar} alt={AUTHOR.name} width="140" height="140" />
   <div>
     <h2 class="author-profile__name">{AUTHOR.name}</h2>
+    <ul class="author-profile__titles">
+      {AUTHOR.jobTitles.map((title) => <li>{title}</li>)}
+    </ul>
     <p class="author-profile__bio">{t.bio}</p>
     <ul class="author-profile__links">
       <li>{t.location}</li>

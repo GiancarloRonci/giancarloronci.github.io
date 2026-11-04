@@ -3,6 +3,7 @@ export const SITE_TITLE = 'Giancarlo Ronci';
 export const AUTHOR = {
   name: 'Giancarlo Ronci',
   avatar: '/assets/images/MyPic.jpeg',
+  jobTitles: ['Data Management & Data Analytics Lead', 'Data & Analytics Coach and Advisor'],
   email: 'giancarlo.ronci@gmail.com',
   phone: '+39 331 828 0118',
   linkedin: 'https://www.linkedin.com/in/roncigiancarlo/',
