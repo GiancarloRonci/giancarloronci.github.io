@@ -35,7 +35,7 @@ for (const code of Object.keys(LANGUAGES) as Lang[]) {
         {
           updated && (
             <>
-              · {t.updatedOn} <time datetime={updated.toISOString()}>{formatDate(updated, lang)}</time>
+              {' '}· {t.updatedOn} <time datetime={updated.toISOString()}>{formatDate(updated, lang)}</time>
             </>
           )
         }
