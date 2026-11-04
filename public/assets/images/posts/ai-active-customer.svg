@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: una query (sinistra) e tre definizioni diverse di "cliente attivo" che si sovrappongono solo in parte (destra) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+    <clipPath id="ab"><circle cx="820" cy="270" r="150"/></clipPath>
+    <clipPath id="abc"><circle cx="920" cy="270" r="150"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- griglia di punti discreta -->
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="80" cy="70" r="3"/><circle cx="120" cy="70" r="3"/><circle cx="160" cy="70" r="3"/>
+    <circle cx="80" cy="110" r="3"/><circle cx="120" cy="110" r="3"/><circle cx="160" cy="110" r="3"/>
+    <circle cx="1040" cy="540" r="3"/><circle cx="1080" cy="540" r="3"/><circle cx="1120" cy="540" r="3"/>
+    <circle cx="1040" cy="580" r="3"/><circle cx="1080" cy="580" r="3"/><circle cx="1120" cy="580" r="3"/>
+  </g>
+
+  <!-- pannello query -->
+  <g>
+    <rect x="110" y="160" width="400" height="310" rx="18" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+    <rect x="110" y="160" width="400" height="48" rx="18" fill="#313237"/>
+    <rect x="110" y="190" width="400" height="18" fill="#313237"/>
+    <circle cx="142" cy="184" r="7" fill="#e06c5a"/>
+    <circle cx="166" cy="184" r="7" fill="#e0a94a"/>
+    <circle cx="190" cy="184" r="7" fill="#6bb38a"/>
+    <g stroke-linecap="round" stroke-width="12">
+      <line x1="150" y1="250" x2="250" y2="250" stroke="#2f7f93"/>
+      <line x1="270" y1="250" x2="430" y2="250" stroke="#c9d3d8"/>
+      <line x1="150" y1="290" x2="210" y2="290" stroke="#2f7f93"/>
+      <line x1="230" y1="290" x2="360" y2="290" stroke="#c9d3d8"/>
+      <line x1="150" y1="330" x2="230" y2="330" stroke="#2f7f93"/>
+      <line x1="250" y1="330" x2="470" y2="330" stroke="#c9d3d8"/>
+      <line x1="180" y1="370" x2="230" y2="370" stroke="#2f7f93"/>
+      <line x1="250" y1="370" x2="400" y2="370" stroke="#c9d3d8"/>
+      <line x1="180" y1="410" x2="230" y2="410" stroke="#2f7f93"/>
+      <line x1="250" y1="410" x2="330" y2="410" stroke="#e0a94a"/>
+    </g>
+  </g>
+
+  <!-- collegamento -->
+  <g stroke="#2f7f93" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="2 14" opacity="0.6">
+    <path d="M520 315 C 580 315, 600 330, 660 330"/>
+  </g>
+
+  <!-- tre definizioni -->
+  <circle cx="820" cy="270" r="150" fill="#2f7f93" fill-opacity="0.14" stroke="#2f7f93" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="920" cy="270" r="150" fill="#6b6e76" fill-opacity="0.12" stroke="#6b6e76" stroke-opacity="0.45" stroke-width="3"/>
+  <circle cx="870" cy="370" r="150" fill="#e0a94a" fill-opacity="0.16" stroke="#c48a2c" stroke-opacity="0.5" stroke-width="3"/>
+
+  <!-- intersezione: la definizione certificata -->
+  <g clip-path="url(#ab)">
+    <g clip-path="url(#abc)">
+      <circle cx="870" cy="370" r="150" fill="#1f5a68"/>
+    </g>
+  </g>
+  <g fill="#ffffff">
+    <path d="M858 300 l10 12 l22 -28" stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- punti dati sparsi nei cerchi -->
+  <g fill="#313237" opacity="0.35">
+    <circle cx="730" cy="210" r="5"/><circle cx="760" cy="300" r="5"/><circle cx="790" cy="170" r="5"/>
+    <circle cx="1000" cy="200" r="5"/><circle cx="1010" cy="290" r="5"/><circle cx="960" cy="160" r="5"/>
+    <circle cx="820" cy="470" r="5"/><circle cx="910" cy="480" r="5"/><circle cx="960" cy="430" r="5"/>
+    <circle cx="780" cy="410" r="5"/>
+  </g>
+</svg>

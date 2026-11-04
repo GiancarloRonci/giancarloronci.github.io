@@ -31,6 +31,11 @@ export async function getTranslation(post: CollectionEntry<'posts'>, lang: Lang)
   return posts.find((other) => getPostSlug(other) === getPostSlug(post));
 }
 
+// Immagine per l'anteprima sui social: i social non leggono gli SVG, quindi si usa il PNG gemello
+export function getSocialImage(src: string) {
+  return src.replace(/\.svg$/, '.png');
+}
+
 export function getCategoryUrl(slug: CategorySlug, lang: Lang) {
   return localizePath(`/posts/category/${slug}/`, lang);
 }

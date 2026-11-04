@@ -11,6 +11,14 @@ const posts = defineCollection({
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
     categories: z.array(z.enum(CATEGORY_SLUGS)).min(1),
+    // Copertina facoltativa, in public/assets/images/posts/. Se è un SVG, accanto serve il PNG
+    // con lo stesso nome (lo genera `npm run covers`) per l'anteprima sui social.
+    cover: z
+      .object({
+        src: z.string().startsWith('/'),
+        alt: z.string(),
+      })
+      .optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),

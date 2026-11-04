@@ -16,14 +16,21 @@ const t = useTranslations(lang);
 <ul class="post-list">
   {
     posts.map((post) => (
-      <li>
-        <a class="post-list__title" href={getPostUrl(post)}>
-          {post.data.title}
-        </a>
-        {post.data.draft && <span class="badge">{t.draft}</span>}
-        <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
-        <p>{post.data.description}</p>
-        <CategoryLinks categories={post.data.categories} lang={lang} />
+      <li class:list={{ 'post-list__item--cover': post.data.cover }}>
+        {post.data.cover && (
+          <a class="post-list__cover" href={getPostUrl(post)} tabindex="-1" aria-hidden="true">
+            <img src={post.data.cover.src} alt="" width="1200" height="630" loading="lazy" />
+          </a>
+        )}
+        <div>
+          <a class="post-list__title" href={getPostUrl(post)}>
+            {post.data.title}
+          </a>
+          {post.data.draft && <span class="badge">{t.draft}</span>}
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
+          <p>{post.data.description}</p>
+          <CategoryLinks categories={post.data.categories} lang={lang} />
+        </div>
       </li>
     ))
   }

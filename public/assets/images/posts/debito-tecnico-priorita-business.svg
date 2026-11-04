@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: nuove funzionalità (blocchi teal) impilate su fondamenta crepate (blocchi grigi);
+       a sinistra il tempo del team diviso tra nuove richieste e lavoro per tenere in piedi l'esistente -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="1040" cy="70" r="3"/><circle cx="1080" cy="70" r="3"/><circle cx="1120" cy="70" r="3"/>
+    <circle cx="1040" cy="110" r="3"/><circle cx="1080" cy="110" r="3"/><circle cx="1120" cy="110" r="3"/>
+  </g>
+
+  <!-- capacità del team: barre orizzontali, la parte ambra è lavoro non pianificato -->
+  <g>
+    <rect x="110" y="190" width="360" height="250" rx="18" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+    <g>
+      <rect x="150" y="235" width="280" height="26" rx="13" fill="#e1e4e8"/>
+      <rect x="150" y="235" width="196" height="26" rx="13" fill="#2f7f93"/>
+      <rect x="340" y="235" width="90" height="26" rx="13" fill="#e0a94a"/>
+
+      <rect x="150" y="290" width="280" height="26" rx="13" fill="#e1e4e8"/>
+      <rect x="150" y="290" width="168" height="26" rx="13" fill="#2f7f93"/>
+      <rect x="312" y="290" width="118" height="26" rx="13" fill="#e0a94a"/>
+
+      <rect x="150" y="345" width="280" height="26" rx="13" fill="#e1e4e8"/>
+      <rect x="150" y="345" width="140" height="26" rx="13" fill="#2f7f93"/>
+      <rect x="284" y="345" width="146" height="26" rx="13" fill="#e0a94a"/>
+    </g>
+    <path d="M150 405 L 430 405" stroke="#c9d3d8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- terreno -->
+  <path d="M560 540 L 1110 540" stroke="#6b6e76" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- fondamenta: blocchi grigi, leggermente disallineati, con crepe -->
+  <g stroke="#ffffff" stroke-width="4">
+    <rect x="640" y="470" width="150" height="68" rx="6" fill="#8a8e96"/>
+    <rect x="794" y="470" width="150" height="68" rx="6" fill="#9a9ea5"/>
+    <rect x="948" y="470" width="110" height="68" rx="6" fill="#8a8e96"/>
+    <g transform="rotate(-2 780 436)">
+      <rect x="680" y="402" width="160" height="66" rx="6" fill="#a7abb1"/>
+      <rect x="844" y="402" width="160" height="66" rx="6" fill="#b3b7bc"/>
+    </g>
+  </g>
+  <g stroke="#e0a94a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M870 470 l -12 22 l 14 14 l -10 32"/>
+    <path d="M760 404 l 10 20 l -12 16 l 8 24"/>
+  </g>
+
+  <!-- piani nuovi: blocchi teal -->
+  <g stroke="#ffffff" stroke-width="4" transform="rotate(-3 840 370)">
+    <rect x="700" y="336" width="150" height="64" rx="6" fill="#2f7f93"/>
+    <rect x="854" y="336" width="130" height="64" rx="6" fill="#3a8ea3"/>
+    <rect x="740" y="270" width="200" height="64" rx="6" fill="#1f5a68"/>
+  </g>
+
+  <!-- nuova richiesta in arrivo -->
+  <g>
+    <rect x="770" y="120" width="150" height="64" rx="6" fill="#2f7f93" stroke="#ffffff" stroke-width="4"/>
+    <g stroke="#2f7f93" stroke-width="4" stroke-linecap="round" opacity="0.5">
+      <line x1="790" y1="96" x2="790" y2="72"/>
+      <line x1="845" y1="104" x2="845" y2="68"/>
+      <line x1="900" y1="96" x2="900" y2="72"/>
+    </g>
+    <path d="M845 200 l 0 40" stroke="#2f7f93" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12" opacity="0.6"/>
+  </g>
+</svg>

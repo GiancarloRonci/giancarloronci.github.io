@@ -3,6 +3,9 @@ title: "Il problema dell’AI sui dati non è scrivere l’SQL: è sapere cosa s
 description: "Chiedere ai dati in linguaggio naturale oggi funziona. Ma se l’azienda non ha deciso cosa significano i suoi numeri, l’AI sceglierà al posto suo, senza dirlo."
 date: 2026-11-02
 categories: ["ai-analytics", "data-governance", "metadata-semantic-layer"]
+cover:
+  src: "/assets/images/posts/ai-active-customer.svg"
+  alt: "Una query da un lato e tre cerchi sovrapposti dall’altro: tre definizioni di cliente attivo che coincidono solo in parte"
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
 updated: 2026-11-02
 draft: false

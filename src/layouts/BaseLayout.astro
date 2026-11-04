@@ -9,11 +9,14 @@ interface Props {
   // Indirizzo della stessa pagina nelle altre lingue, quando non è il semplice cambio di prefisso
   // (es. un articolo che ha un nome diverso o non è tradotto)
   alternates?: Partial<Record<Lang, string>>;
+  // Immagine per l'anteprima sui social (percorso sotto public/), es. la copertina di un articolo
+  image?: string;
+  imageAlt?: string;
 }
 
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
-const { title, description = t.description, alternates = {} } = Astro.props;
+const { title, description = t.description, alternates = {}, image, imageAlt } = Astro.props;
 
 const pageTitle = title ? `${title} | ${SITE_TITLE}` : `${SITE_TITLE} · ${t.tagline}`;
 const currentPath = Astro.url.pathname;
@@ -52,6 +55,17 @@ const isActive = (url: string) => (url === homePath ? currentPath === homePath :
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={t.dateLocale.replace('-', '_')} />
+    {
+      image && (
+        <>
+          <meta property="og:image" content={new URL(image, Astro.site)} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+          <meta name="twitter:card" content="summary_large_image" />
+        </>
+      )
+    }
   </head>
   <body>
     <header class="masthead">

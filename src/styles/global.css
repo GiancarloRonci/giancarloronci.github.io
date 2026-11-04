@@ -300,6 +300,34 @@ main.container {
   margin: 0.25rem 0 0;
 }
 
+/* Articolo con copertina: miniatura a sinistra, testo a destra (in colonna su mobile) */
+.post-list__item--cover {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.post-list__cover {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.post-list__cover img,
+.post__cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.post__cover {
+  margin: 1.25rem 0 1.75rem;
+}
+
 .post {
   max-width: 760px;
   margin: 0 auto;
@@ -475,6 +503,11 @@ main.container {
 
   .career-card {
     flex-direction: column;
+  }
+
+  .post-list__item--cover {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
 
   .career-logo {
