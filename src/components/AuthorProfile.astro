@@ -12,7 +12,6 @@ const t = useTranslations(getLang(Astro.currentLocale));
     <ul class="author-profile__titles">
       {AUTHOR.jobTitles.map((title) => <li>{title}</li>)}
     </ul>
-    <p class="author-profile__bio">{t.bio}</p>
     <ul class="author-profile__links">
       <li>{t.location}</li>
       <li><a href={AUTHOR.linkedin} rel="noopener">LinkedIn</a></li>
