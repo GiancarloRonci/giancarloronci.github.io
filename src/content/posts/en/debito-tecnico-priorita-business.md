@@ -4,7 +4,7 @@ description: "The business wants new features yesterday, the data team knows the
 date: 2026-11-04
 tags: ["Data Engineering", "Technical Debt", "Data Strategy", "Leadership"]
 updated: 2026-11-04
-draft: true
+draft: false
 ---
 
 Monday morning, prioritization meeting.

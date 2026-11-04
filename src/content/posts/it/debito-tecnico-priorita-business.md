@@ -4,7 +4,7 @@ description: "Il business chiede nuove funzionalità per ieri, il team dati sa c
 date: 2026-11-04
 tags: ["Data Engineering", "Debito tecnico", "Data Strategy", "Leadership"]
 updated: 2026-11-04
-draft: true
+draft: false
 ---
 
 Lunedì mattina, riunione di prioritizzazione.
