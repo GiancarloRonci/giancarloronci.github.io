@@ -1,0 +1,23 @@
+---
+// Categorie di un articolo, come link alle rispettive pagine
+import { getCategory, type CategorySlug } from '../data/categories';
+import type { Lang } from '../i18n/ui';
+import { getCategoryUrl } from '../lib/posts';
+
+interface Props {
+  categories: CategorySlug[];
+  lang: Lang;
+}
+
+const { categories, lang } = Astro.props;
+---
+
+<ul class="categories">
+  {
+    categories.map((slug) => (
+      <li>
+        <a href={getCategoryUrl(slug, lang)}>{getCategory(slug).label[lang]}</a>
+      </li>
+    ))
+  }
+</ul>

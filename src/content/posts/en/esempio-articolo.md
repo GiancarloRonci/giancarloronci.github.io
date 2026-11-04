@@ -2,6 +2,7 @@
 title: "Article title"
 description: "A one-line summary: it appears in the article list, in search results and in the RSS feed."
 date: 2026-10-28
+categories: ["data-strategy"]
 tags: ["Data Strategy"]
 draft: true
 ---

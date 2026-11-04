@@ -2,16 +2,18 @@
 // Pagina con profilo autore a lato (come l'author_profile di Minimal Mistakes)
 import BaseLayout from './BaseLayout.astro';
 import AuthorProfile from '../components/AuthorProfile.astro';
+import type { Lang } from '../i18n/ui';
 
 interface Props {
   title?: string;
   description?: string;
+  alternates?: Partial<Record<Lang, string>>;
 }
 
-const { title, description } = Astro.props;
+const { title, description, alternates } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} alternates={alternates}>
   <div class="layout--profile">
     <AuthorProfile />
     <article class="page__content">

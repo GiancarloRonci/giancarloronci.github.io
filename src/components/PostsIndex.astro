@@ -1,13 +1,14 @@
 ---
-// Elenco articoli raggruppato per anno, nella lingua della pagina
+// Elenco articoli raggruppato per anno, nella lingua della pagina, con l'indice delle categorie in cima
 import ProfileLayout from '../layouts/ProfileLayout.astro';
 import PostList from './PostList.astro';
 import { getLang, useTranslations } from '../i18n/ui';
-import { getPublishedPosts } from '../lib/posts';
+import { getCategoryUrl, getPublishedPosts, getUsedCategories } from '../lib/posts';
 
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const posts = await getPublishedPosts(lang);
+const categories = await getUsedCategories(lang);
 
 // Raggruppa per anno; l'ordine (dal più recente) viene da getPublishedPosts
 const byYear = Map.groupBy(posts, (post) => post.data.date.getFullYear());
@@ -16,6 +17,22 @@ const byYear = Map.groupBy(posts, (post) => post.data.date.getFullYear());
 <ProfileLayout title={t.postsTitle} description={t.postsDescription}>
   <h1>{t.postsTitle}</h1>
   <p>{t.postsDescription}</p>
+  {
+    categories.length > 0 && (
+      <nav class="category-index" aria-label={t.categories}>
+        <h2>{t.categories}</h2>
+        <ul class="categories categories--index">
+          {categories.map((category) => (
+            <li>
+              <a href={getCategoryUrl(category.slug, lang)}>
+                {category.label[lang]} <span class="categories__count">{category.posts.length}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
   {posts.length === 0 && <p>{t.noPosts}</p>}
   {
     [...byYear].map(([year, yearPosts]) => (

@@ -2,6 +2,7 @@
 title: "AI's problem with data isn't writing the SQL. It's knowing what \"active customer\" means"
 description: "Asking your data questions in plain language works today. But if a company hasn't decided what its numbers mean, AI will decide for it, without saying so."
 date: 2026-11-02
+categories: ["ai-analytics", "data-governance", "metadata-semantic-layer"]
 tags: ["AI", "Data Analytics", "Data Governance", "KPI"]
 updated: 2026-11-02
 draft: false

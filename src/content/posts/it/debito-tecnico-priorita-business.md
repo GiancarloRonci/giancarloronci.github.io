@@ -2,6 +2,7 @@
 title: "Debito tecnico o priorità del business? Il problema non è scegliere, è decidere quanto pagare"
 description: "Il business chiede nuove funzionalità per ieri, il team dati sa che le fondamenta scricchiolano. Non è una scelta tra due alternative: è una decisione di investimento che va presa in modo esplicito."
 date: 2026-11-04
+categories: ["data-strategy", "data-engineering"]
 tags: ["Data Engineering", "Debito tecnico", "Data Strategy", "Leadership"]
 updated: 2026-11-04
 draft: false

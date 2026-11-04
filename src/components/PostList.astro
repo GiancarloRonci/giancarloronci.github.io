@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import CategoryLinks from './CategoryLinks.astro';
 import { getLang, useTranslations } from '../i18n/ui';
 import { formatDate, getPostUrl } from '../lib/posts';
 
@@ -22,6 +23,7 @@ const t = useTranslations(lang);
         {post.data.draft && <span class="badge">{t.draft}</span>}
         <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
         <p>{post.data.description}</p>
+        <CategoryLinks categories={post.data.categories} lang={lang} />
       </li>
     ))
   }

@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { localizePath, useTranslations, type Lang } from '../i18n/ui';
+import { CATEGORIES, type CategorySlug } from '../data/categories';
 
 // Gli articoli stanno in src/content/posts/<lingua>/: l'id è quindi 'it/nome-file' o 'en/nome-file'.
 // Due file con lo stesso nome nelle due cartelle sono uno la traduzione dell'altro.
@@ -28,6 +29,19 @@ export async function getPublishedPosts(lang: Lang) {
 export async function getTranslation(post: CollectionEntry<'posts'>, lang: Lang) {
   const posts = await getPublishedPosts(lang);
   return posts.find((other) => getPostSlug(other) === getPostSlug(post));
+}
+
+export function getCategoryUrl(slug: CategorySlug, lang: Lang) {
+  return localizePath(`/posts/category/${slug}/`, lang);
+}
+
+// Categorie che hanno almeno un articolo pubblicato nella lingua, nell'ordine di CATEGORIES
+export async function getUsedCategories(lang: Lang) {
+  const posts = await getPublishedPosts(lang);
+  return CATEGORIES.map((category) => ({
+    ...category,
+    posts: posts.filter((post) => post.data.categories.includes(category.slug)),
+  })).filter((category) => category.posts.length > 0);
 }
 
 export function formatDate(date: Date, lang: Lang) {

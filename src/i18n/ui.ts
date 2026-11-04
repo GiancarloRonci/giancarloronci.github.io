@@ -26,6 +26,8 @@ export const UI = {
     allPosts: '← Tutti gli articoli',
     updatedOn: 'aggiornato il',
     draft: 'bozza',
+    categories: 'Categorie',
+    category: 'Categoria',
     cv: {
       title: 'Curriculum Vitae',
       description: 'Curriculum di Giancarlo Ronci: esperienza, formazione e competenze in Data & Analytics.',
@@ -57,6 +59,8 @@ export const UI = {
     allPosts: '← All articles',
     updatedOn: 'updated on',
     draft: 'draft',
+    categories: 'Categories',
+    category: 'Category',
     cv: {
       title: 'Curriculum Vitae',
       description: 'Curriculum of Giancarlo Ronci: experience, education and skills in Data & Analytics.',

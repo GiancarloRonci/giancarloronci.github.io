@@ -2,6 +2,7 @@
 title: "Technical debt or business priorities? The problem isn't choosing, it's deciding how much to pay"
 description: "The business wants new features yesterday, the data team knows the foundations are creaking. It isn't a choice between two options: it's an investment decision that needs to be made in the open."
 date: 2026-11-04
+categories: ["data-strategy", "data-engineering"]
 tags: ["Data Engineering", "Technical Debt", "Data Strategy", "Leadership"]
 updated: 2026-11-04
 draft: false

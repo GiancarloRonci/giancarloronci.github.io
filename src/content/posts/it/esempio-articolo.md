@@ -2,6 +2,7 @@
 title: "Titolo dell'articolo"
 description: "Una riga di sintesi: compare nell'elenco articoli, nei risultati di ricerca e nel feed RSS."
 date: 2026-10-28
+categories: ["data-strategy"]
 tags: ["Data Strategy"]
 draft: true
 ---
