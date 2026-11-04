@@ -178,7 +178,7 @@ export const CV: Record<Lang, Cv> = {
     experience: [
       {
         period: 'Sep 2017 – Present',
-        title: 'Head of Data Management & Data Warehousing · Soldo · Italy',
+        title: 'Data Management & Data Analytics Lead · Soldo · Italy',
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Soldo logo',
         description:
@@ -343,7 +343,7 @@ export const CV: Record<Lang, Cv> = {
     experience: [
       {
         period: 'Set 2017 – Oggi',
-        title: 'Head of Data Management & Data Warehousing · Soldo · Italia',
+        title: 'Data Management & Data Analytics Lead · Soldo · Italia',
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Logo Soldo',
         description:
