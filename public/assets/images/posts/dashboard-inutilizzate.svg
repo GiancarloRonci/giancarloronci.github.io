@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: una griglia di dashboard quasi tutte sbiadite (non usate), poche evidenziate (usate)
+       e una sola contrassegnata come ufficiale -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+
+    <!-- dashboard non usata: tutta grigia, leggera -->
+    <g id="faded" opacity="0.55">
+      <rect width="110" height="80" rx="8" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+      <rect x="12" y="12" width="44" height="7" rx="3.5" fill="#e1e4e8"/>
+      <rect x="14" y="52" width="12" height="16" rx="2" fill="#e1e4e8"/>
+      <rect x="32" y="42" width="12" height="26" rx="2" fill="#e1e4e8"/>
+      <rect x="50" y="47" width="12" height="21" rx="2" fill="#e1e4e8"/>
+      <rect x="72" y="30" width="26" height="38" rx="4" fill="#eef0f2"/>
+    </g>
+
+    <!-- dashboard usata: colori pieni -->
+    <g id="used">
+      <rect width="110" height="80" rx="8" fill="#ffffff" stroke="#9cc6d1" stroke-width="2"/>
+      <rect x="12" y="12" width="44" height="7" rx="3.5" fill="#1f5a68"/>
+      <rect x="14" y="48" width="12" height="20" rx="2" fill="#3a8ea3"/>
+      <rect x="32" y="36" width="12" height="32" rx="2" fill="#2f7f93"/>
+      <rect x="50" y="42" width="12" height="26" rx="2" fill="#3a8ea3"/>
+      <path d="M72 60 L 82 48 L 90 54 L 99 36" stroke="#e0a94a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="1040" cy="60" r="3"/><circle cx="1080" cy="60" r="3"/><circle cx="1120" cy="60" r="3"/>
+    <circle cx="1040" cy="95" r="3"/><circle cx="1080" cy="95" r="3"/><circle cx="1120" cy="95" r="3"/>
+  </g>
+
+  <!-- griglia 8 x 4: passo 125 in orizzontale, 100 in verticale -->
+  <g transform="translate(108 125)">
+    <!-- riga 1 -->
+    <use xlink:href="#faded" x="0" y="0"/>
+    <use xlink:href="#faded" x="125" y="0"/>
+    <use xlink:href="#used" x="250" y="0"/>
+    <use xlink:href="#faded" x="375" y="0"/>
+    <use xlink:href="#faded" x="500" y="0"/>
+    <use xlink:href="#faded" x="625" y="0"/>
+    <use xlink:href="#faded" x="750" y="0"/>
+    <use xlink:href="#faded" x="875" y="0"/>
+    <!-- riga 2 -->
+    <use xlink:href="#faded" x="0" y="100"/>
+    <use xlink:href="#faded" x="125" y="100"/>
+    <use xlink:href="#faded" x="250" y="100"/>
+    <use xlink:href="#faded" x="375" y="100"/>
+    <!-- 500,100: dashboard ufficiale, disegnata sotto -->
+    <use xlink:href="#faded" x="625" y="100"/>
+    <use xlink:href="#used" x="750" y="100"/>
+    <use xlink:href="#faded" x="875" y="100"/>
+    <!-- riga 3 -->
+    <use xlink:href="#faded" x="0" y="200"/>
+    <use xlink:href="#used" x="125" y="200"/>
+    <use xlink:href="#faded" x="250" y="200"/>
+    <use xlink:href="#faded" x="375" y="200"/>
+    <use xlink:href="#faded" x="500" y="200"/>
+    <use xlink:href="#faded" x="625" y="200"/>
+    <use xlink:href="#faded" x="750" y="200"/>
+    <use xlink:href="#faded" x="875" y="200"/>
+    <!-- riga 4 -->
+    <use xlink:href="#faded" x="0" y="300"/>
+    <use xlink:href="#faded" x="125" y="300"/>
+    <use xlink:href="#faded" x="250" y="300"/>
+    <use xlink:href="#faded" x="375" y="300"/>
+    <use xlink:href="#faded" x="500" y="300"/>
+    <use xlink:href="#used" x="625" y="300"/>
+    <use xlink:href="#faded" x="750" y="300"/>
+    <use xlink:href="#faded" x="875" y="300"/>
+
+    <!-- dashboard ufficiale: più grande, in primo piano, con il bollino di certificazione -->
+    <g transform="translate(480 88)">
+      <rect width="150" height="104" rx="10" fill="#1f5a68" stroke="#ffffff" stroke-width="4"/>
+      <rect x="16" y="16" width="60" height="9" rx="4.5" fill="#ffffff" opacity="0.9"/>
+      <rect x="18" y="64" width="16" height="24" rx="2" fill="#9cc6d1"/>
+      <rect x="42" y="48" width="16" height="40" rx="2" fill="#ffffff"/>
+      <rect x="66" y="56" width="16" height="32" rx="2" fill="#9cc6d1"/>
+      <path d="M96 78 L 108 62 L 118 70 L 132 46" stroke="#e0a94a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="146" cy="4" r="20" fill="#e0a94a" stroke="#ffffff" stroke-width="4"/>
+      <path d="M137 4 l 6 6 l 11 -12" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
