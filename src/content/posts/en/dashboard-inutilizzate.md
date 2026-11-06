@@ -8,7 +8,7 @@ cover:
   alt: "A grid of many faded dashboards, with a few highlighted and only one marked as official"
 tags: ["Business Intelligence", "Dashboards", "Data Analytics", "Data Governance"]
 updated: 2026-11-06
-draft: true
+draft: false
 ---
 
 The migration project starts with a harmless question. The vendor of the new BI tool asks how many dashboards need to be migrated, to estimate time and cost.

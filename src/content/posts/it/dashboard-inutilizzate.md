@@ -8,7 +8,7 @@ cover:
   alt: "Una griglia di molte dashboard sbiadite, tra cui poche evidenziate e una sola contrassegnata come ufficiale"
 tags: ["Business Intelligence", "Dashboard", "Data Analytics", "Data Governance"]
 updated: 2026-11-06
-draft: true
+draft: false
 ---
 
 Il progetto di migrazione parte con una domanda innocua. Il fornitore del nuovo strumento di BI chiede quante dashboard ci sono da migrare, per stimare tempi e costi.
