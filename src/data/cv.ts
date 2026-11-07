@@ -196,10 +196,10 @@ export const CV: Record<Lang, Cv> = {
         technologies: TECH.soldo,
       },
       {
-        period: 'Advisory',
+        period: 'Coaching',
         title: 'Data & Analytics Coach',
         description:
-          'Supporting professionals, managers and organizations in strengthening their data capabilities through structured coaching and advisory.',
+          'Supporting professionals, managers and organizations in strengthening their data capabilities through structured coaching.',
         highlights: [
           'Data Strategy and target operating model',
           'Designing and evolving teams for Data Analytics and for AI applied to Data Analytics',
@@ -361,10 +361,10 @@ export const CV: Record<Lang, Cv> = {
         technologies: TECH.soldo,
       },
       {
-        period: 'Advisory',
+        period: 'Coaching',
         title: 'Data & Analytics Coach',
         description:
-          'Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso percorsi strutturati di coaching e advisory.',
+          'Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso percorsi strutturati di coaching.',
         highlights: [
           'Data Strategy e target operating model',
           'Progettazione ed evoluzione dei team di Data Analytics e di AI applicata al Data Analytics',
