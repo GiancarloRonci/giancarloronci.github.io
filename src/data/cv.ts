@@ -199,7 +199,7 @@ export const CV: Record<Lang, Cv> = {
         period: 'Coaching',
         title: 'Data & Analytics Coach',
         description:
-          'Supporting professionals, managers and organizations in strengthening their data capabilities through structured coaching.',
+          'Lessons and coaching sessions for professionals, managers and organizations on the topics below, to help them strengthen their data capabilities.',
         highlights: [
           'Data Strategy and target operating model',
           'Designing and evolving teams for Data Analytics and for AI applied to Data Analytics',
@@ -364,7 +364,7 @@ export const CV: Record<Lang, Cv> = {
         period: 'Coaching',
         title: 'Data & Analytics Coach',
         description:
-          'Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso percorsi strutturati di coaching.',
+          'Lezioni e percorsi di coaching per professionisti, manager e organizzazioni sugli argomenti elencati qui sotto, per rafforzare le loro competenze sui dati.',
         highlights: [
           'Data Strategy e target operating model',
           'Progettazione ed evoluzione dei team di Data Analytics e di AI applicata al Data Analytics',
