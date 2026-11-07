@@ -182,7 +182,7 @@ export const CV: Record<Lang, Cv> = {
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Soldo logo',
         description:
-          'Reporting to the CTO, leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading and growing the internal Data & Analytics team.',
+          'Leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading and growing the internal Data & Analytics team.',
         highlights: [
           'Planning and evolution of the company Data Warehouse, with scalable solutions that optimize data accessibility and performance',
           'Design and maintenance of the data platform architecture (Data Lake, Data Warehouse, Lakehouse) on AWS and Databricks',
@@ -197,7 +197,7 @@ export const CV: Record<Lang, Cv> = {
       },
       {
         period: 'Advisory',
-        title: 'Data & Analytics Coach & Advisor',
+        title: 'Data & Analytics Coach',
         description:
           'Supporting professionals, managers and organizations in strengthening their data capabilities through structured coaching and advisory.',
         highlights: [
@@ -347,7 +347,7 @@ export const CV: Record<Lang, Cv> = {
         logo: '/assets/images/companies/soldo.svg',
         logoAlt: 'Logo Soldo',
         description:
-          'A riporto del CTO, guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige e fa crescere il team interno di Data & Analytics.',
+          'Guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige e fa crescere il team interno di Data & Analytics.',
         highlights: [
           'Pianificazione ed evoluzione del Data Warehouse aziendale, con soluzioni scalabili che ottimizzano accessibilità dei dati e prestazioni',
           'Progettazione e mantenimento dell’architettura della piattaforma dati (Data Lake, Data Warehouse, Lakehouse) su AWS e Databricks',
@@ -362,7 +362,7 @@ export const CV: Record<Lang, Cv> = {
       },
       {
         period: 'Advisory',
-        title: 'Data & Analytics Coach & Advisor',
+        title: 'Data & Analytics Coach',
         description:
           'Affianca professionisti, manager e organizzazioni nel rafforzare le proprie competenze sui dati attraverso percorsi strutturati di coaching e advisory.',
         highlights: [
