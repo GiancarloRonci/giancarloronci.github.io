@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { NAVIGATION, SITE_TITLE } from '../consts';
+import { AUTHOR, NAVIGATION, SITE_TITLE } from '../consts';
 import { DEFAULT_LANG, getLang, LANGUAGES, localizePath, translatePath, useTranslations, type Lang } from '../i18n/ui';
 
 interface Props {
@@ -105,7 +105,14 @@ const isActive = (url: string) => (url === homePath ? currentPath === homePath :
 
     <footer class="site-footer">
       <div class="container">
-        © {new Date().getFullYear()} {SITE_TITLE} · <a href={localizePath('/rss.xml', lang)}>{t.rss}</a>
+        <ul class="footer-contacts">
+          <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
+          <li>{t.cv.phone}: <a href={`tel:${AUTHOR.phone.replaceAll(' ', '')}`}>{AUTHOR.phone}</a></li>
+          <li>LinkedIn: <a href={AUTHOR.linkedin} rel="noopener">{AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</a></li>
+        </ul>
+        <p class="footer-copy">
+          © {new Date().getFullYear()} {SITE_TITLE} · <a href={localizePath('/rss.xml', lang)}>{t.rss}</a>
+        </p>
       </div>
     </footer>
   </body>

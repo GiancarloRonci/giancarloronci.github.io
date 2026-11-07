@@ -488,6 +488,23 @@ main.container {
   color: var(--text-muted);
 }
 
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-contacts a {
+  overflow-wrap: anywhere;
+}
+
+.footer-copy {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .layout--profile {
     grid-template-columns: 1fr;
