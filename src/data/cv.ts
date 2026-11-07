@@ -115,7 +115,7 @@ const TECH = {
 export const CV: Record<Lang, Cv> = {
   en: {
     summary: [
-      'Over 20 years of experience in data and analytics, more than 10 of them in leadership roles, across fintech and technology consulting: Business Intelligence, Data Warehousing, Data Engineering and Data Analytics, from both a functional and a technical perspective. Leading cross-functional teams and managing complex projects, consistently delivering high-quality, forward-thinking solutions that give business units accurate and timely insights.',
+      'Over 20 years of experience in data and analytics, more than 10 of them in leadership roles, across fintech and IT services: Business Intelligence, Data Warehousing, Data Engineering and Data Analytics, from both a functional and a technical perspective. Leading cross-functional teams and managing complex projects, consistently delivering high-quality, forward-thinking solutions that give business units accurate and timely insights.',
       'The vision: integrated data ecosystems that support business growth and optimize decision-making processes, balancing strategic vision with advanced technical skills.',
     ],
     expertise: [
@@ -155,7 +155,7 @@ export const CV: Record<Lang, Cv> = {
           'Developing machine learning models for fraud detection, churn prediction and anti-money laundering, with a focus on real-time solutions.',
       },
       {
-        title: 'Consulting experience and strategic vision',
+        title: 'Broad project experience and strategic vision',
         description:
           'A background at NTT Data and Altran, on projects of all sizes and complexities, brought to companies building their data management foundations.',
       },
@@ -281,7 +281,7 @@ export const CV: Record<Lang, Cv> = {
   },
   it: {
     summary: [
-      'Oltre 20 anni di esperienza in ambito dati e analytics, di cui più di 10 in ruoli di leadership, tra fintech e consulenza tecnologica: Business Intelligence, Data Warehousing, Data Engineering e Data Analytics, sia dal punto di vista funzionale sia da quello tecnico. Guida team cross-funzionali e gestisce progetti complessi, realizzando con costanza soluzioni di qualità e orientate al futuro che forniscono alle business unit informazioni accurate e tempestive.',
+      'Oltre 20 anni di esperienza in ambito dati e analytics, di cui più di 10 in ruoli di leadership, tra fintech e servizi IT: Business Intelligence, Data Warehousing, Data Engineering e Data Analytics, sia dal punto di vista funzionale sia da quello tecnico. Guida team cross-funzionali e gestisce progetti complessi, realizzando con costanza soluzioni di qualità e orientate al futuro che forniscono alle business unit informazioni accurate e tempestive.',
       'La visione: ecosistemi di dati integrati che sostengono la crescita del business e ottimizzano i processi decisionali, in equilibrio tra visione strategica e competenze tecniche avanzate.',
     ],
     expertise: [
@@ -320,7 +320,7 @@ export const CV: Record<Lang, Cv> = {
           'Sviluppo di modelli di machine learning per fraud detection, churn prediction e antiriciclaggio, con un’attenzione particolare alle soluzioni real-time.',
       },
       {
-        title: 'Esperienza di consulenza e visione strategica',
+        title: 'Esperienza su progetti eterogenei e visione strategica',
         description:
           'Un percorso in NTT Data e Altran, su progetti di ogni dimensione e complessità, messo a disposizione delle aziende che costruiscono le basi del proprio data management.',
       },
