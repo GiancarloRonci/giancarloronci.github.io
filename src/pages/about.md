@@ -10,7 +10,7 @@ I am a data leader with over 20 years of experience in data and analytics, more 
 in leadership roles, leading Data Management, Data Warehouse, Data Engineering and Analytics
 initiatives and teams.
 
-My goal is to help organizations and professionals build greater maturity
+My goal is to help professionals build greater maturity
 in the use of data, turning architectures, processes and skills into concrete business value.
 
 ## Focus areas
