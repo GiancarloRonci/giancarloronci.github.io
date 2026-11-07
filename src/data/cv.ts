@@ -179,7 +179,7 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Sep 2017 – Present',
         title: 'Data Management & Data Analytics Lead · Soldo · Italy',
-        logo: '/assets/images/companies/soldo.svg',
+        logo: '/assets/images/companies/soldo.png',
         logoAlt: 'Soldo logo',
         description:
           'Leading all managerial and technical aspects of Data Engineering, Data Warehousing, Business Intelligence / Analytics and Data Management, keeping data infrastructure aligned with business needs, and leading and growing the internal Data & Analytics team.',
@@ -198,6 +198,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Coaching',
         title: 'Data & Analytics Coach',
+        logo: '/assets/images/companies/coaching.svg',
+        logoAlt: 'Coaching icon',
         description:
           'Lessons and coaching sessions for professionals on the topics below, to help them strengthen their data capabilities.',
         highlights: [
@@ -213,6 +215,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Nov 2013 – Sep 2017',
         title: 'Data Warehouse BI Technical and Functional Analyst, DWH Architect · Altran S.p.A.',
+        logo: '/assets/images/companies/altran.svg',
+        logoAlt: 'Altran logo',
         description:
           'Technical and functional analysis in Data Warehousing and Business Intelligence and design of data warehouse systems, including highly complex ones, also acting as team leader and technical manager.',
         highlights: [
@@ -228,6 +232,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Nov 2013 – Sep 2017',
         title: 'BI Data Warehouse Architect, Technical & Project Manager · Altran S.p.A.',
+        logo: '/assets/images/companies/altran.svg',
+        logoAlt: 'Altran logo',
         description:
           'Managing the data warehouse architectures of the projects, with schedules and activity estimates, coordinating the analysis and development groups and handling the relationship with the end customer.',
         highlights: [
@@ -240,6 +246,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Oct 2005 – Nov 2013',
         title: 'Data Warehouse and Business Intelligence Technical Analyst & Developer · NTT DATA Italia',
+        logo: '/assets/images/companies/ntt-data.svg',
+        logoAlt: 'NTT DATA logo',
         description:
           'Technical analysis and software development in Data Warehousing and Business Intelligence: process design, data acquisition and processing, database design, reporting planning and development.',
         highlights: [
@@ -255,6 +263,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Aug 2001 – Oct 2005',
         title: 'Analyst Developer · 3F DATA SYSTEM S.p.A.',
+        logo: '/assets/images/companies/3f-data-system.svg',
+        logoAlt: '3F Data System logo',
         description:
           'Oracle analyst programmer in Rome and developer of graphical user interfaces for storing and processing data.',
         highlights: [
@@ -269,10 +279,14 @@ export const CV: Record<Lang, Cv> = {
       {
         period: '1997 – 2004',
         title: 'Degree in Electronic Engineering · Sapienza University of Rome',
+        logo: '/assets/images/companies/sapienza.svg',
+        logoAlt: 'Sapienza University of Rome logo',
       },
       {
         period: 'Continuous learning',
         title: 'Ongoing professional development',
+        logo: '/assets/images/companies/learning.svg',
+        logoAlt: 'Learning icon',
         description:
           'Continuous focus on cloud data platforms, data engineering, data governance, machine learning, AI and managerial growth in Data & Analytics leadership.',
       },
@@ -344,7 +358,7 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Set 2017 – Oggi',
         title: 'Data Management & Data Analytics Lead · Soldo · Italia',
-        logo: '/assets/images/companies/soldo.svg',
+        logo: '/assets/images/companies/soldo.png',
         logoAlt: 'Logo Soldo',
         description:
           'Guida tutti gli aspetti manageriali e tecnici di Data Engineering, Data Warehousing, Business Intelligence / Analytics e Data Management, mantenendo le infrastrutture dati allineate alle esigenze del business, e dirige e fa crescere il team interno di Data & Analytics.',
@@ -363,6 +377,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Coaching',
         title: 'Data & Analytics Coach',
+        logo: '/assets/images/companies/coaching.svg',
+        logoAlt: 'Icona coaching',
         description:
           'Lezioni e percorsi di coaching per professionisti sugli argomenti elencati qui sotto, per rafforzare le loro competenze sui dati.',
         highlights: [
@@ -378,6 +394,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Nov 2013 – Set 2017',
         title: 'Data Warehouse BI Technical and Functional Analyst, DWH Architect · Altran S.p.A.',
+        logo: '/assets/images/companies/altran.svg',
+        logoAlt: 'Logo Altran',
         description:
           'Analisi tecnica e funzionale in ambito Data Warehousing e Business Intelligence e progettazione di sistemi di data warehouse, anche ad alta complessità, con ruolo di team leader e responsabile tecnico.',
         highlights: [
@@ -393,6 +411,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Nov 2013 – Set 2017',
         title: 'BI Data Warehouse Architect, Technical & Project Manager · Altran S.p.A.',
+        logo: '/assets/images/companies/altran.svg',
+        logoAlt: 'Logo Altran',
         description:
           'Gestione delle architetture di data warehouse dei progetti, con pianificazione e stima delle attività, coordinamento dei gruppi di analisi e sviluppo e gestione del rapporto con il cliente finale.',
         highlights: [
@@ -405,6 +425,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Ott 2005 – Nov 2013',
         title: 'Data Warehouse and Business Intelligence Technical Analyst & Developer · NTT DATA Italia',
+        logo: '/assets/images/companies/ntt-data.svg',
+        logoAlt: 'Logo NTT DATA',
         description:
           'Analisi tecnica e sviluppo software in ambito Data Warehousing e Business Intelligence: progettazione dei processi, acquisizione ed elaborazione dei dati, progettazione di database, pianificazione e sviluppo della reportistica.',
         highlights: [
@@ -420,6 +442,8 @@ export const CV: Record<Lang, Cv> = {
       {
         period: 'Ago 2001 – Ott 2005',
         title: 'Analyst Developer · 3F DATA SYSTEM S.p.A.',
+        logo: '/assets/images/companies/3f-data-system.svg',
+        logoAlt: 'Logo 3F Data System',
         description:
           'Analista programmatore Oracle a Roma e sviluppatore di interfacce grafiche per l’archiviazione e l’elaborazione dei dati.',
         highlights: [
@@ -434,10 +458,14 @@ export const CV: Record<Lang, Cv> = {
       {
         period: '1997 – 2004',
         title: 'Laurea in Ingegneria Elettronica · Università La Sapienza di Roma',
+        logo: '/assets/images/companies/sapienza.svg',
+        logoAlt: 'Logo Università La Sapienza di Roma',
       },
       {
         period: 'Formazione continua',
         title: 'Sviluppo professionale continuo',
+        logo: '/assets/images/companies/learning.svg',
+        logoAlt: 'Icona formazione',
         description:
           'Attenzione costante a data platform cloud, data engineering, data governance, machine learning, AI e crescita manageriale nella leadership Data & Analytics.',
       },
