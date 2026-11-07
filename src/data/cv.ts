@@ -196,7 +196,7 @@ export const CV: Record<Lang, Cv> = {
         technologies: TECH.soldo,
       },
       {
-        period: 'Coaching',
+        period: 'Sep 2018 – Present',
         title: 'Data & Analytics Coach',
         logo: '/assets/images/companies/coaching.svg',
         logoAlt: 'Coaching icon',
@@ -375,7 +375,7 @@ export const CV: Record<Lang, Cv> = {
         technologies: TECH.soldo,
       },
       {
-        period: 'Coaching',
+        period: 'Set 2018 – Oggi',
         title: 'Data & Analytics Coach',
         logo: '/assets/images/companies/coaching.svg',
         logoAlt: 'Icona coaching',
