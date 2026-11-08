@@ -13,7 +13,6 @@ export const UI = {
     tagline: 'Data Analytics & AnalyticsAI',
     description:
       'Un blog sulla Data Analytics e sul rapporto tra AI e Data Analytics: architetture, pratiche e strategie per trasformare i dati in valore per il business.',
-    bio: 'Data & Analytics Coach',
     location: 'Italia · Milano / Roma',
     navLabel: 'Navigazione principale',
     nav: { home: 'Home', posts: 'Blog', about: 'Chi sono', cv: 'CV' },
@@ -46,7 +45,6 @@ export const UI = {
     tagline: 'Data Analytics & AnalyticsAI',
     description:
       'A blog on Data Analytics and on the relationship between AI and Data Analytics: architectures, practices and strategies to turn data into business value.',
-    bio: 'Data & Analytics Coach',
     location: 'Italy · Milan / Rome area',
     navLabel: 'Main navigation',
     nav: { home: 'Home', posts: 'Blog', about: 'About', cv: 'CV' },

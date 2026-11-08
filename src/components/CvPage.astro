@@ -18,7 +18,8 @@ const cv = CV[lang];
     <img class="cv-print-photo" src={AUTHOR.avatar} alt={AUTHOR.name} />
     <div>
       <p class="cv-print-name">{AUTHOR.name}</p>
-      <p>{t.bio} · {t.location}</p>
+      <p>{AUTHOR.jobTitles.join(' · ')}</p>
+      <p>{t.location}</p>
       <p>{AUTHOR.email} · {AUTHOR.phone}</p>
       <p>{AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</p>
     </div>
