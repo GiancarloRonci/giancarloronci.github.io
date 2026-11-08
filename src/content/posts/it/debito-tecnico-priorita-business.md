@@ -97,3 +97,12 @@ C’è un esercizio semplice che si può fare prima di qualsiasi piano di rifaci
 Poi confronta quel numero con il tempo dedicato alle nuove richieste del business. Se il rapporto ti sorprende, hai trovato la prima cosa da portare alla prossima riunione di prioritizzazione: non come lamentela, ma come dato.
 
 Il debito tecnico e le priorità del business non sono due esigenze da mettere una contro l’altra. Sono due voci dello stesso bilancio. Il business ha diritto di chiedere velocità, il team dati ha il dovere di dire quanto costa. Quello che non funziona è far finta che il costo non esista, perché prima o poi qualcuno lo paga comunque, di solito nel momento peggiore.
+
+## Per approfondire
+
+Letture utili sui temi dell’articolo (in inglese).
+
+- [The WyCash Portfolio Management System](http://c2.com/doc/oopsla92.html) (Ward Cunningham, 1992): il testo in cui nasce la metafora del debito tecnico
+- [Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html) (Martin Fowler): debito e interessi spiegati in poche righe
+- [Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) (Martin Fowler): la differenza tra debito consapevole e debito accidentale
+- [Eliminating Toil](https://sre.google/sre-book/eliminating-toil/) (Google, Site Reliability Engineering): come misurare e limitare il lavoro manuale ripetitivo

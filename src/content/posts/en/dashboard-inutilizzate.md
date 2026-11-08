@@ -119,3 +119,12 @@ There's an exercise you can do in an afternoon. Export from your BI tool the lis
 If the three numbers seem acceptable, your BI estate is in good health. If they surprise you, you've found the topic for your next meeting with the business: not as a request to clean up, but as an early answer to a question someone will ask sooner or later, perhaps during a migration, perhaps in front of two different numbers for the same thing.
 
 Dashboards exist to support decisions. When there are so many that nobody knows which ones to look at, they stop doing that.
+
+## Further reading
+
+Useful reading on the topics of this article.
+
+- [Content ownership and management](https://learn.microsoft.com/en-us/power-bi/guidance/fabric-adoption-roadmap-content-ownership-and-management) (Microsoft Fabric adoption roadmap): personal, team and enterprise content, and who owns it
+- [Endorsement overview](https://learn.microsoft.com/en-us/fabric/governance/endorsement-overview) (Microsoft Fabric): how to flag promoted and certified content, the equivalent of the certified dashboard tier
+- [Usage metrics in Power BI](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics): the usage statistics to start the inventory from
+- [Administrative Views](https://help.tableau.com/current/server/en-us/adminview.htm) (Tableau Server): admin views with access and content usage

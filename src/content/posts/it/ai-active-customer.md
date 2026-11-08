@@ -88,3 +88,12 @@ Prima di valutare strumenti e architetture, puoi fare una prova che richiede poc
 Se coincidono, hai una buona base su cui costruire. Se non coincidono, hai appena scoperto da dove partire, e l’AI c’entra poco.
 
 L’AI non elimina il lavoro sui dati. Lo rende più visibile, perché ogni definizione mancata può trasformarsi in una risposta sbagliata davanti a chi deve decidere. Scrivere la query ormai costa poco. Stabilire cosa significano i numeri resta compito dell’azienda.
+
+## Per approfondire
+
+Letture utili sui temi dell’articolo (in inglese).
+
+- [dbt Semantic Layer](https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl): un esempio di come rendere le definizioni delle metriche eseguibili e condivise tra strumenti
+- [Benchmarking and Improving Text-to-SQL Generation under Ambiguity](https://arxiv.org/abs/2310.13659) (Bhaskar et al., 2023): come i modelli si comportano davanti a domande ambigue
+- [Can LLM Already Serve as A Database Interface? (BIRD)](https://arxiv.org/abs/2305.03111) (Li et al., 2023): un benchmark text-to-SQL su database reali, dove la conoscenza del dominio fa la differenza
+- [DAMA-DMBOK](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/): il riferimento classico per data governance, metadati e responsabilità sui dati

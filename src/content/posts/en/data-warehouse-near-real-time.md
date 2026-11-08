@@ -124,3 +124,15 @@ The best way to start isn't to redesign everything, but to pick one high-value u
 For a long time the data warehouse was the company's memory: reliable, complete, but always a step behind. A data warehouse updated within seconds is still the memory, but it also becomes something closer to a nervous system: it senses what's happening as it happens, and makes it possible to react.
 
 The technology to do this is now mature, accessible and far simpler than it was a few years ago. The real question is no longer whether it can be done, but which decisions the company wants to be able to make when they really matter, which is now.
+
+## Further reading
+
+Useful reading on the topics of this article.
+
+- [Zero-ETL between Amazon Aurora and Amazon Redshift](/posts/zero-etl-aurora-redshift/): a closer look at one of the technologies mentioned
+- [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) (Jay Kreps, 2014): the article that proposed the kappa architecture
+- [Streaming 101: The world beyond batch](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) (Tyler Akidau, 2015): event time, processing time and out-of-order data
+- [Debezium](https://debezium.io/documentation/reference/stable/index.html): an open-source reference for log-based Change Data Capture
+- [Medallion architecture](https://www.databricks.com/glossary/medallion-architecture) (Databricks): the bronze, silver and gold layers
+- [Streaming ingestion](https://docs.aws.amazon.com/redshift/latest/dg/materialized-view-streaming-ingestion.html) (Amazon Redshift) and [Dynamic tables](https://docs.snowflake.com/en/user-guide/dynamic-tables-about) (Snowflake): two examples of continuous ingestion and transformation
+- [Apache Iceberg](https://iceberg.apache.org/) and [Delta Lake](https://delta.io/): open table formats for the lakehouse

@@ -119,3 +119,12 @@ C’è un esercizio che si può fare in un pomeriggio. Estrai dallo strumento di
 Se i tre numeri ti sembrano accettabili, hai un patrimonio di BI in buona salute. Se ti sorprendono, hai trovato l’argomento per la prossima riunione con il business: non come richiesta di fare pulizia, ma come risposta anticipata a una domanda che prima o poi qualcuno farà, magari durante una migrazione, magari davanti a due numeri diversi per la stessa cosa.
 
 Le dashboard servono a prendere decisioni. Quando sono così tante che nessuno sa più quali guardare, smettono di farlo.
+
+## Per approfondire
+
+Letture utili sui temi dell’articolo (in inglese).
+
+- [Content ownership and management](https://learn.microsoft.com/en-us/power-bi/guidance/fabric-adoption-roadmap-content-ownership-and-management) (Microsoft Fabric adoption roadmap): contenuti personali, di team e aziendali, e chi ne è responsabile
+- [Endorsement overview](https://learn.microsoft.com/en-us/fabric/governance/endorsement-overview) (Microsoft Fabric): come segnalare i contenuti promossi e certificati, l’equivalente del livello delle dashboard certificate
+- [Usage metrics in Power BI](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-modern-usage-metrics): le statistiche di utilizzo da cui partire per l’inventario
+- [Administrative Views](https://help.tableau.com/current/server/en-us/adminview.htm) (Tableau Server): le viste di amministrazione con accessi e utilizzo dei contenuti

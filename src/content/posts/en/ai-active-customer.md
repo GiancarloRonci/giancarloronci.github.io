@@ -88,3 +88,12 @@ Before you evaluate tools and architectures, there's a quick experiment you can 
 If they match, you have a good base to build on. If they don't, you've just found out where to start, and AI has little to do with it.
 
 AI doesn't eliminate the work on data. It makes that work more visible, because every missing definition can turn into a wrong answer in front of the people who have to decide. Writing the query is cheap now. Deciding what the numbers mean is still the company's job.
+
+## Further reading
+
+Useful reading on the topics of this article.
+
+- [dbt Semantic Layer](https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl): an example of how to make metric definitions executable and shared across tools
+- [Benchmarking and Improving Text-to-SQL Generation under Ambiguity](https://arxiv.org/abs/2310.13659) (Bhaskar et al., 2023): how models behave when questions are ambiguous
+- [Can LLM Already Serve as A Database Interface? (BIRD)](https://arxiv.org/abs/2305.03111) (Li et al., 2023): a text-to-SQL benchmark on real databases, where domain knowledge makes the difference
+- [DAMA-DMBOK](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/): the classic reference for data governance, metadata and data ownership

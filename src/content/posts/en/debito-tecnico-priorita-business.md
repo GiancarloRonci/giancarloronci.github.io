@@ -97,3 +97,12 @@ There's a simple exercise you can do before any rebuild plan. For a month, ask t
 Then compare that number with the time spent on new business requests. If the ratio surprises you, you've found the first thing to bring to the next prioritization meeting: not as a complaint, but as data.
 
 Technical debt and business priorities aren't two needs to set against each other. They're two lines in the same budget. The business has every right to ask for speed, and the data team has a duty to say what it costs. What doesn't work is pretending the cost doesn't exist, because sooner or later someone pays it anyway, usually at the worst possible moment.
+
+## Further reading
+
+Useful reading on the topics of this article.
+
+- [The WyCash Portfolio Management System](http://c2.com/doc/oopsla92.html) (Ward Cunningham, 1992): the text where the technical debt metaphor was born
+- [Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html) (Martin Fowler): debt and interest explained in a few lines
+- [Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) (Martin Fowler): the difference between deliberate and inadvertent debt
+- [Eliminating Toil](https://sre.google/sre-book/eliminating-toil/) (Google, Site Reliability Engineering): how to measure and cap repetitive manual work
