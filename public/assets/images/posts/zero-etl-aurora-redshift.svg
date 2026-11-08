@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: in alto, sbiadita, la pipeline tradizionale con tanti passaggi intermedi;
+       al centro un database operazionale collegato direttamente al data warehouse da un flusso continuo -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="80" cy="560" r="3"/><circle cx="120" cy="560" r="3"/><circle cx="160" cy="560" r="3"/>
+    <circle cx="80" cy="595" r="3"/><circle cx="120" cy="595" r="3"/><circle cx="160" cy="595" r="3"/>
+  </g>
+
+  <!-- pipeline tradizionale: tanti box e passaggi, sbiadita e barrata -->
+  <g opacity="0.45">
+    <path d="M360 110 L 840 110" stroke="#9a9ea5" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+    <rect x="380" y="86" width="70" height="48" rx="8" fill="#ffffff" stroke="#9a9ea5" stroke-width="3"/>
+    <rect x="490" y="86" width="70" height="48" rx="8" fill="#ffffff" stroke="#9a9ea5" stroke-width="3"/>
+    <rect x="600" y="86" width="70" height="48" rx="8" fill="#ffffff" stroke="#9a9ea5" stroke-width="3"/>
+    <rect x="710" y="86" width="70" height="48" rx="8" fill="#ffffff" stroke="#9a9ea5" stroke-width="3"/>
+    <g fill="#9a9ea5">
+      <circle cx="415" cy="110" r="7"/>
+      <rect x="512" y="102" width="26" height="16" rx="3"/>
+      <path d="M622 122 L 635 98 L 648 122 Z"/>
+      <circle cx="733" cy="110" r="5"/><circle cx="757" cy="110" r="5"/>
+    </g>
+  </g>
+  <path d="M360 150 L 840 70" stroke="#e0a94a" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- database operazionale (Aurora) -->
+  <g>
+    <path d="M150 270 L 150 430 A 80 26 0 0 0 310 430 L 310 270" fill="#3a8ea3"/>
+    <ellipse cx="230" cy="270" rx="80" ry="26" fill="#6fb3c4"/>
+    <path d="M150 325 A 80 26 0 0 0 310 325" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.4"/>
+    <path d="M150 380 A 80 26 0 0 0 310 380" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.4"/>
+  </g>
+  <!-- piccole righe di tabella che escono dal database -->
+  <g fill="#ffffff" opacity="0.9">
+    <rect x="182" y="300" width="96" height="8" rx="4"/>
+    <rect x="182" y="350" width="70" height="8" rx="4"/>
+    <rect x="182" y="400" width="84" height="8" rx="4"/>
+  </g>
+
+  <!-- flusso diretto: righe che viaggiano in continuo -->
+  <path d="M340 350 L 860 350" stroke="#2f7f93" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+  <g fill="#2f7f93">
+    <rect x="380" y="342" width="44" height="16" rx="8" opacity="0.35"/>
+    <rect x="470" y="342" width="44" height="16" rx="8" opacity="0.5"/>
+    <rect x="560" y="342" width="44" height="16" rx="8" opacity="0.65"/>
+    <rect x="650" y="342" width="44" height="16" rx="8" opacity="0.8"/>
+    <rect x="740" y="342" width="44" height="16" rx="8"/>
+  </g>
+  <g fill="#e0a94a">
+    <rect x="515" y="310" width="30" height="12" rx="6" opacity="0.6"/>
+    <rect x="695" y="378" width="30" height="12" rx="6"/>
+  </g>
+  <path d="M842 334 l 20 16 l -20 16" stroke="#2f7f93" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- "zero": badge al centro del flusso -->
+  <g transform="translate(600 245)">
+    <circle r="40" fill="#ffffff" stroke="#e0a94a" stroke-width="5"/>
+    <ellipse rx="14" ry="20" fill="none" stroke="#1f5a68" stroke-width="6"/>
+  </g>
+  <path d="M600 290 L 600 328" stroke="#e0a94a" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
+
+  <!-- data warehouse (Redshift) -->
+  <g>
+    <path d="M890 250 L 890 450 A 100 30 0 0 0 1090 450 L 1090 250" fill="#1f5a68"/>
+    <ellipse cx="990" cy="250" rx="100" ry="30" fill="#3a8ea3"/>
+    <path d="M890 317 A 100 30 0 0 0 1090 317" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.35"/>
+    <path d="M890 384 A 100 30 0 0 0 1090 384" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.35"/>
+  </g>
+  <!-- livelli bronze / silver / gold dentro il data warehouse -->
+  <g>
+    <rect x="930" y="400" width="120" height="14" rx="7" fill="#c08a3e"/>
+    <rect x="930" y="372" width="120" height="14" rx="7" fill="#c9d3d8"/>
+    <rect x="930" y="344" width="120" height="14" rx="7" fill="#e0a94a"/>
+  </g>
+
+  <!-- terreno -->
+  <path d="M120 500 L 1110 500" stroke="#6b6e76" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+</svg>
