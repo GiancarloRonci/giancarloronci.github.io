@@ -11,7 +11,7 @@ updated: 2026-11-08
 draft: false
 ---
 
-Chi ha costruito almeno una volta una pipeline dal database applicativo al data warehouse conosce la sequenza. Un servizio di Change Data Capture legge i log del database. Un broker di messaggi o un bucket S3 fa da appoggio. Un job, schedulato o in streaming, prende i file e li carica con un `COPY`. Un altro job fa il merge degli aggiornamenti e delle cancellazioni nelle tabelle finali. E intorno a tutto questo ci sono monitoraggio, gestione degli errori, riprocessamenti, e qualcuno reperibile quando una colonna cambia tipo alle tre di notte.
+Chi ha costruito almeno una volta una pipeline near real time dal database applicativo al data warehouse conosce la sequenza. Un servizio di Change Data Capture legge i log del database. Un broker di messaggi o un bucket S3 fa da appoggio. Un job, schedulato o in streaming, prende i file e li carica con un `COPY`. Un altro job fa il merge degli aggiornamenti e delle cancellazioni nelle tabelle finali. E intorno a tutto questo ci sono monitoraggio, gestione degli errori, riprocessamenti, e qualcuno reperibile quando una colonna cambia tipo alle tre di notte.
 
 Ogni pezzo ha senso preso da solo. Messi in fila, sono una piccola piattaforma da mantenere solo per spostare dati che esistono già, da un sistema all’altro, senza cambiarli.
 

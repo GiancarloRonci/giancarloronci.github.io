@@ -11,7 +11,7 @@ updated: 2026-11-08
 draft: false
 ---
 
-Anyone who has ever built a pipeline from an application database to a data warehouse knows the sequence. A Change Data Capture service reads the database logs. A message broker or an S3 bucket acts as a staging area. A job, scheduled or streaming, picks up the files and loads them with a `COPY`. Another job merges updates and deletes into the final tables. And around all of this there's monitoring, error handling, reprocessing, and someone on call when a column changes type at three in the morning.
+Anyone who has ever built a near real-time pipeline from an application database to a data warehouse knows the sequence. A Change Data Capture service reads the database logs. A message broker or an S3 bucket acts as a staging area. A job, scheduled or streaming, picks up the files and loads them with a `COPY`. Another job merges updates and deletes into the final tables. And around all of this there's monitoring, error handling, reprocessing, and someone on call when a column changes type at three in the morning.
 
 Each piece makes sense on its own. Lined up together, they're a small platform to maintain just to move data that already exists from one system to another, without changing it.
 
