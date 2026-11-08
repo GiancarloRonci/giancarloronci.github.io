@@ -154,3 +154,27 @@ If you're evaluating zero-ETL, here's a path that reduces surprises.
 For years a significant part of data teams' work has been moving data from one place to another, and keeping alive the mechanisms that did it. It was necessary work, but it generated little value in itself and absorbed a lot of attention.
 
 The zero-ETL integration between Aurora and Redshift shifts that work onto the platform. The time it frees up shouldn't be seen as a saving to pocket, but as an opportunity to reinvest where value is really created: in data modelling, in defining metrics, in quality and governance. In other words, in the T, which is still yours.
+
+## Sources
+
+Official AWS documentation consulted for this article.
+
+**Amazon Aurora**
+
+- [Aurora zero-ETL integrations](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.html): overview, supported sources, limits and costs
+- [Getting started with Aurora zero-ETL integrations](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.setting-up.html): Aurora cluster parameters
+- [Creating Aurora zero-ETL integrations with Amazon Redshift](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.creating.html): creating the integration
+- [Data filtering for Aurora zero-ETL integrations](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/zero-etl.filtering.html): filter syntax
+- [Amazon Aurora zero-ETL integration with Amazon Redshift](https://aws.amazon.com/rds/aurora/zero-etl/): product page and pricing
+
+**Amazon Redshift**
+
+- [Zero-ETL integrations](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.html): overview on the data warehouse side
+- [Considerations when using zero-ETL integrations](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl.reqs-lims.html): requirements and limits
+- [Configure authorization for your data warehouse](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.redshift-iam.html): resource policy
+- [Creating destination databases](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.creating-db.html): destination database
+- [History mode](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-history-mode.html)
+- [Querying and creating materialized views with zero-ETL integrations](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.querying-and-creating-materialized-views.html)
+- [Monitoring zero-ETL integrations](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-monitoring.html) and [CloudWatch metrics](https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.metrics.html)
+- [CREATE DATABASE](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_DATABASE.html) and [ALTER DATABASE](https://docs.aws.amazon.com/redshift/latest/dg/r_ALTER_DATABASE.html): SQL reference
+- [Refreshing a materialized view](https://docs.aws.amazon.com/redshift/latest/dg/materialized-view-refresh.html)
