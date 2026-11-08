@@ -29,7 +29,7 @@ Oltre ad Aurora, la stessa famiglia di integrazioni copre oggi anche RDS for MyS
 
 Quando crei l’integrazione succedono due cose, in sequenza.
 
-La prima è il **caricamento iniziale**. AWS esporta lo stato attuale delle tabelle scelte e lo carica in Redshift. La documentazione indica tempi di 20-25 minuti o più, che crescono con la dimensione dei dati, e avviene senza bloccare il database sorgente.
+La prima è il **caricamento iniziale**. AWS esporta lo stato attuale delle tabelle scelte e lo carica in Redshift. Non c’è una durata fissa: la documentazione indica 20-25 minuti “o più”, a seconda della dimensione del database sorgente. Va letto come un ordine di grandezza per database piccoli; su database grandi i tempi si allungano. Lo stesso vale ogni volta che una tabella deve essere risincronizzata.
 
 La seconda è la **replica continua**. Da quel momento le modifiche vengono lette dai log delle transazioni di Aurora e applicate in Redshift. Su Aurora MySQL si usa il binlog, nella versione ottimizzata (*enhanced binlog*) che si attiva con i parametri che vedremo tra poco; su Aurora PostgreSQL la replica logica. Non serve nessun processo esterno che interroghi il database.
 

@@ -29,7 +29,7 @@ Besides Aurora, the same family of integrations now also covers RDS for MySQL, P
 
 When you create the integration, two things happen in sequence.
 
-The first is the **initial load**. AWS exports the current state of the selected tables and loads it into Redshift. The documentation mentions 20-25 minutes or more, growing with the size of the data, and it happens without blocking the source database.
+The first is the **initial load**. AWS exports the current state of the selected tables and loads it into Redshift. There's no fixed duration: the documentation says 20-25 minutes "or more", depending on the size of the source database. Read it as an order of magnitude for small databases; on large ones it takes longer. The same applies whenever a table has to be resynchronised.
 
 The second is **continuous replication**. From then on, changes are read from Aurora's transaction logs and applied in Redshift. Aurora MySQL uses the binlog, in the optimised version (*enhanced binlog*) turned on by the parameters we'll see shortly; Aurora PostgreSQL uses logical replication. No external process needs to query the database.
 
