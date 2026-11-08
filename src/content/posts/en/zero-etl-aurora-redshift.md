@@ -19,21 +19,21 @@ The **zero-ETL integration between Amazon Aurora and Amazon Redshift** exists to
 
 ## What it is, in one sentence
 
-It's a replication managed by AWS that continuously copies the tables of an Aurora cluster (MySQL or PostgreSQL) into a Redshift database, typically a few seconds behind, without you having to write, schedule or monitor a pipeline.
+It's a replication managed by AWS that continuously copies the tables of an Aurora cluster (MySQL or PostgreSQL) into a Redshift database, with a delay AWS puts in the order of seconds, without you having to write, schedule or monitor a pipeline.
 
 The name is a bit promotional, and it's worth reading carefully. "Zero-ETL" doesn't mean there's no transformation anymore. It means the **E** and the **L**, extraction and loading, go away: the least interesting and most fragile part of the work. The **T** stays, all of it: modelling, business rules, metrics. It simply moves inside Redshift, where the data has already arrived.
 
-Besides Aurora, the same family of integrations now also covers RDS for MySQL, DynamoDB and some SaaS applications. The principles are the same; here I focus on Aurora, which is the most common case.
+Besides Aurora, the same family of integrations now also covers RDS for MySQL, PostgreSQL and Oracle, DynamoDB, self-managed MySQL, PostgreSQL, SQL Server and Oracle databases, and applications such as Salesforce, SAP and ServiceNow. The principles are the same; here I focus on Aurora, which is the most common case.
 
 ## How it works
 
 When you create the integration, two things happen in sequence.
 
-The first is the **initial load**. AWS exports the current state of the selected tables and loads it into Redshift. On databases of a few terabytes it can take a while, but it happens without blocking the source database.
+The first is the **initial load**. AWS exports the current state of the selected tables and loads it into Redshift. The documentation mentions 20-25 minutes or more, growing with the size of the data, and it happens without blocking the source database.
 
-The second is **continuous replication**. From then on, every insert, update and delete is read from Aurora's transaction logs and applied in Redshift. Aurora MySQL uses an optimised version of the binlog (*enhanced binlog*); Aurora PostgreSQL uses logical replication. In both cases the reading happens at the storage level, with a very limited impact on the performance of the cluster serving the application.
+The second is **continuous replication**. From then on, changes are read from Aurora's transaction logs and applied in Redshift. Aurora MySQL uses the binlog, in the optimised version (*enhanced binlog*) turned on by the parameters we'll see shortly; Aurora PostgreSQL uses logical replication. No external process needs to query the database.
 
-On the Redshift side, data lands in a dedicated database created from the integration. Tables keep the names and structure of the source ones, and many schema changes (a new column, a new table) are propagated automatically too.
+On the Redshift side, data lands in a dedicated database created from the integration. Tables keep the names and structure of the source ones, and the integration replicates the schema too, not just the data.
 
 One important detail: that database is **read-only**. You can't write to it, add calculated columns or create objects inside it. It's a mirror of the source, and it has to stay that way. All transformation work happens in other databases of the data warehouse, which read from this one through cross-database queries.
 
@@ -52,6 +52,8 @@ binlog_backup               = 0
 binlog_replication_globaldb = 0
 ```
 
+In addition, `binlog_transaction_compression` must not be on and `binlog_row_value_options` must not be set to `PARTIAL_JSON`.
+
 For Aurora PostgreSQL the equivalent is:
 
 ```text
@@ -61,11 +63,11 @@ aurora.logical_replication_backup   = 0
 aurora.logical_replication_globaldb = 0
 ```
 
-After the change the cluster needs a reboot, to be planned in a maintenance window.
+If the parameter group is attached to an existing cluster, the primary instance needs a reboot, to be planned in a maintenance window.
 
-**On the data warehouse** the target can be Redshift Serverless or an encrypted provisioned cluster with RA3 nodes. The `enable_case_sensitive_identifier` parameter must be turned on, because MySQL and PostgreSQL distinguish upper and lower case in names and Redshift, by default, doesn't. Finally, the integration has to be authorised with a *resource policy* on the Redshift namespace, stating which Aurora cluster can write to it and which account can create the integration.
+**On the data warehouse** the target can be Redshift Serverless or an encrypted provisioned cluster with at least two RA3 nodes. The `enable_case_sensitive_identifier` parameter must be turned on, because MySQL and PostgreSQL distinguish upper and lower case in names and Redshift, by default, doesn't. On Serverless it's set from the CLI, because the console doesn't allow it. Finally, the integration has to be authorised with a *resource policy* on the data warehouse, stating which source database can write to it and who can create the integration.
 
-**The integration** is created from the RDS console, the CLI or with infrastructure as code (CloudFormation and Terraform support it). This is also where you define the **data filters**: which databases and tables to include or exclude. It's a step not to underestimate, as we'll see shortly.
+**The integration** is created from the RDS console, the CLI (`aws rds create-integration`) or through the API and SDKs. This is also where you define the **data filters**: which databases and tables to include or exclude. It's a step not to underestimate, as we'll see shortly.
 
 **The target database**, finally, is created in Redshift with a SQL command:
 
@@ -74,7 +76,7 @@ After the change the cluster needs a reboot, to be planned in a maintenance wind
 CREATE DATABASE aurora_sales FROM INTEGRATION '<integration_id>';
 
 -- Aurora PostgreSQL: the source database must be named too
-CREATE DATABASE aurora_sales FROM INTEGRATION '<integration_id>' DATABASE sales;
+CREATE DATABASE aurora_sales FROM INTEGRATION '<integration_id>' DATABASE 'sales';
 ```
 
 From that moment the tables appear in Redshift and start catching up.
@@ -83,15 +85,15 @@ From that moment the tables appear in Redshift and start catching up.
 
 This is the part worth knowing before promising anything to the business.
 
-**A primary key is required.** Tables without a primary key aren't replicated: they stay in an error state and don't appear in Redshift. In older application databases this happens more often than you'd think, especially for log or relationship tables. It's worth taking an inventory before starting.
+**A primary key is required.** Tables without a primary key aren't replicated (on Aurora PostgreSQL they end up in a failed state). In older application databases this happens more often than you'd think, especially for log or relationship tables. It's worth taking an inventory before starting.
 
-**Not all data types are supported equally.** Most columns map without problems; some special types and very large values (text or blobs beyond Redshift's limits) may be converted or cause problems on the individual table. The AWS documentation has an up-to-date mapping table, to be checked against the real schema.
+**Not all data types are supported.** Most columns map without problems, but some types aren't supported. Watch out for very long values too: a Redshift `VARCHAR` holds at most 65,535 bytes, and if a source value doesn't fit, replication of that table stops and the table goes into a failed state. The `TRUNCATECOLUMNS` parameter lets you truncate those values instead of blocking the table. The AWS documentation has an up-to-date data type mapping, to be checked against the real schema.
 
-**Schema changes are propagated, but not all in the same way.** Adding a column is painless. Other, more invasive changes can trigger a full resynchronisation of the affected table, during which that table's data isn't up to date.
+**Schema changes come at a price.** DDL commands on the source, such as an `ALTER TABLE`, can trigger a resynchronisation of the table, during which the table can't be queried in Redshift. It's worth coordinating schema changes with whoever uses that data, rather than finding out from an empty dashboard.
 
-**Filters decide what enters the data warehouse.** Without filters the integration replicates everything, including technical tables, application queues and data that isn't needed in the data warehouse or shouldn't be there at all. With a filter like `include: sales.*, exclude: sales.audit_log` you bring only what you need. It's also the first governance tool: data that isn't replicated doesn't have to be protected downstream.
+**Filters decide what enters the data warehouse.** Without filters the integration replicates everything, including technical tables, application queues and data that isn't needed in the data warehouse or shouldn't be there at all. On Aurora MySQL a filter like `include: sales.*, exclude: sales.audit_log` brings only what you need; on Aurora PostgreSQL the format includes the schema too (`include: sales.*.*, exclude: sales.*.audit_log`). It's also the first governance tool: data that isn't replicated doesn't have to be protected downstream.
 
-**Sensitive data arrives as it is.** The integration doesn't mask, pseudonymise or encrypt individual fields. If the customer table holds tax codes, IBANs or email addresses, they reach Redshift in clear text. Protection has to be built on the data warehouse, with permissions on the replicated database, dynamic data masking and row-level security on the objects users actually query. It has to be designed before access is opened, not after.
+**Sensitive data arrives as it is.** The integration applies no transformations during replication: it doesn't mask, pseudonymise or encrypt individual fields. If the customer table holds tax codes, IBANs or email addresses, they reach Redshift in clear text. Protection has to be built on the data warehouse, with permissions on the replicated database, dynamic data masking and row-level security on the objects users actually query. It has to be designed before access is opened, not after.
 
 ## After landing: the T is still yours
 
@@ -99,10 +101,10 @@ Having the application tables in Redshift, updated within seconds, is an excelle
 
 The model that works best is to use the replicated database as the **bronze layer** of a medallion architecture, and build the other layers on top of it.
 
-- **Materialized views with automatic refresh.** Redshift supports auto refresh and, for many queries, incremental refresh, including on tables fed by zero-ETL. It's the most direct way to keep a silver or gold layer almost as fresh as the source, without external schedulers.
+- **Materialized views with automatic refresh.** Redshift lets you create, in another database, materialized views with auto refresh built on the replicated tables. It's the most direct way to keep a silver or gold layer almost as fresh as the source, without external schedulers.
 - **Transformation tools such as dbt.** They work as usual: they read from the replicated database and write to a separate one. The frequency is worth choosing carefully, because a model refreshed every hour cancels out the advantage of a replication that arrives within seconds.
-- **History mode.** By default, replication only shows the current state of rows: if a customer changes address, the old value disappears. By turning on *history mode* for specific tables, Redshift keeps every version of every row with its validity dates, in practice a type 2 slowly changing dimension managed by the platform. For master data and statuses needed to reconstruct the past, it's a valuable feature.
-- **Refresh interval.** With `ALTER DATABASE ... INTEGRATION SET REFRESH_INTERVAL` you can decide how many seconds pass between one application of changes in Redshift and the next. Lengthening it reduces compute usage when a few seconds aren't really needed.
+- **History mode.** By default, replication only shows the current state of rows: if a customer changes address, the old value disappears. By turning on *history mode* for specific tables, Redshift keeps every version of every row, with three extra columns (`_record_is_active`, `_record_create_time`, `_record_delete_time`) telling when a version was created and when it was superseded. The result is very close to a type 2 slowly changing dimension managed by the platform. For master data and statuses needed to reconstruct the past, it's a valuable feature. Worth knowing: materialized views on history-mode tables are always fully recomputed.
+- **Refresh interval.** With `ALTER DATABASE ... INTEGRATION SET REFRESH_INTERVAL` you set how many seconds to wait between one refresh cycle and the next: the default is 0, meaning no pause. Lengthening it reduces compute usage when a few seconds aren't really needed.
 
 In other words, zero-ETL removes the plumbing, not the design. Those who adopt it thinking they can do without data modelling end up with a very fast data warehouse that's hard to use.
 
@@ -112,15 +114,15 @@ A managed integration is easier to run, but it doesn't run itself. The trickiest
 
 The tools to notice are there.
 
-- In Redshift, the system views `SVV_INTEGRATION`, `SVV_INTEGRATION_TABLE_STATE` and `SYS_INTEGRATION_ACTIVITY` show the state of the integration, the state of each individual table and the synchronisation activity.
-- In CloudWatch there are metrics on replication lag and on the number of tables replicated or in error, to set alarms on.
-- RDS events report changes in the state of the integration itself.
+- In Redshift, system views such as `SVV_INTEGRATION`, `SVV_INTEGRATION_TABLE_STATE` and `SYS_INTEGRATION_ACTIVITY` show the state of the integration, the state of each individual table and the synchronisation activity.
+- In CloudWatch there are metrics to set alarms on, such as `IntegrationLag` (the delay between a commit on the source and its availability in Redshift) and `IntegrationNumTablesFailedReplication` (the tables in error).
+- Redshift sends integration-related events to Amazon EventBridge, from which notifications can be routed.
 
 The practical advice is to treat latency as a service indicator: a clear threshold (five minutes, for example), an alarm when it's exceeded, and a periodic check that no table has ended up in an error state. If the business gets used to data from a few seconds ago, a one-hour delay is an incident and should be treated as one.
 
 ## Costs
 
-AWS doesn't charge for the integration itself. You pay for the resources it uses: on the Aurora side, I/O and storage related to reading changes and to the initial load; on the Redshift side, the compute needed to apply them and the storage of replicated data.
+AWS doesn't charge for the integration itself. You pay for the resources it uses: on the Aurora side, the additional I/O and storage to capture changes and the snapshot export for the initial load; on the Redshift side, the compute needed to apply them and the storage of replicated data; and any data transfer between different availability zones.
 
 The item to keep an eye on is mainly the second. With Redshift Serverless, a continuous flow of changes keeps the data warehouse active far more often than a nightly load, and the bill reflects it. It's a cost to compare with what it replaces: CDC services, loading jobs, intermediate storage and, above all, the hours spent keeping everything running. In my experience the comparison is almost always favourable, but it has to be done with real numbers, not the ones on the slides.
 
@@ -129,8 +131,8 @@ The item to keep an eye on is mainly the second. With Redshift Serverless, a con
 Zero-ETL is the right choice for a very specific case: bringing tables from an AWS database into Redshift, exactly as they are, as quickly as possible. Outside that scope, other tools are needed.
 
 - **Transformations in flight.** If data has to be enriched, filtered by row or anonymised before reaching the data warehouse, zero-ETL doesn't allow it. You need AWS DMS, Glue or a streaming pipeline.
-- **Sources outside AWS or not supported.** An on-premises database or one on another cloud needs a traditional CDC solution.
-- **Targets other than Redshift.** If the architecture is centred on a lakehouse with Apache Iceberg on S3, there are zero-ETL integrations towards SageMaker Lakehouse too, but with different characteristics to be assessed separately.
+- **Unsupported sources.** The list of sources keeps growing, and now includes self-managed databases too, but an engine that isn't on it needs a traditional CDC solution.
+- **Targets other than Redshift.** If the architecture is centred on a lakehouse, there are zero-ETL integrations towards the Amazon SageMaker lakehouse too, with different characteristics to be assessed separately.
 - **Events rather than tables.** Clickstream, IoT data or application events don't live in a relational database. For those, Redshift offers *streaming ingestion* from Kinesis and Kafka, which sits well alongside zero-ETL.
 
 In practice, mature architectures use both worlds: zero-ETL for operational databases, which are the majority of cases, and dedicated pipelines only where they're really needed.
