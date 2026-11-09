@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: linee confuse da quattro reparti convergono su un unico dato; sopra, una persona
+       con il bollino di approvazione decide; a destra esce una sola linea ordinata verso il numero ufficiale -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="1040" cy="60" r="3"/><circle cx="1080" cy="60" r="3"/><circle cx="1120" cy="60" r="3"/>
+    <circle cx="1040" cy="95" r="3"/><circle cx="1080" cy="95" r="3"/><circle cx="1120" cy="95" r="3"/>
+  </g>
+
+  <!-- linee confuse dai reparti al dato centrale -->
+  <g fill="none" stroke-width="4" stroke-linecap="round" opacity="0.75">
+    <path d="M190 150 C 330 140, 300 330, 420 260 S 470 330, 520 330" stroke="#9cc6d1"/>
+    <path d="M190 260 C 300 380, 360 200, 440 380 S 480 300, 520 350" stroke="#3a8ea3"/>
+    <path d="M190 370 C 280 250, 380 470, 450 300 S 490 380, 520 370" stroke="#9cc6d1"/>
+    <path d="M190 480 C 320 520, 330 300, 430 420 S 480 400, 520 390" stroke="#3a8ea3"/>
+  </g>
+
+  <!-- reparti: quattro schede con un numero diverso ciascuna -->
+  <g>
+    <g transform="translate(90 115)">
+      <rect width="100" height="70" rx="8" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+      <rect x="14" y="14" width="40" height="7" rx="3.5" fill="#c9d3d8"/>
+      <rect x="14" y="36" width="70" height="18" rx="4" fill="#9cc6d1"/>
+    </g>
+    <g transform="translate(90 225)">
+      <rect width="100" height="70" rx="8" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+      <rect x="14" y="14" width="40" height="7" rx="3.5" fill="#c9d3d8"/>
+      <rect x="14" y="36" width="56" height="18" rx="4" fill="#3a8ea3"/>
+    </g>
+    <g transform="translate(90 335)">
+      <rect width="100" height="70" rx="8" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+      <rect x="14" y="14" width="40" height="7" rx="3.5" fill="#c9d3d8"/>
+      <rect x="14" y="36" width="64" height="18" rx="4" fill="#9cc6d1"/>
+    </g>
+    <g transform="translate(90 445)">
+      <rect width="100" height="70" rx="8" fill="#ffffff" stroke="#e1e4e8" stroke-width="2"/>
+      <rect x="14" y="14" width="40" height="7" rx="3.5" fill="#c9d3d8"/>
+      <rect x="14" y="36" width="48" height="18" rx="4" fill="#3a8ea3"/>
+    </g>
+  </g>
+
+  <!-- il dato centrale: un database -->
+  <g transform="translate(600 360)">
+    <path d="M-80 -50 L -80 50 A 80 24 0 0 0 80 50 L 80 -50" fill="#1f5a68"/>
+    <ellipse cx="0" cy="-50" rx="80" ry="24" fill="#2f7f93"/>
+    <path d="M-80 0 A 80 24 0 0 0 80 0" fill="none" stroke="#9cc6d1" stroke-width="3" opacity="0.7"/>
+    <path d="M-80 50 A 80 24 0 0 0 80 50" fill="none" stroke="#9cc6d1" stroke-width="3" opacity="0.7"/>
+  </g>
+
+  <!-- il responsabile: una persona sopra il dato, con il bollino di approvazione -->
+  <g transform="translate(600 170)">
+    <line x1="0" y1="62" x2="0" y2="118" stroke="#1f5a68" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="74" fill="#ffffff" stroke="#9cc6d1" stroke-width="3"/>
+    <circle cx="0" cy="-16" r="22" fill="#1f5a68"/>
+    <path d="M-38 40 C -38 10, 38 10, 38 40 Z" fill="#1f5a68"/>
+    <circle cx="54" cy="-52" r="22" fill="#e0a94a" stroke="#ffffff" stroke-width="4"/>
+    <path d="M44 -52 l 7 7 l 12 -13" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- una sola linea ordinata verso il numero ufficiale -->
+  <path d="M685 360 L 900 360" stroke="#1f5a68" stroke-width="5" stroke-linecap="round"/>
+  <path d="M888 348 L 902 360 L 888 372" stroke="#1f5a68" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(920 300)">
+    <rect width="190" height="120" rx="12" fill="#ffffff" stroke="#1f5a68" stroke-width="3"/>
+    <rect x="20" y="20" width="70" height="9" rx="4.5" fill="#1f5a68"/>
+    <rect x="20" y="50" width="120" height="30" rx="6" fill="#1f5a68"/>
+    <path d="M20 100 L 60 100" stroke="#e0a94a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
