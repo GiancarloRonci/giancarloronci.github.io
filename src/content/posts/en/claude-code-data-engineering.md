@@ -46,7 +46,20 @@ A **plugin** is exactly that: a package that bundles skills, hooks, agents and M
 
 Skills tell Claude how to work. **MCP servers** give it access to the systems it works on.
 
-The dbt MCP server exposes groups of tools for running SQL, the semantic layer, searching metadata and lineage, CLI commands (`build`, `run`, `test`, `compile`), and generating YAML and staging models. The README warns that the CLI tools can modify models, sources and warehouse objects: enable them knowing what you're granting.
+MCP, the Model Context Protocol, is an open standard for connecting an AI assistant to external systems. An MCP server is a small program that sits between the assistant and a system and offers it a list of tools, each with a name, a description and parameters: "find a model", "run this query", "show me the lineage". The assistant doesn't need to know the system's APIs: it sees the tools, picks the one it needs and gets a structured answer back. The same server works with Claude Code and with any other tool that supports the protocol.
+
+The **dbt MCP server** is the one dbt Labs publishes for dbt projects. It works with dbt Core, the Fusion engine and dbt Platform, and gives Claude direct access to what dbt knows about the project. Its tools are grouped by type:
+
+- **discovery and lineage**: find a model, read its columns, descriptions and tests, see what it depends on and what depends on it, check its health;
+- **semantic layer**: list the defined metrics and query them, so the number comes from the official definition instead of a query rewritten every time;
+- **SQL**: run queries on the warehouse and turn a question into SQL;
+- **dbt commands**: `build`, `run`, `test`, `compile`, `show`, the same commands you'd run from the terminal;
+- **code generation**: create a model's YAML, a source definition, a staging model;
+- **dbt Platform Admin API**: list jobs, trigger one, read the error of a failed run.
+
+The difference shows on a question like "can I rename the `customer_id` column in `stg_orders`?". Without the server, Claude has to search the project files, read dozens of SQL models and rebuild the dependencies by hand, at the risk of missing some. With the server, it asks dbt for the lineage and gets the list of downstream models. Likewise, for a job that failed overnight, instead of having the log pasted in, it reads the run's error directly.
+
+The README warns that the CLI tools can modify models, sources and warehouse objects: enable them knowing what you're granting. A `build` started by the agent is a real `build`.
 
 For the warehouse, AWS publishes an MCP server for Amazon Redshift. The detail that matters most is the default behavior: the server starts read-only, and any value other than `read-write`, typos included, keeps it read-only. Even in write mode, it asks for confirmation before every statement that may change data. And the README says it plainly: the real security boundary is the database user's privileges, not the server.
 

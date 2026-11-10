@@ -46,7 +46,20 @@ Un **plugin** è proprio questo: un pacchetto che mette insieme skill, hook, age
 
 Le skill dicono a Claude come lavorare. I **server MCP** gli danno accesso ai sistemi su cui lavorare.
 
-Il server MCP di dbt espone gruppi di strumenti per l’esecuzione di SQL, il semantic layer, la ricerca nei metadati e nel lineage, i comandi della CLI (`build`, `run`, `test`, `compile`), la generazione di YAML e modelli di staging. Il README avverte che gli strumenti della CLI possono modificare modelli, sorgenti e oggetti nel warehouse: vanno abilitati sapendo cosa si sta concedendo.
+MCP, Model Context Protocol, è uno standard aperto per collegare un assistente AI a sistemi esterni. Un server MCP è un piccolo programma che si mette tra l’assistente e un sistema e gli offre un elenco di strumenti, ognuno con un nome, una descrizione e dei parametri: “cerca un modello”, “esegui questa query”, “mostrami il lineage”. L’assistente non deve conoscere le API del sistema: vede gli strumenti, sceglie quello che serve e riceve una risposta strutturata. Lo stesso server funziona con Claude Code e con gli altri strumenti che supportano il protocollo.
+
+Il **server MCP di dbt** è quello che dbt Labs pubblica per i progetti dbt. Funziona con dbt Core, con il motore Fusion e con dbt Platform, e dà a Claude accesso diretto a ciò che dbt sa del progetto. Gli strumenti sono raggruppati per tipo:
+
+- **ricerca e lineage**: trovare un modello, leggerne colonne, descrizioni e test, vedere da cosa dipende e cosa dipende da lui, controllarne lo stato;
+- **semantic layer**: elencare le metriche definite e interrogarle, così il numero arriva dalla definizione ufficiale invece che da una query riscritta ogni volta;
+- **SQL**: eseguire query sul warehouse e tradurre una domanda in SQL;
+- **comandi dbt**: `build`, `run`, `test`, `compile`, `show`, cioè gli stessi comandi che lanceresti dal terminale;
+- **generazione di codice**: creare lo YAML di un modello, la definizione di una sorgente, un modello di staging;
+- **Admin API** di dbt Platform: elencare i job, avviarne uno, leggere l’errore di un’esecuzione fallita.
+
+La differenza si vede su una domanda come “posso rinominare la colonna `customer_id` in `stg_orders`?”. Senza il server, Claude deve cercare nei file del progetto, leggere decine di modelli SQL e ricostruire le dipendenze a mano, con il rischio di perderne qualcuna. Con il server, chiede a dbt il lineage e riceve l’elenco dei modelli a valle. Allo stesso modo, per un job fallito di notte, invece di farsi incollare il log, legge direttamente l’errore dell’esecuzione.
+
+Il README avverte che i comandi della CLI possono modificare modelli, sorgenti e oggetti nel warehouse: vanno abilitati sapendo cosa si sta concedendo. Un `build` lanciato dall’agente è un `build` vero.
 
 Per il warehouse, AWS pubblica un server MCP per Amazon Redshift. Il dettaglio che conta di più è il comportamento predefinito: il server parte in sola lettura, e qualunque valore diverso da `read-write`, compreso un errore di battitura, lo lascia in sola lettura. Anche in modalità scrittura, chiede conferma prima di ogni istruzione che può modificare dati. E il README lo dice chiaramente: il vero confine di sicurezza sono i privilegi dell’utente di database, non il server.
 
