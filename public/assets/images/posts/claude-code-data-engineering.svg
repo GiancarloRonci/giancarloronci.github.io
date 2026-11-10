@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Copertina: un terminale a sinistra, collegato a una catena di modelli dati (DAG) e a un data warehouse;
+       uno scudo protegge il collegamento verso il database -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f7f8"/>
+      <stop offset="1" stop-color="#e7f1f4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g fill="#2f7f93" opacity="0.10">
+    <circle cx="1040" cy="60" r="3"/><circle cx="1080" cy="60" r="3"/><circle cx="1120" cy="60" r="3"/>
+    <circle cx="1040" cy="95" r="3"/><circle cx="1080" cy="95" r="3"/><circle cx="1120" cy="95" r="3"/>
+  </g>
+
+  <!-- terminale -->
+  <g transform="translate(80 180)">
+    <rect width="320" height="270" rx="14" fill="#1f5a68"/>
+    <rect width="320" height="40" rx="14" fill="#2f7f93"/>
+    <rect y="26" width="320" height="14" fill="#2f7f93"/>
+    <circle cx="26" cy="20" r="6" fill="#e0a94a"/>
+    <circle cx="48" cy="20" r="6" fill="#9cc6d1"/>
+    <circle cx="70" cy="20" r="6" fill="#ffffff" opacity="0.6"/>
+    <path d="M28 80 l 14 12 l -14 12" stroke="#e0a94a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="56" y="86" width="150" height="12" rx="6" fill="#ffffff" opacity="0.9"/>
+    <rect x="28" y="124" width="220" height="10" rx="5" fill="#9cc6d1" opacity="0.8"/>
+    <rect x="28" y="150" width="180" height="10" rx="5" fill="#9cc6d1" opacity="0.6"/>
+    <rect x="28" y="176" width="240" height="10" rx="5" fill="#9cc6d1" opacity="0.8"/>
+    <rect x="28" y="202" width="130" height="10" rx="5" fill="#9cc6d1" opacity="0.6"/>
+    <rect x="28" y="230" width="14" height="18" rx="2" fill="#e0a94a"/>
+  </g>
+
+  <!-- collegamento terminale -> DAG -->
+  <path d="M400 315 L 470 315" stroke="#1f5a68" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+  <!-- DAG di modelli -->
+  <g stroke="#3a8ea3" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M530 220 C 580 220, 580 300, 630 300"/>
+    <path d="M530 410 C 580 410, 580 330, 630 330"/>
+    <path d="M690 315 L 750 315"/>
+    <path d="M530 220 C 600 220, 680 200, 750 200"/>
+  </g>
+  <g>
+    <rect x="470" y="195" width="60" height="50" rx="10" fill="#ffffff" stroke="#9cc6d1" stroke-width="3"/>
+    <rect x="470" y="385" width="60" height="50" rx="10" fill="#ffffff" stroke="#9cc6d1" stroke-width="3"/>
+    <rect x="630" y="290" width="60" height="50" rx="10" fill="#ffffff" stroke="#3a8ea3" stroke-width="3"/>
+    <rect x="750" y="175" width="60" height="50" rx="10" fill="#ffffff" stroke="#3a8ea3" stroke-width="3"/>
+    <rect x="750" y="290" width="60" height="50" rx="10" fill="#3a8ea3"/>
+    <rect x="484" y="214" width="32" height="10" rx="5" fill="#c9d3d8"/>
+    <rect x="484" y="404" width="32" height="10" rx="5" fill="#c9d3d8"/>
+    <rect x="644" y="309" width="32" height="10" rx="5" fill="#9cc6d1"/>
+    <rect x="764" y="194" width="32" height="10" rx="5" fill="#9cc6d1"/>
+    <rect x="764" y="309" width="32" height="10" rx="5" fill="#ffffff"/>
+  </g>
+
+  <!-- collegamento verso il warehouse, con lo scudo -->
+  <path d="M810 315 L 960 315" stroke="#1f5a68" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(885 315)">
+    <path d="M0 -46 L 36 -32 L 36 4 C 36 28, 18 42, 0 50 C -18 42, -36 28, -36 4 L -36 -32 Z" fill="#ffffff" stroke="#1f5a68" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-14 2 l 10 10 l 18 -20" stroke="#e0a94a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- data warehouse -->
+  <g transform="translate(1040 320)">
+    <path d="M-80 -70 L -80 70 A 80 24 0 0 0 80 70 L 80 -70" fill="#1f5a68"/>
+    <ellipse cx="0" cy="-70" rx="80" ry="24" fill="#2f7f93"/>
+    <path d="M-80 -20 A 80 24 0 0 0 80 -20" fill="none" stroke="#9cc6d1" stroke-width="3" opacity="0.7"/>
+    <path d="M-80 25 A 80 24 0 0 0 80 25" fill="none" stroke="#9cc6d1" stroke-width="3" opacity="0.7"/>
+  </g>
+</svg>
