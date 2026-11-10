@@ -21,6 +21,8 @@ In questo articolo metto in fila le novità che contano per chi lavora con pipel
 
 ## Il collo di bottiglia non era l’SQL
 
+Una premessa per chi non lo conosce. **dbt**, che sta per *data build tool*, è lo strumento più diffuso per la parte di trasformazione dei dati dentro il data warehouse, la “T” dell’ELT. Ogni modello è un file SQL che contiene una `SELECT`: dbt la esegue nel warehouse e ne salva il risultato come tabella o vista. I modelli si richiamano tra loro, e da questi riferimenti dbt ricava le dipendenze, cioè il lineage, e l’ordine in cui eseguirli. Test e documentazione stanno in file YAML accanto ai modelli. Esiste in versione open source, dbt Core, e come servizio gestito di dbt Labs, dbt Platform. Un progetto dbt contiene quindi, in forma leggibile, buona parte delle regole di un team dati: per questo compare spesso in questo articolo.
+
 Il caso più concreto pubblicato finora viene da DocuSign, raccontato da dbt Labs a fine ottobre. Il team di analytics engineering ha osservato che il tempo non se ne andava nello scrivere le query, ma nel continuo passaggio di contesto: il requisito in un ticket, le convenzioni del progetto “per lo più nella testa delle persone”, la validazione ripetuta a ogni modifica.
 
 La soluzione che hanno costruito divide i compiti in modo netto. Claude Code coordina il lavoro. Un insieme di **skill** porta le convenzioni del progetto. Il **server MCP di dbt** fornisce metadati e lineage. Il motore dbt valida l’SQL compilato prima che venga aperta una pull request. Il flusso è diviso in fasi, scoperta, sviluppo, orchestrazione, in modo che una fase fallita si possa ripetere da sola senza ripartire da capo.
@@ -145,6 +147,7 @@ Pagine usate per scrivere e verificare l’articolo (in inglese).
 - [Claude Code: What’s new](https://code.claude.com/docs/en/whats-new) e [changelog](https://code.claude.com/docs/en/changelog) (Anthropic): l’elenco settimanale delle novità e le note di rilascio, incluse quelle di novembre su task MCP e `denyInsteadOfPrompting`
 - [Week 15](https://code.claude.com/docs/en/whats-new/2026-w15), [Week 27](https://code.claude.com/docs/en/whats-new/2026-w27) e [Week 32](https://code.claude.com/docs/en/whats-new/2026-w32) (Anthropic): lo strumento Monitor, i subagenti in background, auto mode come modalità predefinita, i messaggi tra sessioni, gli ambienti self-hosted e il mascheramento delle credenziali
 - [Skills](https://code.claude.com/docs/en/skills), [MCP](https://code.claude.com/docs/en/mcp), [Hooks](https://code.claude.com/docs/en/hooks) e [Permission modes](https://code.claude.com/docs/en/permission-modes) (Anthropic): la documentazione di riferimento delle funzionalità descritte
+- [What is dbt?](https://docs.getdbt.com/docs/introduction) (dbt Labs): cos’è dbt e come funziona, dai modelli SQL ai test
 - [How DocuSign cut analytics engineering time in half](https://www.getdbt.com/blog/docusign-claude-code-dbt-v2-mcp-agent-skills) (dbt Labs): il caso DocuSign con Claude Code, skill e server MCP di dbt
 - [dbt-mcp](https://github.com/dbt-labs/dbt-mcp) e [dbt-agent-skills](https://github.com/dbt-labs/dbt-agent-skills) (dbt Labs): il server MCP e la raccolta di skill per dbt
 - [Amazon Redshift MCP Server](https://github.com/awslabs/mcp/tree/main/src/redshift-mcp-server) (AWS Labs): il server MCP per Redshift, con la modalità in sola lettura predefinita
