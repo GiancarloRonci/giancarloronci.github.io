@@ -21,7 +21,11 @@ In this post I go through the new features that matter for people who work with 
 
 ## The bottleneck wasn't the SQL
 
-A quick note for anyone who doesn't know it. **dbt**, short for *data build tool*, is the most widely used tool for the transformation step inside the data warehouse, the "T" in ELT. Each model is a SQL file containing a `SELECT`: dbt runs it in the warehouse and saves the result as a table or view. Models reference each other, and from those references dbt works out the dependencies, the lineage, and the order to run them in. Tests and documentation live in YAML files next to the models. It comes as open source, dbt Core, and as a managed service from dbt Labs, dbt Platform. A dbt project therefore holds, in readable form, much of a data team's rules: that's why it comes up so often in this post.
+A quick note for anyone who doesn't know it. **dbt**, short for *data build tool*, is a software product from the company dbt Labs, not a standard: there's no independent body writing its specification, as there is for SQL or MCP. It's used to transform data that's already in the data warehouse, the "T" in ELT: it takes the raw data copied from business systems and turns it into clean, consistent tables ready for reports and analysis. It doesn't move data between systems and doesn't visualize it: it sits in the middle.
+
+Each model is a SQL file containing a `SELECT`: dbt runs it in the warehouse and saves the result as a table or view. Models reference each other, and from those references dbt works out the dependencies, the lineage, and the order to run them in. Tests and documentation live in YAML files next to the models, and the whole project is versioned in git like any software. The product comes in two forms: dbt Core, open source under the Apache 2.0 license, and dbt Platform, the paid managed service that adds scheduled jobs, a web interface and a semantic layer.
+
+Although it isn't a formal standard, in practice it has become a de facto one: it's the most widely used tool for this work, and its project format is read by many other tools, from data catalogs to BI. A dbt project therefore holds, in a readable and widely recognized form, much of a data team's rules: that's why it comes up so often in this post.
 
 The most concrete case published so far comes from DocuSign, told by dbt Labs at the end of October. The analytics engineering team noticed that time wasn't going into writing queries, but into constant context switching: the requirement in a ticket, the project's conventions "mostly in people's heads", repeated validation on every change.
 
@@ -148,6 +152,7 @@ Pages used to write and verify this post.
 - [Week 15](https://code.claude.com/docs/en/whats-new/2026-w15), [Week 27](https://code.claude.com/docs/en/whats-new/2026-w27) and [Week 32](https://code.claude.com/docs/en/whats-new/2026-w32) (Anthropic): the Monitor tool, background subagents, auto mode as the default, cross-session messaging, self-hosted environments and credential masking
 - [Skills](https://code.claude.com/docs/en/skills), [MCP](https://code.claude.com/docs/en/mcp), [Hooks](https://code.claude.com/docs/en/hooks) and [Permission modes](https://code.claude.com/docs/en/permission-modes) (Anthropic): reference documentation for the features described
 - [What is dbt?](https://docs.getdbt.com/docs/introduction) (dbt Labs): what dbt is and how it works, from SQL models to tests
+- [dbt on GitHub](https://github.com/dbt-labs/dbt) (dbt Labs): the open source code of dbt Core, under the Apache 2.0 license
 - [How DocuSign cut analytics engineering time in half](https://www.getdbt.com/blog/docusign-claude-code-dbt-v2-mcp-agent-skills) (dbt Labs): the DocuSign case with Claude Code, dbt skills and the dbt MCP server
 - [dbt-mcp](https://github.com/dbt-labs/dbt-mcp) and [dbt-agent-skills](https://github.com/dbt-labs/dbt-agent-skills) (dbt Labs): the MCP server and the skill collection for dbt
 - [Amazon Redshift MCP Server](https://github.com/awslabs/mcp/tree/main/src/redshift-mcp-server) (AWS Labs): the MCP server for Redshift, read-only by default
