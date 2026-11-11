@@ -25,7 +25,7 @@ A quick note for anyone who doesn't know it. **dbt**, short for *data build tool
 
 Each model is a SQL file containing a `SELECT`: dbt runs it in the warehouse and saves the result as a table or view. Models reference each other, and from those references dbt works out the dependencies, the lineage, and the order to run them in. Tests and documentation live in YAML files next to the models, and the whole project is versioned in git like any software. The product comes in two forms: dbt Core, open source under the Apache 2.0 license, and dbt Platform, the paid managed service that adds scheduled jobs, a web interface and a semantic layer.
 
-Although it isn't a formal standard, in practice it has become a de facto one: it's the most widely used tool for this work, and its project format is read by many other tools, from data catalogs to BI. A dbt project therefore holds, in a readable and widely recognized form, much of a data team's rules: that's why it comes up so often in this post.
+Although it isn't a formal standard, in practice it has become a reference point: among tools built for SQL transformation it's the most widely adopted, and its project format is read by many other tools, from data catalogs to BI. A dbt project therefore holds, in a readable and widely recognized form, much of a data team's rules: that's why it comes up so often in this post. It isn't the only way to work, though: many teams still transform data with stored procedures, hand-written SQL or traditional ETL tools.
 
 The most concrete case published so far comes from DocuSign, told by dbt Labs at the end of October. The analytics engineering team noticed that time wasn't going into writing queries, but into constant context switching: the requirement in a ticket, the project's conventions "mostly in people's heads", repeated validation on every change.
 
@@ -153,6 +153,7 @@ Pages used to write and verify this post.
 - [Skills](https://code.claude.com/docs/en/skills), [MCP](https://code.claude.com/docs/en/mcp), [Hooks](https://code.claude.com/docs/en/hooks) and [Permission modes](https://code.claude.com/docs/en/permission-modes) (Anthropic): reference documentation for the features described
 - [What is dbt?](https://docs.getdbt.com/docs/introduction) (dbt Labs): what dbt is and how it works, from SQL models to tests
 - [dbt on GitHub](https://github.com/dbt-labs/dbt) (dbt Labs): the open source code of dbt Core, under the Apache 2.0 license
+- [How Do Professionals Use Data Engineering Tools and Practices?](https://datatalks.club/blog/how-do-data-professionals-use-data-engineering-tools-and-practices.html) (DataTalks.Club): a 2025 survey of about 200 professionals, where dbt is the most cited ETL/ELT tool (33.5%) but 46.3% use no formal ETL tool
 - [How DocuSign cut analytics engineering time in half](https://www.getdbt.com/blog/docusign-claude-code-dbt-v2-mcp-agent-skills) (dbt Labs): the DocuSign case with Claude Code, dbt skills and the dbt MCP server
 - [dbt-mcp](https://github.com/dbt-labs/dbt-mcp) and [dbt-agent-skills](https://github.com/dbt-labs/dbt-agent-skills) (dbt Labs): the MCP server and the skill collection for dbt
 - [Amazon Redshift MCP Server](https://github.com/awslabs/mcp/tree/main/src/redshift-mcp-server) (AWS Labs): the MCP server for Redshift, read-only by default
