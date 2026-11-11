@@ -10,8 +10,8 @@ import { getLang, useTranslations } from '../i18n/ui';
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const cv = CV[lang];
-// Indirizzo del sito (radice), da leggere anche sul PDF stampato
-const blogUrl = new URL('/', Astro.site).href;
+// Indirizzo della home nella lingua del CV, da leggere anche sul PDF stampato
+const blogUrl = new URL(lang === 'it' ? '/it/' : '/', Astro.site).href;
 ---
 
 <ProfileLayout title={t.cv.title} description={t.cv.description}>
