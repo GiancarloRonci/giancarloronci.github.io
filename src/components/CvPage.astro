@@ -66,6 +66,7 @@ const blogUrl = new URL(lang === 'it' ? '/it/' : '/', Astro.site).href;
     <h2>{t.cv.contact}</h2>
     <ul>
       <li>LinkedIn: <a href={AUTHOR.linkedin}>{AUTHOR.name}</a></li>
+      <li>Blog: <a href={blogUrl}>{blogUrl.replace('https://', '').replace(/\/$/, '')}</a></li>
       <li>GitHub: <a href={AUTHOR.github}>GiancarloRonci</a></li>
       <li>Email: <a href={`mailto:${AUTHOR.email}`}>{AUTHOR.email}</a></li>
       <li>{t.cv.phone}: <a href={`tel:${AUTHOR.phone.replaceAll(' ', '')}`}>{AUTHOR.phone}</a></li>
