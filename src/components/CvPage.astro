@@ -10,6 +10,8 @@ import { getLang, useTranslations } from '../i18n/ui';
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 const cv = CV[lang];
+// Indirizzo completo dell'elenco articoli nella lingua del CV, da leggere anche sul PDF stampato
+const blogUrl = new URL(lang === 'it' ? '/it/posts/' : '/posts/', Astro.site).href;
 ---
 
 <ProfileLayout title={t.cv.title} description={t.cv.description}>
@@ -22,6 +24,7 @@ const cv = CV[lang];
       <p>{t.location}</p>
       <p>{AUTHOR.email} · {AUTHOR.phone}</p>
       <p>{AUTHOR.linkedin.replace('https://www.', '').replace(/\/$/, '')}</p>
+      <p>Blog: <a href={blogUrl}>{blogUrl.replace('https://', '').replace(/\/$/, '')}</a></p>
     </div>
   </div>
 
