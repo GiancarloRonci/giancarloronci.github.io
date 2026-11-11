@@ -63,9 +63,22 @@ Il nome del file diventa l'indirizzo: `src/content/posts/en/data-mesh.md` → `/
 `src/content/posts/it/data-mesh.md` → `/it/posts/data-mesh/`.
 Con `draft: true` l'articolo si vede solo con `npm run dev`.
 
-**Traduzioni:** due file con lo stesso nome in `en/` e `it/` sono lo stesso articolo nelle due lingue, e il
-selettore EN/IT li collega. Un articolo può anche esistere in una sola lingua: in quel caso il selettore
-porta all'elenco articoli dell'altra lingua.
+**Traduzioni:** per i nuovi articoli, il file inglese ha un nome in inglese e quello italiano un nome in
+italiano, così ogni versione ha l'indirizzo nella sua lingua. Le due versioni si collegano con lo stesso
+valore di `translationKey` nell'intestazione:
+
+```yaml
+# src/content/posts/it/catena-dati-marketing.md  →  /it/posts/catena-dati-marketing/
+translationKey: "marketing-data-chain"
+
+# src/content/posts/en/marketing-data-chain.md   →  /posts/marketing-data-chain/
+translationKey: "marketing-data-chain"
+```
+
+Senza `translationKey`, due file con lo stesso nome in `en/` e `it/` sono lo stesso articolo nelle due
+lingue: è il caso degli articoli pubblicati prima di questa regola, che restano così per non cambiare
+indirizzi già condivisi. Il selettore EN/IT collega le due versioni. Un articolo può anche esistere in una
+sola lingua: in quel caso il selettore porta all'elenco articoli dell'altra lingua.
 
 ## Pubblicazione
 

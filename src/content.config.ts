@@ -21,6 +21,9 @@ const posts = defineCollection({
       .optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    // Collega le traduzioni quando i due file hanno nomi diversi (es. indirizzo in inglese per la
+    // versione inglese): stesso valore in en/ e it/. Se manca, vale il nome del file.
+    translationKey: z.string().optional(),
   }),
 });
 

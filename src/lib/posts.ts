@@ -3,7 +3,8 @@ import { localizePath, useTranslations, type Lang } from '../i18n/ui';
 import { CATEGORIES, type CategorySlug } from '../data/categories';
 
 // Gli articoli stanno in src/content/posts/<lingua>/: l'id è quindi 'it/nome-file' o 'en/nome-file'.
-// Due file con lo stesso nome nelle due cartelle sono uno la traduzione dell'altro.
+// Due articoli sono uno la traduzione dell'altro se hanno la stessa translationKey nell'intestazione
+// o, in mancanza, lo stesso nome di file nelle due cartelle.
 
 export function getPostLang(post: CollectionEntry<'posts'>) {
   return post.id.split('/')[0] as Lang;
@@ -26,9 +27,13 @@ export async function getPublishedPosts(lang: Lang) {
   return posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
+function getTranslationKey(post: CollectionEntry<'posts'>) {
+  return post.data.translationKey ?? getPostSlug(post);
+}
+
 export async function getTranslation(post: CollectionEntry<'posts'>, lang: Lang) {
   const posts = await getPublishedPosts(lang);
-  return posts.find((other) => getPostSlug(other) === getPostSlug(post));
+  return posts.find((other) => getTranslationKey(other) === getTranslationKey(post));
 }
 
 // Immagine per l'anteprima sui social: i social non leggono gli SVG, quindi si usa il PNG gemello
