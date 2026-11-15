@@ -350,6 +350,42 @@ main.container {
   margin-top: 3rem;
 }
 
+/* Tabelle negli articoli: bordi leggeri, intestazione su fondo grigio, righe alterne */
+.post table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  border: 1px solid #d5d9de;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.post th,
+.post td {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #d5d9de;
+  text-align: left;
+  vertical-align: top;
+}
+
+.post th {
+  background: #eef1f4;
+  font-weight: 700;
+}
+
+.post tbody tr:nth-child(even) {
+  background: var(--bg-subtle);
+}
+
+/* I comandi nelle tabelle: piccola etichetta su fondo chiaro, senza andare a capo */
+.post td code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: #e7f1f4;
+  color: var(--link-hover);
+  white-space: nowrap;
+}
+
 .badge {
   margin-left: 0.5rem;
   padding: 0.1rem 0.45rem;
@@ -541,6 +577,12 @@ main.container {
     width: 96px;
     height: 56px;
     padding: 8px;
+  }
+
+  /* Su schermi stretti la tabella scorre in orizzontale invece di allargare la pagina */
+  .post table {
+    display: block;
+    overflow-x: auto;
   }
 }
 
