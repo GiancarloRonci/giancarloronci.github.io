@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Storia completa: l'ora di ultima modifica degli articoli viene dai commit
+          fetch-depth: 0
       - uses: withastro/action@v6
 
   deploy:

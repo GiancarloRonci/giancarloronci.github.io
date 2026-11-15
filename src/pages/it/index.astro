@@ -4,10 +4,10 @@ import CareerList from '../../components/CareerList.astro';
 import PostList from '../../components/PostList.astro';
 import { AUTHOR } from '../../consts';
 import { CV } from '../../data/cv';
-import { getPublishedPosts } from '../../lib/posts';
+import { getRecentlyUpdatedPosts } from '../../lib/posts';
 
 const cv = CV.it;
-const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
+const latestPosts = (await getRecentlyUpdatedPosts('it')).slice(0, 5);
 ---
 
 <ProfileLayout>
@@ -34,7 +34,7 @@ const latestPosts = (await getPublishedPosts('it')).slice(0, 5);
 
   {
     latestPosts.length > 0 ? (
-      <PostList posts={latestPosts} />
+      <PostList posts={latestPosts} showLastModified />
     ) : (
       <>
         <p>I primi articoli sono in arrivo. Prossimamente:</p>

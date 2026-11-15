@@ -2,13 +2,15 @@
 import type { CollectionEntry } from 'astro:content';
 import CategoryLinks from './CategoryLinks.astro';
 import { getLang, useTranslations } from '../i18n/ui';
-import { formatDate, getPostUrl } from '../lib/posts';
+import { formatDate, formatDateTime, getLastModified, getPostUrl } from '../lib/posts';
 
 interface Props {
   posts: CollectionEntry<'posts'>[];
+  // true: mostra data e ora dell'ultima modifica invece della data di pubblicazione
+  showLastModified?: boolean;
 }
 
-const { posts } = Astro.props;
+const { posts, showLastModified = false } = Astro.props;
 const lang = getLang(Astro.currentLocale);
 const t = useTranslations(lang);
 ---
@@ -27,7 +29,13 @@ const t = useTranslations(lang);
             {post.data.title}
           </a>
           {post.data.draft && <span class="badge">{t.draft}</span>}
-          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
+          {showLastModified ? (
+            <time datetime={getLastModified(post).toISOString()}>
+              {t.lastUpdated} {formatDateTime(getLastModified(post), lang)}
+            </time>
+          ) : (
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date, lang)}</time>
+          )}
           <p>{post.data.description}</p>
           <CategoryLinks categories={post.data.categories} lang={lang} />
         </div>
