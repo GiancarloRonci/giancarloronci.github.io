@@ -4,8 +4,8 @@ description: "Da /init a /rewind, da claude -p ai server MCP: i comandi di Claud
 date: 2026-11-15
 categories: ["data-engineering", "ai-analytics"]
 cover:
-  src: "/assets/images/posts/comandi-claude-code.svg"
-  alt: "Una finestra di terminale con un elenco di comandi che iniziano con la barra, uno dei quali evidenziato"
+  src: "/assets/images/posts/comandi-claude-code.jpg"
+  alt: "Il titolo Claude Code Commands accanto a un portatile con un terminale aperto, in cui sono digitati alcuni comandi con la barra"
 tags: ["Claude Code", "AI", "Produttività", "MCP"]
 translationKey: "claude-code-commands"
 updated: 2026-11-15

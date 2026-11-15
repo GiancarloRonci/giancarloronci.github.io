@@ -4,8 +4,8 @@ description: "From /init to /rewind, from claude -p to MCP servers: Claude Code'
 date: 2026-11-15
 categories: ["data-engineering", "ai-analytics"]
 cover:
-  src: "/assets/images/posts/comandi-claude-code.svg"
-  alt: "A terminal window with a list of commands starting with a slash, one of them highlighted"
+  src: "/assets/images/posts/comandi-claude-code.jpg"
+  alt: "The title Claude Code Commands next to a laptop with an open terminal, where a few slash commands have been typed"
 tags: ["Claude Code", "AI", "Productivity", "MCP"]
 translationKey: "claude-code-commands"
 updated: 2026-11-15
