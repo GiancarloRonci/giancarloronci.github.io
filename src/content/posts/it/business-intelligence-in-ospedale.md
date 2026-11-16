@@ -3,6 +3,9 @@ title: "Business Intelligence in ospedale: cosa cambia quando i dati sono pazien
 description: "Fare BI in un ospedale non è come farla in un’azienda qualsiasi. Più sedi da mettere d’accordo, dati clinici delicati, decisioni che si prendono in reparto e non in riunione, e una parte del lavoro che deve arrivare in tempo reale. Cosa serve a un team BI per funzionare in questo contesto."
 date: 2026-11-16
 categories: ["bi-analytics", "data-governance"]
+cover:
+  src: "/assets/images/posts/business-intelligence-in-ospedale.jpg"
+  alt: "Un ospedale al crepuscolo con il titolo “Business Intelligence in a Hospital”, un portatile con una dashboard di occupazione dei letti, tempi di attesa e flusso dei pazienti, e uno schema di più sedi collegate protetto da un lucchetto"
 tags: ["Business Intelligence", "Sanità", "Dashboard", "Data Governance", "Tempo reale"]
 translationKey: "hospital-business-intelligence"
 updated: 2026-11-16
