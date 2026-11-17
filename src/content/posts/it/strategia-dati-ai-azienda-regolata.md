@@ -1,6 +1,6 @@
 ---
-title: "Chi guida Data & AI in un’azienda regolata: cosa racconta un annuncio di lavoro"
-description: "Un’azienda farmaceutica internazionale cerca chi guidi dati, analytics, automazione e AI. Dietro l’elenco dei compiti c’è un’idea precisa di come sta cambiando il ruolo: una strategia sola con l’IT, una roadmap con investimenti misurabili, governance pensata per un settore regolato e un modello che porta i casi d’uso dalla sperimentazione al lavoro di tutti i giorni."
+title: "Chi guida Data & AI in un’azienda regolata: come sta cambiando il ruolo"
+description: "Un’azienda farmaceutica internazionale affida a una sola persona dati, analytics, automazione e AI. Dietro questo mandato c’è un’idea precisa di come sta cambiando il ruolo: una strategia sola con l’IT, una roadmap con investimenti misurabili, governance pensata per un settore regolato e un modello che porta i casi d’uso dalla sperimentazione al lavoro di tutti i giorni."
 date: 2026-11-17
 categories: ["data-strategy", "ai-analytics"]
 cover:
@@ -12,23 +12,23 @@ updated: 2026-11-17
 draft: false
 ---
 
-Qualche giorno fa ho letto l’annuncio di un’azienda farmaceutica internazionale che cercava il responsabile globale di Data, Analytics & AI. Non un capo progetto e nemmeno il responsabile di una piattaforma: la persona che deve definire la strategia dati e AI di tutta l’azienda, tradurla in una roadmap pluriennale, possedere le piattaforme, costruire la governance e far crescere un’organizzazione globale che va dal data engineering all’AI.
+Prendiamo un caso concreto: un’azienda farmaceutica internazionale che affida a una sola persona la responsabilità globale di Data, Analytics & AI. Non un capo progetto e nemmeno il responsabile di una piattaforma: la persona che deve definire la strategia dati e AI di tutta l’azienda, tradurla in una roadmap pluriennale, possedere le piattaforme, costruire la governance e far crescere un’organizzazione globale che va dal data engineering all’AI.
 
-Sono annunci che leggo sempre con attenzione, perché raccontano più di quanto sembri. L’elenco dei compiti è, in pratica, la descrizione di come un’azienda immagina il proprio rapporto con i dati nei prossimi anni. E in questo caso alcune scelte sono molto chiare.
+Il modo in cui un’azienda definisce questo ruolo racconta più di quanto sembri. Compiti e responsabilità sono, in pratica, la descrizione di come immagina il proprio rapporto con i dati nei prossimi anni. E in questo caso alcune scelte sono molto chiare.
 
 ## Una strategia sola, non due
 
-La prima riga dice che la strategia Data, Analytics & AI deve essere allineata alla strategia IT e alle priorità di business. Sembra una formula di rito. Non lo è.
+Il primo punto è che la strategia Data, Analytics & AI deve essere allineata alla strategia IT e alle priorità di business. Sembra una formula di rito. Non lo è.
 
 Per anni, in molte aziende, i dati hanno avuto una strategia propria, spesso nata fuori dall’IT: un Chief Data Officer che riportava al business, un team di data science cresciuto in una funzione, una piattaforma comprata da un reparto. Il risultato era una seconda architettura accanto a quella ufficiale, con i suoi fornitori, i suoi contratti e le sue regole di sicurezza. Funzionava finché i dati restavano un tema da specialisti.
 
 Con l’AI questo equilibrio non regge più. I modelli hanno bisogno dei dati dei sistemi transazionali, girano sulle stesse infrastrutture cloud, devono rispettare le stesse regole di identità e accesso, e finiscono dentro le applicazioni che l’IT gestisce. Una strategia AI separata da quella IT produce due cose: duplicazioni e attriti. Due team che negoziano lo stesso contratto cloud, due modi di gestire le credenziali, due cataloghi dei dati.
 
-Allinearsi non significa sottomettersi. Significa che la roadmap dei dati e quella delle applicazioni si leggono insieme, che le decisioni di architettura si prendono allo stesso tavolo e che le priorità le fissa il business, non la tecnologia preferita da chi la propone. Non a caso l’annuncio chiede che questa persona sia un partner strategico all’interno dell’IT Leadership Team: i dati non sono più un ospite delle riunioni IT, ne sono una parte.
+Allinearsi non significa sottomettersi. Significa che la roadmap dei dati e quella delle applicazioni si leggono insieme, che le decisioni di architettura si prendono allo stesso tavolo e che le priorità le fissa il business, non la tecnologia preferita da chi la propone. Non a caso chi guida Data & AI è chiamato a essere un partner strategico all’interno dell’IT Leadership Team: i dati non sono più un ospite delle riunioni IT, ne sono una parte.
 
 ## Dalla strategia alla roadmap: investimenti e risultati misurabili
 
-La seconda riga è quella che distingue una strategia da una presentazione: tradurla in una roadmap di trasformazione pluriennale, con priorità di investimento chiare, risultati misurabili e valore di business sostenibile.
+Il secondo punto è quello che distingue una strategia da una presentazione: tradurla in una roadmap di trasformazione pluriennale, con priorità di investimento chiare, risultati misurabili e valore di business sostenibile.
 
 Ogni parola pesa.
 
@@ -41,7 +41,7 @@ Ogni parola pesa.
 
 ## Dati, analytics, automazione e AI: una famiglia sola
 
-L’annuncio mette sotto la stessa responsabilità quattro cose: dati, analytics, automazione e AI. Non è ovvio. In molte aziende l’automazione dei processi, con robot software e workflow, sta in un team diverso, a volte nell’IT applicativo, a volte in una funzione operations.
+Il ruolo mette sotto la stessa responsabilità quattro cose: dati, analytics, automazione e AI. Non è ovvio. In molte aziende l’automazione dei processi, con robot software e workflow, sta in un team diverso, a volte nell’IT applicativo, a volte in una funzione operations.
 
 Metterle insieme ha senso, per tre motivi.
 
@@ -49,7 +49,7 @@ Metterle insieme ha senso, per tre motivi.
 2. **Il confine si sta spostando.** Con i modelli linguistici, molte automazioni diventano “intelligenti”: un processo che prima seguiva regole fisse oggi legge un documento, ne estrae le informazioni e propone una decisione. Separare automazione e AI significherebbe tracciare una linea dove la tecnologia ne sta cancellando una.
 3. **Il valore sta nel processo.** Spesso l’AI da sola produce un suggerimento; è l’automazione che lo porta dentro il flusso di lavoro, senza che qualcuno debba copiarlo a mano in un altro sistema. Gestite insieme, le due cose si progettano insieme.
 
-Possedere queste piattaforme, dice l’annuncio, significa garantire che siano sicure, affidabili, scalabili e pronte per i bisogni futuri. È una responsabilità da gestore di servizio, non da sperimentatore: le piattaforme dati oggi sono infrastruttura critica, e vanno trattate come tale.
+Possedere queste piattaforme significa garantire che siano sicure, affidabili, scalabili e pronte per i bisogni futuri. È una responsabilità da gestore di servizio, non da sperimentatore: le piattaforme dati oggi sono infrastruttura critica, e vanno trattate come tale.
 
 ## Governance in un ambiente regolato
 
@@ -81,7 +81,7 @@ Il compito non è servire tutti allo stesso modo, ma scegliere. Con budget e per
 
 ## Un modello che porta i casi d’uso in produzione
 
-Una delle frasi più interessanti dell’annuncio parla di costruire un modello di delivery per prodotti e servizi che trasformi i casi d’uso promettenti in soluzioni affidabili e riutilizzabili, inserite nei processi di business. Tra i requisiti si chiede esperienza nel portare le soluzioni dalla sperimentazione a un’operatività sostenibile.
+Una delle responsabilità più interessanti è costruire un modello di delivery per prodotti e servizi che trasformi i casi d’uso promettenti in soluzioni affidabili e riutilizzabili, inserite nei processi di business: in altre parole, portare le soluzioni dalla sperimentazione a un’operatività sostenibile.
 
 È il problema che quasi tutte le aziende hanno oggi con l’AI: decine di prototipi, poche soluzioni in produzione. Un proof of concept dimostra che una cosa si può fare; non dimostra che si può fare ogni giorno, con dati reali, utenti veri, costi sotto controllo e qualcuno che risponde quando qualcosa non va.
 
@@ -96,7 +96,7 @@ Un modello per prodotti cambia alcune cose.
 
 ## Partner ed ecosistemi
 
-L’annuncio chiede anche di rappresentare l’azienda nelle partnership tecnologiche e negli ecosistemi Data & AI. È un punto che si tende a sottovalutare.
+Fa parte del ruolo anche rappresentare l’azienda nelle partnership tecnologiche e negli ecosistemi Data & AI. È un punto che si tende a sottovalutare.
 
 Nessuna azienda farmaceutica costruirà da sola i propri modelli di base, né la propria piattaforma cloud. Le scelte vere sono su cosa comprare, cosa adattare e cosa costruire, e con quali partner. Sono decisioni che durano anni e legano l’azienda a un fornitore, quindi richiedono qualcuno che conosca il mercato, sappia valutare cosa c’è dietro le promesse commerciali e negozi con un’idea chiara di cosa deve restare in casa: i dati, la conoscenza dei processi, le competenze per cambiare fornitore se serve.
 
@@ -104,7 +104,7 @@ Gli ecosistemi contano anche fuori dal rapporto con i fornitori. Consorzi di set
 
 ## Costruire l’organizzazione
 
-L’ultimo compito dell’elenco è forse quello che richiede più tempo: costruire e far crescere un’organizzazione globale e multidisciplinare tra data engineering, analytics, automazione e AI, con competenze, ruoli e percorsi di carriera chiari.
+L’ultimo compito è forse quello che richiede più tempo: costruire e far crescere un’organizzazione globale e multidisciplinare tra data engineering, analytics, automazione e AI, con competenze, ruoli e percorsi di carriera chiari.
 
 Un’organizzazione dati non nasce dall’unione di team esistenti. Ha bisogno di risposte a domande pratiche.
 
@@ -114,17 +114,17 @@ Un’organizzazione dati non nasce dall’unione di team esistenti. Ha bisogno d
 
 È un lavoro di anni, e spesso è quello che decide il successo di tutto il resto. Una strategia ottima con un’organizzazione debole resta sulla carta.
 
-## Il profilo: strategia e giudizio tecnico
+## Le competenze: strategia e giudizio tecnico
 
-Leggendo i requisiti, una frase riassume il ruolo: la capacità di collegare la direzione strategica a un solido giudizio tecnico su piattaforme dati, analytics, automazione, AI e pratiche di ingegneria moderne.
+Se dovessi riassumere in una frase cosa serve per questo ruolo, direi: la capacità di collegare la direzione strategica a un solido giudizio tecnico su piattaforme dati, analytics, automazione, AI e pratiche di ingegneria moderne.
 
 È una combinazione rara. Chi viene dalla strategia rischia di approvare architetture che non reggeranno; chi viene dalla tecnica rischia di inseguire la soluzione elegante invece di quella che serve. Il ruolo chiede di stare in mezzo: abbastanza vicino alla tecnologia da riconoscere un rischio architetturale o una promessa irrealistica, abbastanza vicino al business da parlare di valore e priorità con chi decide i budget.
 
-Il resto del profilo conferma questa lettura: esperienza documentata di strategie che hanno prodotto un impatto misurabile, capacità di allineare il top management e di guidare trasformazioni trasversali, team globali e diversi. L’esperienza nel farmaceutico o in un altro settore regolato è un vantaggio, non un requisito: segno che il problema è comune a molti settori, e che le competenze si trasferiscono.
+Il resto viene di conseguenza: strategie che hanno già prodotto un impatto misurabile, la capacità di allineare il top management e di guidare trasformazioni trasversali, l’abitudine a lavorare con team globali e diversi. Conoscere il farmaceutico o un altro settore regolato aiuta, ma non è indispensabile: il problema è comune a molti settori, e le competenze si trasferiscono.
 
 ## Cosa mi porto via
 
-Rileggendo l’annuncio, quello che colpisce è quanto poco parli di tecnologie specifiche. Non c’è un nome di piattaforma, di cloud o di modello. Ci sono strategia, roadmap, governance, priorità, modello operativo, organizzazione.
+Guardando il ruolo nel suo insieme, quello che colpisce è quanto poco riguardi tecnologie specifiche. Non c’è un nome di piattaforma, di cloud o di modello. Ci sono strategia, roadmap, governance, priorità, modello operativo, organizzazione.
 
 Non perché la tecnologia non conti, ma perché oggi non è più il collo di bottiglia. Gli strumenti per fare analytics e AI sono disponibili a tutti. Quello che manca, quasi ovunque, è la capacità di scegliere cosa fare, di farlo in modo che resti, dentro regole che proteggono pazienti e azienda, e con persone che crescono insieme al lavoro.
 

@@ -1,6 +1,6 @@
 ---
-title: "Leading Data & AI in a regulated company: what a job ad tells us"
-description: "An international pharmaceutical company is looking for someone to lead data, analytics, automation and AI. Behind the list of duties there is a clear idea of how the role is changing: one strategy shared with IT, a roadmap with measurable investments, governance designed for a regulated sector and a model that takes use cases from experimentation into everyday work."
+title: "Leading Data & AI in a regulated company: how the role is changing"
+description: "An international pharmaceutical company puts data, analytics, automation and AI in the hands of a single person. Behind that mandate there is a clear idea of how the role is changing: one strategy shared with IT, a roadmap with measurable investments, governance designed for a regulated sector and a model that takes use cases from experimentation into everyday work."
 date: 2026-11-17
 categories: ["data-strategy", "ai-analytics"]
 cover:
@@ -12,23 +12,23 @@ updated: 2026-11-17
 draft: false
 ---
 
-A few days ago I read a job ad from an international pharmaceutical company looking for a global head of Data, Analytics & AI. Not a project lead, nor the owner of a single platform: the person who has to set the data and AI strategy for the whole company, turn it into a multi-year roadmap, own the platforms, build the governance and grow a global organisation that spans everything from data engineering to AI.
+Let's take a concrete case: an international pharmaceutical company that gives a single person global responsibility for Data, Analytics & AI. Not a project lead, nor the owner of a single platform: the person who has to set the data and AI strategy for the whole company, turn it into a multi-year roadmap, own the platforms, build the governance and grow a global organisation that spans everything from data engineering to AI.
 
-I always read ads like this carefully, because they say more than they seem to. The list of duties is, in practice, a description of how a company imagines its relationship with data over the next few years. And in this case some choices are very clear.
+The way a company defines this role says more than it seems to. Its duties and responsibilities are, in practice, a description of how the company imagines its relationship with data over the next few years. And in this case some choices are very clear.
 
 ## One strategy, not two
 
-The first line says that the Data, Analytics & AI strategy must be aligned with the IT strategy and with business priorities. It sounds like boilerplate. It isn't.
+The first point is that the Data, Analytics & AI strategy must be aligned with the IT strategy and with business priorities. It sounds like boilerplate. It isn't.
 
 For years, in many companies, data had a strategy of its own, often born outside IT: a Chief Data Officer reporting to the business, a data science team that grew up inside one function, a platform bought by one department. The result was a second architecture next to the official one, with its own vendors, contracts and security rules. It worked as long as data remained a topic for specialists.
 
 With AI that balance no longer holds. Models need data from transactional systems, run on the same cloud infrastructure, must follow the same identity and access rules, and end up inside the applications IT runs. An AI strategy separate from the IT strategy produces two things: duplication and friction. Two teams negotiating the same cloud contract, two ways of managing credentials, two data catalogues.
 
-Aligning doesn't mean submitting. It means that the data roadmap and the application roadmap are read together, that architecture decisions are taken at the same table and that priorities are set by the business, not by the favourite technology of whoever proposes it. It's no coincidence that the ad asks this person to be a strategic partner within the IT Leadership Team: data is no longer a guest at IT meetings, it's part of them.
+Aligning doesn't mean submitting. It means that the data roadmap and the application roadmap are read together, that architecture decisions are taken at the same table and that priorities are set by the business, not by the favourite technology of whoever proposes it. It's no coincidence that whoever leads Data & AI is expected to be a strategic partner within the IT Leadership Team: data is no longer a guest at IT meetings, it's part of them.
 
 ## From strategy to roadmap: investments and measurable outcomes
 
-The second line is the one that separates a strategy from a slide deck: turning it into a multi-year transformation roadmap, with clear investment priorities, measurable outcomes and sustainable business value.
+The second point is the one that separates a strategy from a slide deck: turning it into a multi-year transformation roadmap, with clear investment priorities, measurable outcomes and sustainable business value.
 
 Every word carries weight.
 
@@ -41,7 +41,7 @@ It's the same principle I described when writing about [data and AI products tha
 
 ## Data, analytics, automation and AI: one family
 
-The ad puts four things under the same responsibility: data, analytics, automation and AI. That isn't obvious. In many companies process automation, with software robots and workflows, sits in a different team, sometimes in application IT, sometimes in an operations function.
+The role puts four things under the same responsibility: data, analytics, automation and AI. That isn't obvious. In many companies process automation, with software robots and workflows, sits in a different team, sometimes in application IT, sometimes in an operations function.
 
 Bringing them together makes sense, for three reasons.
 
@@ -49,7 +49,7 @@ Bringing them together makes sense, for three reasons.
 2. **The boundary is moving.** With language models, many automations become "intelligent": a process that used to follow fixed rules now reads a document, extracts the information and proposes a decision. Separating automation and AI would mean drawing a line just where technology is erasing one.
 3. **The value is in the process.** On its own, AI often produces a suggestion; it's automation that brings it into the workflow, without someone having to copy it by hand into another system. Managed together, the two are designed together.
 
-Owning these platforms, the ad says, means making sure they are secure, reliable, scalable and fit for future needs. It's the responsibility of a service owner, not of an experimenter: data platforms today are critical infrastructure, and must be treated as such.
+Owning these platforms means making sure they are secure, reliable, scalable and fit for future needs. It's the responsibility of a service owner, not of an experimenter: data platforms today are critical infrastructure, and must be treated as such.
 
 ## Governance in a regulated environment
 
@@ -81,7 +81,7 @@ The job isn't to serve everyone in the same way, but to choose. With limited bud
 
 ## A model that takes use cases into production
 
-One of the most interesting sentences in the ad talks about building a product and service delivery model that turns promising use cases into reliable, reusable solutions embedded in business processes. Among the requirements is experience moving solutions from experimentation into sustainable operations.
+One of the most interesting responsibilities is building a product and service delivery model that turns promising use cases into reliable, reusable solutions embedded in business processes: in other words, moving solutions from experimentation into sustainable operations.
 
 It's the problem almost every company has with AI today: dozens of prototypes, few solutions in production. A proof of concept shows that something can be done; it doesn't show that it can be done every day, with real data, real users, costs under control and someone who answers when something goes wrong.
 
@@ -96,7 +96,7 @@ It's less spectacular than a new prototype, but it's what separates a company th
 
 ## Partners and ecosystems
 
-The ad also asks this person to represent the company in technology partnerships and Data & AI ecosystems. It's a point that tends to be underestimated.
+The role also includes representing the company in technology partnerships and Data & AI ecosystems. It's a point that tends to be underestimated.
 
 No pharmaceutical company is going to build its own foundation models, or its own cloud platform. The real choices are about what to buy, what to adapt and what to build, and with which partners. These decisions last for years and tie the company to a vendor, so they need someone who knows the market, can judge what lies behind sales promises and negotiates with a clear idea of what must stay in-house: the data, the knowledge of the processes, the skills needed to change vendor if necessary.
 
@@ -104,7 +104,7 @@ Ecosystems matter beyond the vendor relationship too. Industry consortia, partne
 
 ## Building the organisation
 
-The last duty on the list is perhaps the one that takes longest: building and developing a global, multidisciplinary organisation across data engineering, analytics, automation and AI, with clear capabilities, roles and career paths.
+The last duty is perhaps the one that takes longest: building and developing a global, multidisciplinary organisation across data engineering, analytics, automation and AI, with clear capabilities, roles and career paths.
 
 A data organisation doesn't emerge from merging existing teams. It needs answers to practical questions.
 
@@ -114,17 +114,17 @@ A data organisation doesn't emerge from merging existing teams. It needs answers
 
 It's the work of years, and it often decides the success of everything else. An excellent strategy with a weak organisation stays on paper.
 
-## The profile: strategy and technical judgement
+## The skills: strategy and technical judgement
 
-Reading the requirements, one sentence sums up the role: the ability to connect strategic direction with sound technical judgement across data platforms, analytics, automation, AI and modern engineering practices.
+If I had to sum up in one sentence what this role takes, I'd say: the ability to connect strategic direction with sound technical judgement across data platforms, analytics, automation, AI and modern engineering practices.
 
 It's a rare combination. People who come from strategy risk approving architectures that won't hold up; people who come from engineering risk chasing the elegant solution instead of the one that's needed. The role asks you to stand in between: close enough to the technology to spot an architectural risk or an unrealistic promise, close enough to the business to talk about value and priorities with the people who set budgets.
 
-The rest of the profile confirms this reading: a track record of strategies that produced measurable impact, the ability to align senior stakeholders and guide cross-functional transformation, global and diverse teams. Experience in pharmaceuticals or another regulated sector is an advantage, not a requirement: a sign that the problem is shared by many sectors, and that the skills transfer.
+The rest follows from that: strategies that have already produced measurable impact, the ability to align senior stakeholders and guide cross-functional transformation, the habit of working with global and diverse teams. Knowing pharmaceuticals or another regulated sector helps, but it isn't essential: the problem is shared by many sectors, and the skills transfer.
 
 ## What I take from it
 
-Rereading the ad, what stands out is how little it says about specific technologies. There's no name of a platform, a cloud or a model. There's strategy, roadmap, governance, priorities, operating model, organisation.
+Looking at the role as a whole, what stands out is how little of it is about specific technologies. There's no name of a platform, a cloud or a model. There's strategy, roadmap, governance, priorities, operating model, organisation.
 
 Not because technology doesn't matter, but because it's no longer the bottleneck. The tools for analytics and AI are available to everyone. What's missing almost everywhere is the ability to choose what to do, to do it in a way that lasts, within rules that protect patients and the company, and with people who grow along with the work.
 
