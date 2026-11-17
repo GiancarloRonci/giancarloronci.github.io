@@ -12,9 +12,9 @@ updated: 2026-11-16
 draft: false
 ---
 
-A few days ago I read a job ad from a multi-site hospital looking for a head for its Business Intelligence team. A thousand beds spread across several institutes, tens of thousands of admissions a year, hundreds of thousands of outpatient visits. The duties included what you would expect: leading the team, evolving the platform, developing the data warehouse and analyses. But there were also less obvious items: building dashboards together with the clinical information system team, sitting on the data governance board, knowing tools for real-time data analysis.
+Take a multi-site hospital: a thousand beds spread across several institutes, tens of thousands of admissions a year, hundreds of thousands of outpatient visits. Whoever leads its Business Intelligence team is asked for what you would expect: leading the team, evolving the platform, developing the data warehouse and analyses. But also for less obvious things: building dashboards together with the clinical information system team, sitting on the data governance board, knowing tools for real-time data analysis.
 
-That list captures something anyone who has worked with healthcare data already knows: BI in a hospital is a job of its own. The tools are the same as in any other company. What changes is the context, the timing and the cost of a wrong number.
+That set of duties captures something anyone who has worked with healthcare data already knows: BI in a hospital is a job of its own. The tools are the same as in any other company. What changes is the context, the timing and the cost of a wrong number.
 
 ## Several sites, one version of the facts
 
@@ -38,7 +38,7 @@ That is why it makes sense for the head of BI to sit on the data governance boar
 
 ## The dashboard that matters lives in the clinical system
 
-One of the most interesting items in that ad was working with the team that develops the clinical information system to build "application" dashboards. It is an area where healthcare is ahead of many other sectors.
+One of the most interesting duties is working with the team that develops the clinical information system to build "application" dashboards. It is an area where healthcare is ahead of many other sectors.
 
 A doctor or a nurse does not open a BI tool to make a decision. They work in the electronic health record, between one patient and the next. If the useful information (free beds on the ward, patients waiting for discharge, overdue tests) sits in a separate portal, nobody will look at it. I wrote about this in the article on [dashboards nobody uses](/posts/dashboard-inutilizzate/): a dashboard works when it is in the place and at the moment the decision is made.
 
@@ -51,13 +51,13 @@ The questions that reach a hospital BI team run at two very different paces.
 - **Management** thinks in months or quarters: costs per ward, occupancy rates, 30-day readmissions, comparisons between sites. Here the classic data warehouse, loaded overnight, works perfectly well.
 - **The ward and the emergency department** think in hours: how many patients are waiting right now, how many beds will free up today, which operating theatre is running late. Here, data from last night is already old.
 
-That is why the ad also mentioned tools for real-time analysis. Not everything needs to be real time: it costs more, it is more fragile and often it isn't needed. But a small share of the indicators does, and it has to be designed separately, with its own architecture. I described one way of bringing the data warehouse closer to those timings in the article on the [near real-time data warehouse](/posts/data-warehouse-near-real-time/).
+That is why a hospital BI team also needs tools for real-time analysis. Not everything needs to be real time: it costs more, it is more fragile and often it isn't needed. But a small share of the indicators does, and it has to be designed separately, with its own architecture. I described one way of bringing the data warehouse closer to those timings in the article on the [near real-time data warehouse](/posts/data-warehouse-near-real-time/).
 
 The important choice is to state, for each indicator, which of the two speeds it needs. And to write it on the dashboard: "updated at 7:00" and "updated 2 minutes ago" are two different promises.
 
 ## The platform is a service, not a project
 
-Among the preferred qualifications in the ad was the ITIL Foundation certification. At first sight it looks out of place in a BI role. In fact it says a lot.
+One skill that can look out of place in a BI role is knowing ITIL, the most widely used reference for managing IT services. In fact it says a lot.
 
 In a hospital, the BI platform is not a project you deliver and close. It is a service that has to work every day, with users who report problems, ask for new features and expect answers within a known time. A failed overnight load is not a technical nuisance: it is hospital management making decisions on stale numbers the next morning.
 
@@ -65,15 +65,15 @@ Running BI as a service means having a clear way to collect requests, a shared o
 
 ## Finding new ways to aggregate
 
-The last duty on the list was perhaps the most ambitious: identifying new models for aggregating information.
+The last duty is perhaps the most ambitious: identifying new models for aggregating information.
 
 In a hospital, data is born organised by system: the laboratory, radiology, pharmacy, the emergency department, administration. The most useful questions, though, cut across systems. A patient's journey from arrival in the emergency department to discharge touches five different applications. The real cost of an operation sits partly in the operating theatre, partly in the pharmacy, partly in the days of the stay.
 
-Building views by patient pathway, and not only by source system, is where hospital BI can make its biggest contribution. It takes knowing the data, but above all knowing the clinical processes. That is why experience in a hospital setting, in ads like this one, counts almost as much as technical skill.
+Building views by patient pathway, and not only by source system, is where hospital BI can make its biggest contribution. It takes knowing the data, but above all knowing the clinical processes. That is why, in a hospital BI team, experience in healthcare counts almost as much as technical skill.
 
 ## What I take from it
 
-Rereading that list of duties, what stands out is how little of it is about tools. Power BI, SSIS, Python: they are required, but they are the easy part. The rest is getting the sites to agree on definitions, protecting data about people's health, bringing indicators into clinical work, choosing the right speed for each number and keeping up a service that management can rely on.
+Looking at the job as a whole, what stands out is how little of it is about tools. Power BI, SSIS, Python: they are needed, but they are the easy part. The rest is getting the sites to agree on definitions, protecting data about people's health, bringing indicators into clinical work, choosing the right speed for each number and keeping up a service that management can rely on.
 
 It is a good reminder for those who do BI outside healthcare, too. In a hospital the consequences of a wrong number are simply more visible.
 
