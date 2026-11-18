@@ -5,7 +5,7 @@ date: 2026-11-18
 categories: ["metadata-semantic-layer", "data-governance"]
 cover:
   src: "/assets/images/posts/cos-e-un-data-catalog.jpg"
-  alt: "Infografica “What is a data catalog?”: un bibliotecario con un tablet, il confronto tra una biblioteca senza catalogo e una con il catalogo, le sei voci di una scheda (asset, definizione, formula e regole, origine e lineage, owner e steward, stato e qualità) e i tre benefici"
+  alt: "Una biblioteca d’epoca con il titolo “What Is a Data Catalog? A Library Index for Your Data”: una bibliotecaria al bancone e, in primo piano, un cassetto dello schedario con una scheda che elenca Data Assets, Definitions, Formulas & Rules, Sources & Lineage, Owners & Stewards e Status & Quality"
 tags: ["Data Catalog", "Metadati", "Data Lineage", "Data Governance", "Data Stewardship"]
 translationKey: "what-is-a-data-catalog"
 draft: false
