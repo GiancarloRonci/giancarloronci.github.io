@@ -4,7 +4,7 @@ description: "Un data catalog è l'elenco centrale e consultabile dei dati di un
 date: 2026-11-18
 categories: ["metadata-semantic-layer", "data-governance"]
 cover:
-  src: "/assets/images/posts/cos-e-un-data-catalog.jpg"
+  src: "/assets/images/posts/data-catalog-copertina.jpg"
   alt: "Una biblioteca d’epoca con il titolo “What Is a Data Catalog? A Library Index for Your Data”: una bibliotecaria al bancone e, in primo piano, un cassetto dello schedario con una scheda che elenca Data Assets, Definitions, Formulas & Rules, Sources & Lineage, Owners & Stewards e Status & Quality"
 tags: ["Data Catalog", "Metadati", "Data Lineage", "Data Governance", "Data Stewardship"]
 translationKey: "what-is-a-data-catalog"
