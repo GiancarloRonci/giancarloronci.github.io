@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- English version of ../lollipop-dumbbell.svg -->
+  <rect width="800" height="400" rx="8" fill="#ffffff"/>
+
+  <text x="30" y="40" font-size="17" font-weight="600" fill="#1f2d33">Lollipop</text>
+  <text x="30" y="62" font-size="13" fill="#6b7780">Many categories, less ink</text>
+  <g font-size="12" fill="#4a565d" text-anchor="end">
+    <text x="130" y="94">Sneakers</text><text x="130" y="122">Boots</text><text x="130" y="150">Bags</text>
+    <text x="130" y="178">Backpacks</text><text x="130" y="206">Belts</text><text x="130" y="234">Sandals</text>
+    <text x="130" y="262">Wallets</text><text x="130" y="290">Eyewear</text><text x="130" y="318">Hats</text>
+    <text x="130" y="346">Gloves</text>
+  </g>
+  <g stroke="#9cc6d1" stroke-width="2">
+    <line x1="140" y1="90" x2="349" y2="90"/><line x1="140" y1="118" x2="333.6" y2="118"/>
+    <line x1="140" y1="146" x2="316" y2="146"/><line x1="140" y1="174" x2="302.8" y2="174"/>
+    <line x1="140" y1="202" x2="285.2" y2="202"/><line x1="140" y1="230" x2="267.6" y2="230"/>
+    <line x1="140" y1="258" x2="252.2" y2="258"/><line x1="140" y1="286" x2="239" y2="286"/>
+    <line x1="140" y1="314" x2="223.6" y2="314"/><line x1="140" y1="342" x2="206" y2="342"/>
+  </g>
+  <g fill="#1f5a68">
+    <circle cx="349" cy="90" r="6"/><circle cx="333.6" cy="118" r="6"/><circle cx="316" cy="146" r="6"/>
+    <circle cx="302.8" cy="174" r="6"/><circle cx="285.2" cy="202" r="6"/><circle cx="267.6" cy="230" r="6"/>
+    <circle cx="252.2" cy="258" r="6"/><circle cx="239" cy="286" r="6"/><circle cx="223.6" cy="314" r="6"/>
+    <circle cx="206" cy="342" r="6"/>
+  </g>
+  <line x1="140" y1="78" x2="140" y2="354" stroke="#9aa6ad" stroke-width="1.5"/>
+
+  <line x1="400" y1="30" x2="400" y2="380" stroke="#e1e4e8" stroke-width="1.5"/>
+
+  <text x="430" y="40" font-size="17" font-weight="600" fill="#1f2d33">Dumbbell</text>
+  <text x="430" y="62" font-size="13" fill="#6b7780">Two periods: the gap is the news</text>
+  <g font-size="12" fill="#4a565d" text-anchor="end">
+    <text x="525" y="94">Lombardy</text><text x="525" y="128">Lazio</text><text x="525" y="162">Veneto</text>
+    <text x="525" y="196">Emilia-R.</text><text x="525" y="230">Campania</text><text x="525" y="264">Piedmont</text>
+    <text x="525" y="298">Tuscany</text><text x="525" y="332">Apulia</text>
+  </g>
+  <g stroke="#eef1f3" stroke-width="1">
+    <line x1="540" y1="80" x2="540" y2="342"/><line x1="601.5" y1="80" x2="601.5" y2="342"/>
+    <line x1="663.1" y1="80" x2="663.1" y2="342"/><line x1="724.6" y1="80" x2="724.6" y2="342"/>
+  </g>
+  <g stroke-width="3">
+    <line x1="678.5" y1="90" x2="721.5" y2="90" stroke="#9cc6d1"/>
+    <line x1="647.7" y1="124" x2="653.8" y2="124" stroke="#e8c3a2"/>
+    <line x1="632.3" y1="158" x2="666.2" y2="158" stroke="#9cc6d1"/>
+    <line x1="616.9" y1="192" x2="623.1" y2="192" stroke="#9cc6d1"/>
+    <line x1="586.2" y1="226" x2="607.7" y2="226" stroke="#9cc6d1"/>
+    <line x1="580" y1="260" x2="601.5" y2="260" stroke="#e8c3a2"/>
+    <line x1="580" y1="294" x2="598.5" y2="294" stroke="#9cc6d1"/>
+    <line x1="555.4" y1="328" x2="573.8" y2="328" stroke="#9cc6d1"/>
+  </g>
+  <g fill="#ffffff" stroke="#9cc6d1" stroke-width="2.5">
+    <circle cx="678.5" cy="90" r="6"/><circle cx="653.8" cy="124" r="6"/><circle cx="632.3" cy="158" r="6"/>
+    <circle cx="616.9" cy="192" r="6"/><circle cx="586.2" cy="226" r="6"/><circle cx="601.5" cy="260" r="6"/>
+    <circle cx="580" cy="294" r="6"/><circle cx="555.4" cy="328" r="6"/>
+  </g>
+  <g fill="#1f5a68">
+    <circle cx="721.5" cy="90" r="6"/><circle cx="666.2" cy="158" r="6"/><circle cx="623.1" cy="192" r="6"/>
+    <circle cx="607.7" cy="226" r="6"/><circle cx="598.5" cy="294" r="6"/><circle cx="573.8" cy="328" r="6"/>
+  </g>
+  <g fill="#c2702a">
+    <circle cx="647.7" cy="124" r="6"/><circle cx="580" cy="260" r="6"/>
+  </g>
+  <g font-size="11" fill="#6b7780" text-anchor="middle">
+    <text x="540" y="358">25</text><text x="601.5" y="358">45</text><text x="663.1" y="358">65</text><text x="724.6" y="358">85</text>
+  </g>
+  <g font-size="12" fill="#4a565d">
+    <circle cx="546" cy="380" r="6" fill="#ffffff" stroke="#9cc6d1" stroke-width="2.5"/><text x="558" y="384">2024</text>
+    <circle cx="606" cy="380" r="6" fill="#1f5a68"/><text x="618" y="384">2025</text>
+    <circle cx="666" cy="380" r="6" fill="#c2702a"/><text x="678" y="384">2025 down</text>
+  </g>
+</svg>

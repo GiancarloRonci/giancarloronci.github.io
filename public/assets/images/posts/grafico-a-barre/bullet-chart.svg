@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- Bullet chart: per ogni regione una barra sottile con il venduto, una tacca verticale per
+       l'obiettivo e tre fasce di sfondo (insufficiente, buono, ottimo) -->
+  <rect width="800" height="350" rx="8" fill="#ffffff"/>
+
+  <text x="30" y="40" font-size="17" font-weight="600" fill="#1f2d33">Bullet chart: valore, obiettivo e fasce</text>
+  <text x="30" y="62" font-size="13" fill="#6b7780">Una barra sottile per il dato, una tacca per l’obiettivo</text>
+
+  <g font-size="13" fill="#4a565d" text-anchor="end">
+    <text x="155" y="115">Nord</text><text x="155" y="167">Centro</text><text x="155" y="219">Sud</text><text x="155" y="271">Isole</text>
+  </g>
+
+  <!-- fasce -->
+  <g>
+    <rect x="170" y="95" width="326.7" height="30" fill="#c9d3d8"/>
+    <rect x="496.7" y="95" width="116.7" height="30" fill="#dde4e7"/>
+    <rect x="613.3" y="95" width="116.7" height="30" fill="#eef2f4"/>
+    <rect x="170" y="147" width="326.7" height="30" fill="#c9d3d8"/>
+    <rect x="496.7" y="147" width="116.7" height="30" fill="#dde4e7"/>
+    <rect x="613.3" y="147" width="116.7" height="30" fill="#eef2f4"/>
+    <rect x="170" y="199" width="326.7" height="30" fill="#c9d3d8"/>
+    <rect x="496.7" y="199" width="116.7" height="30" fill="#dde4e7"/>
+    <rect x="613.3" y="199" width="116.7" height="30" fill="#eef2f4"/>
+    <rect x="170" y="251" width="326.7" height="30" fill="#c9d3d8"/>
+    <rect x="496.7" y="251" width="116.7" height="30" fill="#dde4e7"/>
+    <rect x="613.3" y="251" width="116.7" height="30" fill="#eef2f4"/>
+  </g>
+  <!-- valore -->
+  <g fill="#1f5a68">
+    <rect x="170" y="105" width="490" height="10"/>
+    <rect x="170" y="157" width="410.7" height="10"/>
+    <rect x="170" y="209" width="336" height="10"/>
+    <rect x="170" y="261" width="298.7" height="10"/>
+  </g>
+  <!-- obiettivo -->
+  <g stroke="#1f2d33" stroke-width="3">
+    <line x1="636.7" y1="99" x2="636.7" y2="121"/>
+    <line x1="613.3" y1="151" x2="613.3" y2="173"/>
+    <line x1="566.7" y1="203" x2="566.7" y2="225"/>
+    <line x1="450" y1="255" x2="450" y2="277"/>
+  </g>
+
+  <g font-size="11" fill="#6b7780" text-anchor="middle">
+    <text x="170" y="300">0</text><text x="310" y="300">30</text><text x="450" y="300">60</text>
+    <text x="590" y="300">90</text><text x="730" y="300">120</text>
+  </g>
+
+  <g font-size="12" fill="#4a565d">
+    <rect x="170" y="320" width="26" height="8" fill="#1f5a68"/><text x="202" y="329">Venduto</text>
+    <line x1="275" y1="316" x2="275" y2="332" stroke="#1f2d33" stroke-width="3"/><text x="284" y="329">Obiettivo</text>
+    <rect x="370" y="318" width="14" height="12" fill="#c9d3d8"/>
+    <rect x="384" y="318" width="14" height="12" fill="#dde4e7"/>
+    <rect x="398" y="318" width="14" height="12" fill="#eef2f4" stroke="#dde4e7"/>
+    <text x="420" y="329">Fasce: insufficiente, buono, ottimo</text>
+  </g>
+</svg>

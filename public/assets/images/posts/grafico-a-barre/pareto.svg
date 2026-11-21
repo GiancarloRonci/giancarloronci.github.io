@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- Pareto: fatturato di dieci clienti in barre ordinate dal più grande, con la linea della quota
+       cumulata. I primi cinque clienti superano l'80% e sono colorati -->
+  <rect width="800" height="380" rx="8" fill="#ffffff"/>
+
+  <text x="30" y="40" font-size="17" font-weight="600" fill="#1f2d33">Pareto: barre ordinate e quota cumulata</text>
+  <text x="30" y="62" font-size="13" fill="#6b7780">Cinque clienti su dieci fanno l’82% del fatturato</text>
+
+  <line x1="80" y1="144" x2="720" y2="144" stroke="#e0a94a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="726" y="148" font-size="12" font-weight="600" fill="#b07a1f">80%</text>
+
+  <g fill="#1f5a68">
+    <rect x="100" y="122" width="44" height="198"/>
+    <rect x="162" y="188" width="44" height="132"/>
+    <rect x="224" y="227.6" width="44" height="92.4"/>
+    <rect x="286" y="254" width="44" height="66"/>
+    <rect x="348" y="267.2" width="44" height="52.8"/>
+  </g>
+  <g fill="#c9d3d8">
+    <rect x="410" y="280.4" width="44" height="39.6"/>
+    <rect x="472" y="287" width="44" height="33"/>
+    <rect x="534" y="300.2" width="44" height="19.8"/>
+    <rect x="596" y="306.8" width="44" height="13.2"/>
+    <rect x="658" y="306.8" width="44" height="13.2"/>
+  </g>
+  <line x1="80" y1="320" x2="720" y2="320" stroke="#9aa6ad" stroke-width="1.5"/>
+
+  <polyline points="122,254 184,210 246,179.2 308,157.2 370,139.6 432,126.4 494,115.4 556,108.8 618,104.4 680,100"
+            fill="none" stroke="#1f2d33" stroke-width="2"/>
+  <g fill="#1f2d33" stroke="#ffffff" stroke-width="2">
+    <circle cx="122" cy="254" r="5"/><circle cx="184" cy="210" r="5"/><circle cx="246" cy="179.2" r="5"/>
+    <circle cx="308" cy="157.2" r="5"/><circle cx="370" cy="139.6" r="5"/><circle cx="432" cy="126.4" r="5"/>
+    <circle cx="494" cy="115.4" r="5"/><circle cx="556" cy="108.8" r="5"/><circle cx="618" cy="104.4" r="5"/>
+    <circle cx="680" cy="100" r="5"/>
+  </g>
+  <g font-size="12" font-weight="600" fill="#1f2d33" text-anchor="middle">
+    <text x="370" y="128">82%</text><text x="680" y="90">100%</text>
+  </g>
+
+  <g font-size="12" fill="#4a565d" text-anchor="middle">
+    <text x="122" y="340">A</text><text x="184" y="340">B</text><text x="246" y="340">C</text><text x="308" y="340">D</text>
+    <text x="370" y="340">E</text><text x="432" y="340">F</text><text x="494" y="340">G</text><text x="556" y="340">H</text>
+    <text x="618" y="340">I</text><text x="680" y="340">J</text>
+  </g>
+  <text x="400" y="366" font-size="12" fill="#6b7780" text-anchor="middle">Clienti, dal più grande al più piccolo</text>
+</svg>

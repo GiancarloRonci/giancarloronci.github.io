@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- Quattro piccoli grafici a colonne, uno per regione, con la stessa scala: vendite per trimestre.
+       Il Sud, unico in calo, è colorato in arancione -->
+  <rect width="800" height="340" rx="8" fill="#ffffff"/>
+
+  <text x="30" y="40" font-size="17" font-weight="600" fill="#1f2d33">Small multiples: un grafico per regione, stessa scala</text>
+  <text x="30" y="62" font-size="13" fill="#6b7780">Vendite per trimestre</text>
+
+  <!-- riferimento comune a 100 -->
+  <g stroke="#c9d3d8" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="45" y1="150" x2="200" y2="150"/><line x1="230" y1="150" x2="385" y2="150"/>
+    <line x1="415" y1="150" x2="570" y2="150"/><line x1="600" y1="150" x2="755" y2="150"/>
+  </g>
+  <text x="40" y="154" font-size="11" fill="#6b7780" text-anchor="end">100</text>
+
+  <g font-size="14" font-weight="600" fill="#1f2d33">
+    <text x="50" y="98">Nord</text><text x="235" y="98">Centro</text>
+    <text x="420" y="98" fill="#c2702a">Sud</text><text x="605" y="98">Isole</text>
+  </g>
+
+  <g fill="#3a8ea3">
+    <rect x="50" y="150" width="28" height="150"/><rect x="88" y="135" width="28" height="165"/>
+    <rect x="126" y="142.5" width="28" height="157.5"/><rect x="164" y="120" width="28" height="180"/>
+    <rect x="235" y="195" width="28" height="105"/><rect x="273" y="192" width="28" height="108"/>
+    <rect x="311" y="187.5" width="28" height="112.5"/><rect x="349" y="183" width="28" height="117"/>
+    <rect x="605" y="255" width="28" height="45"/><rect x="643" y="232.5" width="28" height="67.5"/>
+    <rect x="681" y="243" width="28" height="57"/><rect x="719" y="222" width="28" height="78"/>
+  </g>
+  <g fill="#c2702a">
+    <rect x="420" y="210" width="28" height="90"/><rect x="458" y="217.5" width="28" height="82.5"/>
+    <rect x="496" y="225" width="28" height="75"/><rect x="534" y="231" width="28" height="69"/>
+  </g>
+
+  <g stroke="#9aa6ad" stroke-width="1.5">
+    <line x1="45" y1="300" x2="200" y2="300"/><line x1="230" y1="300" x2="385" y2="300"/>
+    <line x1="415" y1="300" x2="570" y2="300"/><line x1="600" y1="300" x2="755" y2="300"/>
+  </g>
+  <g font-size="11" fill="#4a565d" text-anchor="middle">
+    <text x="64" y="318">T1</text><text x="102" y="318">T2</text><text x="140" y="318">T3</text><text x="178" y="318">T4</text>
+    <text x="249" y="318">T1</text><text x="287" y="318">T2</text><text x="325" y="318">T3</text><text x="363" y="318">T4</text>
+    <text x="434" y="318">T1</text><text x="472" y="318">T2</text><text x="510" y="318">T3</text><text x="548" y="318">T4</text>
+    <text x="619" y="318">T1</text><text x="657" y="318">T2</text><text x="695" y="318">T3</text><text x="733" y="318">T4</text>
+  </g>
+</svg>

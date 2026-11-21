@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- Barre divergenti: scostamento percentuale dal budget per regione, positivi a destra in blu,
+       negativi a sinistra in arancione, attorno a un asse centrale -->
+  <rect width="800" height="340" rx="8" fill="#ffffff"/>
+
+  <text x="30" y="40" font-size="17" font-weight="600" fill="#1f2d33">Barre divergenti: scostamento dal budget</text>
+  <text x="30" y="62" font-size="13" fill="#6b7780">Sopra il budget a destra, sotto a sinistra, ordinate per valore</text>
+
+  <g fill="#1f5a68">
+    <rect x="430" y="90" width="102" height="26"/>
+    <rect x="430" y="128" width="62.4" height="26"/>
+    <rect x="430" y="166" width="25.2" height="26"/>
+  </g>
+  <g fill="#c2702a">
+    <rect x="413.2" y="204" width="16.8" height="26"/>
+    <rect x="384.4" y="242" width="45.6" height="26"/>
+    <rect x="352" y="280" width="78" height="26"/>
+  </g>
+  <line x1="430" y1="80" x2="430" y2="316" stroke="#4a565d" stroke-width="1.5"/>
+
+  <g font-size="13" fill="#4a565d" text-anchor="end">
+    <text x="420" y="108">Lombardia</text><text x="420" y="146">Veneto</text><text x="420" y="184">Lazio</text>
+  </g>
+  <g font-size="13" fill="#4a565d">
+    <text x="440" y="222">Piemonte</text><text x="440" y="260">Campania</text><text x="440" y="298">Sicilia</text>
+  </g>
+  <g font-size="12" font-weight="600" fill="#1f5a68">
+    <text x="538" y="108">+8,5%</text><text x="498" y="146">+5,2%</text><text x="461" y="184">+2,1%</text>
+  </g>
+  <g font-size="12" font-weight="600" fill="#c2702a" text-anchor="end">
+    <text x="407" y="222">−1,4%</text><text x="378" y="260">−3,8%</text><text x="346" y="298">−6,5%</text>
+  </g>
+  <text x="436" y="78" font-size="11" fill="#6b7780">budget</text>
+</svg>
